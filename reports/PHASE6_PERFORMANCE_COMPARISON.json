@@ -1,6 +1,6 @@
 {
   "schema": "echo.standalone_engine.performance_comparison.v1",
-  "generatedAt": "2026-06-20T22:01:19Z",
+  "generatedAt": "2026-06-20T22:12:56Z",
   "host": {
     "os": "Windows-10-10.0.19045-SP0",
     "python": "3.14.4",
@@ -9,23 +9,25 @@
   "repos": {
     "engine": {
       "path": "C:\\Development\\Github\\ECHO-Standalone-Engine",
-      "head": "687a60faa3bb",
+      "head": "a69252c83a25",
       "branch": "main",
-      "dirtyCount": 14
+      "dirtyCount": 16
     },
     "legacyStandaloneRuntime": {
       "path": "C:\\Development\\Github\\ECHO-Standalone-Runtime",
       "head": "690612418b8c",
       "branch": "main",
-      "dirtyCount": 8
+      "dirtyCount": 13
     }
   },
   "methodology": {
     "engine": "Runs the packaged ECHO Standalone Engine JAR with --headless-smoke and measures process wall time plus sampled peak RSS.",
     "legacy": "Ingests existing legacy Standalone Runtime reports; with --run-legacy, measures selected Gradle smoke tasks as task-level evidence.",
+    "legacyClientLaunchProxy": "With --run-legacy-client-launch, measures selected legacy client startup proxy tasks. These exercise the player-facing client assembly but are not visible packaged player-launch evidence.",
     "comparabilityWarning": "Legacy Gradle task timings are not direct player-launch timings and must not be used alone for replacement decisions.",
     "iterations": 3,
-    "legacyTasksExecuted": true
+    "legacyTasksExecuted": true,
+    "legacyClientLaunchProxyExecuted": true
   },
   "engine": {
     "runtime": "echo-standalone-engine",
@@ -37,28 +39,28 @@
       "failed": 0,
       "failureRate": 0.0,
       "startupWallMs": {
-        "min": 1222.242,
-        "median": 1273.433,
-        "p95": 1443.561,
-        "max": 1462.464
+        "min": 1249.336,
+        "median": 1359.376,
+        "p95": 1373.74,
+        "max": 1375.336
       },
       "peakRssBytes": {
-        "min": 213651456,
-        "median": 251097088,
-        "max": 253272064
+        "min": 226533376,
+        "median": 229998592,
+        "max": 279715840
       }
     },
     "contentGraph": {
-      "edges": 109,
-      "modules": 18,
-      "nodes": 133,
-      "mappedNodeCounts": {
-        "neoforge": 78,
-        "echo_runtime_standalone": 78,
-        "echo_native": 78
-      },
-      "canonical": true,
       "crossRuntimeParity": true,
+      "canonical": true,
+      "mappedNodeCounts": {
+        "echo_native": 78,
+        "echo_runtime_standalone": 78,
+        "neoforge": 78
+      },
+      "nodes": 133,
+      "modules": 18,
+      "edges": 109,
       "fingerprint": "c37b52c8a3bf35c1236a2326c3892bdc61f04a0efb0bda1f7874a428545a7330"
     },
     "saveLoad": {
@@ -66,20 +68,20 @@
       "allRunsContentIdentityVerified": true
     },
     "adapterCore": {
-      "rejected": 0,
-      "revoked": 0,
-      "acceptedByDomain": {
-        "blocks": 14,
-        "recipes": 4,
-        "gameplay": 1,
-        "items": 24,
-        "entities": 3,
-        "services": 1,
-        "worldgen": 1
-      },
       "ready": true,
-      "accepted": 48,
-      "canonicalRuntimeBridge": true
+      "acceptedByDomain": {
+        "worldgen": 1,
+        "services": 1,
+        "entities": 3,
+        "items": 24,
+        "gameplay": 1,
+        "recipes": 4,
+        "blocks": 14
+      },
+      "revoked": 0,
+      "rejected": 0,
+      "canonicalRuntimeBridge": true,
+      "accepted": 48
     },
     "runs": [
       {
@@ -100,9 +102,9 @@
         "cwd": "C:\\Development\\Github\\ECHO-Standalone-Engine",
         "exitCode": 0,
         "timedOut": false,
-        "wallMs": 1273.433,
-        "peakRssBytes": 213651456,
-        "stdoutTail": "ECHO Standalone Engine 2.0.0-beta.2\npackRoot=C:\\Development\\Github\\ECHO-Standalone-Engine\\dist\nmanifest=C:\\Development\\Github\\ECHO-Standalone-Engine\\dist\\pack.json\n[module:echoadaptercore] AdapterCore canonical bridge active; graphNodes=133 fingerprint=c37b52c8a3bf35c1236a2326c3892bdc61f04a0efb0bda1f7874a428545a7330\n[module:echoashfallprotocol] Ashfall activated from canonical Content Graph; nodes=133 edges=109 modules=18 fingerprint=c37b52c8a3bf35c1236a2326c3892bdc61f04a0efb0bda1f7874a428545a7330\n[game] Crash Protocol active. Inspect the Field Terminal\n[game] World generated from canonical module graph\n[game] World loaded with matching content identity\nHEADLESS SMOKE PASS {schema=echo.engine.headless_smoke.v2, status=PASS, engineVersion=2.0.0-beta.2, packId=ashfall-standalone-engine-edition, installedModules=18, contentGraph={edges=109, modules=18, nodes=133, mappedNodeCounts={neoforge=78, echo_runtime_standalone=78, echo_native=78}, canonical=true, crossRuntimeParity=true, fingerprint=c37b52c8a3bf35c1236a2326c3892bdc61f04a0efb0bda1f7874a428545a7330}, adapterCore={rejected=0, revoked=0, acceptedByDomain={blocks=14, recipes=4, gameplay=1, items=24, entities=3, services=1, worldgen=1}, ready=true, accepted=48, canonicalRuntimeBridge=true}, runtimeContent={blocks=16, recipes=4, items=24, gameExtensions=1, entityDefinitions=3}, world={spawnedEntities=4, chunks=25, saveReload=true, contentIdentityVerified=true}}\n",
+        "wallMs": 1375.336,
+        "peakRssBytes": 226533376,
+        "stdoutTail": "ECHO Standalone Engine 2.0.0-beta.2\npackRoot=C:\\Development\\Github\\ECHO-Standalone-Engine\\dist\nmanifest=C:\\Development\\Github\\ECHO-Standalone-Engine\\dist\\pack.json\n[module:echoadaptercore] AdapterCore canonical bridge active; graphNodes=133 fingerprint=c37b52c8a3bf35c1236a2326c3892bdc61f04a0efb0bda1f7874a428545a7330\n[module:echoashfallprotocol] Ashfall activated from canonical Content Graph; nodes=133 edges=109 modules=18 fingerprint=c37b52c8a3bf35c1236a2326c3892bdc61f04a0efb0bda1f7874a428545a7330\n[game] Crash Protocol active. Inspect the Field Terminal\n[game] World generated from canonical module graph\n[game] World loaded with matching content identity\nHEADLESS SMOKE PASS {schema=echo.engine.headless_smoke.v2, status=PASS, engineVersion=2.0.0-beta.2, packId=ashfall-standalone-engine-edition, installedModules=18, contentGraph={crossRuntimeParity=true, canonical=true, mappedNodeCounts={echo_native=78, echo_runtime_standalone=78, neoforge=78}, nodes=133, modules=18, edges=109, fingerprint=c37b52c8a3bf35c1236a2326c3892bdc61f04a0efb0bda1f7874a428545a7330}, adapterCore={ready=true, acceptedByDomain={worldgen=1, services=1, entities=3, items=24, gameplay=1, recipes=4, blocks=14}, revoked=0, rejected=0, canonicalRuntimeBridge=true, accepted=48}, runtimeContent={entityDefinitions=3, gameExtensions=1, items=24, recipes=4, blocks=16}, world={saveReload=true, chunks=25, spawnedEntities=4, contentIdentityVerified=true}}\n",
         "stderrTail": "",
         "ok": true,
         "reportPath": "C:\\Development\\Github\\ECHO-Standalone-Engine\\build\\phase6-performance-comparison\\engine\\run-1\\headless-smoke\\headless-smoke-report.json",
@@ -113,45 +115,45 @@
           "packId": "ashfall-standalone-engine-edition",
           "installedModules": 18,
           "contentGraph": {
-            "edges": 109,
-            "modules": 18,
-            "nodes": 133,
-            "mappedNodeCounts": {
-              "neoforge": 78,
-              "echo_runtime_standalone": 78,
-              "echo_native": 78
-            },
-            "canonical": true,
             "crossRuntimeParity": true,
+            "canonical": true,
+            "mappedNodeCounts": {
+              "echo_native": 78,
+              "echo_runtime_standalone": 78,
+              "neoforge": 78
+            },
+            "nodes": 133,
+            "modules": 18,
+            "edges": 109,
             "fingerprint": "c37b52c8a3bf35c1236a2326c3892bdc61f04a0efb0bda1f7874a428545a7330"
           },
           "adapterCore": {
-            "rejected": 0,
-            "revoked": 0,
-            "acceptedByDomain": {
-              "blocks": 14,
-              "recipes": 4,
-              "gameplay": 1,
-              "items": 24,
-              "entities": 3,
-              "services": 1,
-              "worldgen": 1
-            },
             "ready": true,
-            "accepted": 48,
-            "canonicalRuntimeBridge": true
+            "acceptedByDomain": {
+              "worldgen": 1,
+              "services": 1,
+              "entities": 3,
+              "items": 24,
+              "gameplay": 1,
+              "recipes": 4,
+              "blocks": 14
+            },
+            "revoked": 0,
+            "rejected": 0,
+            "canonicalRuntimeBridge": true,
+            "accepted": 48
           },
           "runtimeContent": {
-            "blocks": 16,
-            "recipes": 4,
-            "items": 24,
+            "entityDefinitions": 3,
             "gameExtensions": 1,
-            "entityDefinitions": 3
+            "items": 24,
+            "recipes": 4,
+            "blocks": 16
           },
           "world": {
-            "spawnedEntities": 4,
-            "chunks": 25,
             "saveReload": true,
+            "chunks": 25,
+            "spawnedEntities": 4,
             "contentIdentityVerified": true
           }
         },
@@ -159,33 +161,33 @@
           "saveReload": true,
           "contentIdentityVerified": true,
           "contentGraph": {
-            "edges": 109,
-            "modules": 18,
-            "nodes": 133,
-            "mappedNodeCounts": {
-              "neoforge": 78,
-              "echo_runtime_standalone": 78,
-              "echo_native": 78
-            },
-            "canonical": true,
             "crossRuntimeParity": true,
+            "canonical": true,
+            "mappedNodeCounts": {
+              "echo_native": 78,
+              "echo_runtime_standalone": 78,
+              "neoforge": 78
+            },
+            "nodes": 133,
+            "modules": 18,
+            "edges": 109,
             "fingerprint": "c37b52c8a3bf35c1236a2326c3892bdc61f04a0efb0bda1f7874a428545a7330"
           },
           "adapterCore": {
-            "rejected": 0,
-            "revoked": 0,
-            "acceptedByDomain": {
-              "blocks": 14,
-              "recipes": 4,
-              "gameplay": 1,
-              "items": 24,
-              "entities": 3,
-              "services": 1,
-              "worldgen": 1
-            },
             "ready": true,
-            "accepted": 48,
-            "canonicalRuntimeBridge": true
+            "acceptedByDomain": {
+              "worldgen": 1,
+              "services": 1,
+              "entities": 3,
+              "items": 24,
+              "gameplay": 1,
+              "recipes": 4,
+              "blocks": 14
+            },
+            "revoked": 0,
+            "rejected": 0,
+            "canonicalRuntimeBridge": true,
+            "accepted": 48
           }
         }
       },
@@ -207,12 +209,119 @@
         "cwd": "C:\\Development\\Github\\ECHO-Standalone-Engine",
         "exitCode": 0,
         "timedOut": false,
-        "wallMs": 1462.464,
-        "peakRssBytes": 251097088,
-        "stdoutTail": "ECHO Standalone Engine 2.0.0-beta.2\npackRoot=C:\\Development\\Github\\ECHO-Standalone-Engine\\dist\nmanifest=C:\\Development\\Github\\ECHO-Standalone-Engine\\dist\\pack.json\n[module:echoadaptercore] AdapterCore canonical bridge active; graphNodes=133 fingerprint=c37b52c8a3bf35c1236a2326c3892bdc61f04a0efb0bda1f7874a428545a7330\n[module:echoashfallprotocol] Ashfall activated from canonical Content Graph; nodes=133 edges=109 modules=18 fingerprint=c37b52c8a3bf35c1236a2326c3892bdc61f04a0efb0bda1f7874a428545a7330\n[game] Crash Protocol active. Inspect the Field Terminal\n[game] World generated from canonical module graph\n[game] World loaded with matching content identity\nHEADLESS SMOKE PASS {schema=echo.engine.headless_smoke.v2, status=PASS, engineVersion=2.0.0-beta.2, packId=ashfall-standalone-engine-edition, installedModules=18, contentGraph={modules=18, edges=109, fingerprint=c37b52c8a3bf35c1236a2326c3892bdc61f04a0efb0bda1f7874a428545a7330, crossRuntimeParity=true, canonical=true, mappedNodeCounts={neoforge=78, echo_native=78, echo_runtime_standalone=78}, nodes=133}, adapterCore={revoked=0, rejected=0, canonicalRuntimeBridge=true, accepted=48, ready=true, acceptedByDomain={worldgen=1, services=1, entities=3, items=24, gameplay=1, recipes=4, blocks=14}}, runtimeContent={recipes=4, blocks=16, entityDefinitions=3, gameExtensions=1, items=24}, world={contentIdentityVerified=true, saveReload=true, chunks=25, spawnedEntities=4}}\n",
+        "wallMs": 1359.376,
+        "peakRssBytes": 279715840,
+        "stdoutTail": "ECHO Standalone Engine 2.0.0-beta.2\npackRoot=C:\\Development\\Github\\ECHO-Standalone-Engine\\dist\nmanifest=C:\\Development\\Github\\ECHO-Standalone-Engine\\dist\\pack.json\n[module:echoadaptercore] AdapterCore canonical bridge active; graphNodes=133 fingerprint=c37b52c8a3bf35c1236a2326c3892bdc61f04a0efb0bda1f7874a428545a7330\n[module:echoashfallprotocol] Ashfall activated from canonical Content Graph; nodes=133 edges=109 modules=18 fingerprint=c37b52c8a3bf35c1236a2326c3892bdc61f04a0efb0bda1f7874a428545a7330\n[game] Crash Protocol active. Inspect the Field Terminal\n[game] World generated from canonical module graph\n[game] World loaded with matching content identity\nHEADLESS SMOKE PASS {schema=echo.engine.headless_smoke.v2, status=PASS, engineVersion=2.0.0-beta.2, packId=ashfall-standalone-engine-edition, installedModules=18, contentGraph={modules=18, edges=109, fingerprint=c37b52c8a3bf35c1236a2326c3892bdc61f04a0efb0bda1f7874a428545a7330, crossRuntimeParity=true, canonical=true, mappedNodeCounts={echo_native=78, echo_runtime_standalone=78, neoforge=78}, nodes=133}, adapterCore={revoked=0, rejected=0, canonicalRuntimeBridge=true, accepted=48, ready=true, acceptedByDomain={gameplay=1, recipes=4, blocks=14, worldgen=1, services=1, entities=3, items=24}}, runtimeContent={recipes=4, blocks=16, entityDefinitions=3, gameExtensions=1, items=24}, world={spawnedEntities=4, contentIdentityVerified=true, saveReload=true, chunks=25}}\n",
         "stderrTail": "",
         "ok": true,
         "reportPath": "C:\\Development\\Github\\ECHO-Standalone-Engine\\build\\phase6-performance-comparison\\engine\\run-2\\headless-smoke\\headless-smoke-report.json",
+        "report": {
+          "schema": "echo.engine.headless_smoke.v2",
+          "status": "PASS",
+          "engineVersion": "2.0.0-beta.2",
+          "packId": "ashfall-standalone-engine-edition",
+          "installedModules": 18,
+          "contentGraph": {
+            "modules": 18,
+            "edges": 109,
+            "fingerprint": "c37b52c8a3bf35c1236a2326c3892bdc61f04a0efb0bda1f7874a428545a7330",
+            "crossRuntimeParity": true,
+            "canonical": true,
+            "mappedNodeCounts": {
+              "echo_native": 78,
+              "echo_runtime_standalone": 78,
+              "neoforge": 78
+            },
+            "nodes": 133
+          },
+          "adapterCore": {
+            "revoked": 0,
+            "rejected": 0,
+            "canonicalRuntimeBridge": true,
+            "accepted": 48,
+            "ready": true,
+            "acceptedByDomain": {
+              "gameplay": 1,
+              "recipes": 4,
+              "blocks": 14,
+              "worldgen": 1,
+              "services": 1,
+              "entities": 3,
+              "items": 24
+            }
+          },
+          "runtimeContent": {
+            "recipes": 4,
+            "blocks": 16,
+            "entityDefinitions": 3,
+            "gameExtensions": 1,
+            "items": 24
+          },
+          "world": {
+            "spawnedEntities": 4,
+            "contentIdentityVerified": true,
+            "saveReload": true,
+            "chunks": 25
+          }
+        },
+        "metrics": {
+          "saveReload": true,
+          "contentIdentityVerified": true,
+          "contentGraph": {
+            "modules": 18,
+            "edges": 109,
+            "fingerprint": "c37b52c8a3bf35c1236a2326c3892bdc61f04a0efb0bda1f7874a428545a7330",
+            "crossRuntimeParity": true,
+            "canonical": true,
+            "mappedNodeCounts": {
+              "echo_native": 78,
+              "echo_runtime_standalone": 78,
+              "neoforge": 78
+            },
+            "nodes": 133
+          },
+          "adapterCore": {
+            "revoked": 0,
+            "rejected": 0,
+            "canonicalRuntimeBridge": true,
+            "accepted": 48,
+            "ready": true,
+            "acceptedByDomain": {
+              "gameplay": 1,
+              "recipes": 4,
+              "blocks": 14,
+              "worldgen": 1,
+              "services": 1,
+              "entities": 3,
+              "items": 24
+            }
+          }
+        }
+      },
+      {
+        "label": "engine-headless-smoke-3",
+        "command": [
+          "java",
+          "-Dfile.encoding=UTF-8",
+          "-jar",
+          "C:\\Development\\Github\\ECHO-Standalone-Engine\\dist\\echo-standalone-engine-2.0.0-beta.2.jar",
+          "--pack-root",
+          "C:\\Development\\Github\\ECHO-Standalone-Engine\\dist",
+          "--manifest",
+          "pack.json",
+          "--save-root",
+          "C:\\Development\\Github\\ECHO-Standalone-Engine\\build\\phase6-performance-comparison\\engine\\run-3",
+          "--headless-smoke"
+        ],
+        "cwd": "C:\\Development\\Github\\ECHO-Standalone-Engine",
+        "exitCode": 0,
+        "timedOut": false,
+        "wallMs": 1249.336,
+        "peakRssBytes": 229998592,
+        "stdoutTail": "ECHO Standalone Engine 2.0.0-beta.2\npackRoot=C:\\Development\\Github\\ECHO-Standalone-Engine\\dist\nmanifest=C:\\Development\\Github\\ECHO-Standalone-Engine\\dist\\pack.json\n[module:echoadaptercore] AdapterCore canonical bridge active; graphNodes=133 fingerprint=c37b52c8a3bf35c1236a2326c3892bdc61f04a0efb0bda1f7874a428545a7330\n[module:echoashfallprotocol] Ashfall activated from canonical Content Graph; nodes=133 edges=109 modules=18 fingerprint=c37b52c8a3bf35c1236a2326c3892bdc61f04a0efb0bda1f7874a428545a7330\n[game] Crash Protocol active. Inspect the Field Terminal\n[game] World generated from canonical module graph\n[game] World loaded with matching content identity\nHEADLESS SMOKE PASS {schema=echo.engine.headless_smoke.v2, status=PASS, engineVersion=2.0.0-beta.2, packId=ashfall-standalone-engine-edition, installedModules=18, contentGraph={modules=18, edges=109, fingerprint=c37b52c8a3bf35c1236a2326c3892bdc61f04a0efb0bda1f7874a428545a7330, crossRuntimeParity=true, canonical=true, mappedNodeCounts={neoforge=78, echo_native=78, echo_runtime_standalone=78}, nodes=133}, adapterCore={revoked=0, rejected=0, canonicalRuntimeBridge=true, accepted=48, ready=true, acceptedByDomain={worldgen=1, services=1, entities=3, items=24, gameplay=1, recipes=4, blocks=14}}, runtimeContent={recipes=4, blocks=16, entityDefinitions=3, gameExtensions=1, items=24}, world={contentIdentityVerified=true, saveReload=true, chunks=25, spawnedEntities=4}}\n",
+        "stderrTail": "",
+        "ok": true,
+        "reportPath": "C:\\Development\\Github\\ECHO-Standalone-Engine\\build\\phase6-performance-comparison\\engine\\run-3\\headless-smoke\\headless-smoke-report.json",
         "report": {
           "schema": "echo.engine.headless_smoke.v2",
           "status": "PASS",
@@ -293,113 +402,6 @@
               "recipes": 4,
               "blocks": 14
             }
-          }
-        }
-      },
-      {
-        "label": "engine-headless-smoke-3",
-        "command": [
-          "java",
-          "-Dfile.encoding=UTF-8",
-          "-jar",
-          "C:\\Development\\Github\\ECHO-Standalone-Engine\\dist\\echo-standalone-engine-2.0.0-beta.2.jar",
-          "--pack-root",
-          "C:\\Development\\Github\\ECHO-Standalone-Engine\\dist",
-          "--manifest",
-          "pack.json",
-          "--save-root",
-          "C:\\Development\\Github\\ECHO-Standalone-Engine\\build\\phase6-performance-comparison\\engine\\run-3",
-          "--headless-smoke"
-        ],
-        "cwd": "C:\\Development\\Github\\ECHO-Standalone-Engine",
-        "exitCode": 0,
-        "timedOut": false,
-        "wallMs": 1222.242,
-        "peakRssBytes": 253272064,
-        "stdoutTail": "ECHO Standalone Engine 2.0.0-beta.2\npackRoot=C:\\Development\\Github\\ECHO-Standalone-Engine\\dist\nmanifest=C:\\Development\\Github\\ECHO-Standalone-Engine\\dist\\pack.json\n[module:echoadaptercore] AdapterCore canonical bridge active; graphNodes=133 fingerprint=c37b52c8a3bf35c1236a2326c3892bdc61f04a0efb0bda1f7874a428545a7330\n[module:echoashfallprotocol] Ashfall activated from canonical Content Graph; nodes=133 edges=109 modules=18 fingerprint=c37b52c8a3bf35c1236a2326c3892bdc61f04a0efb0bda1f7874a428545a7330\n[game] Crash Protocol active. Inspect the Field Terminal\n[game] World generated from canonical module graph\n[game] World loaded with matching content identity\nHEADLESS SMOKE PASS {schema=echo.engine.headless_smoke.v2, status=PASS, engineVersion=2.0.0-beta.2, packId=ashfall-standalone-engine-edition, installedModules=18, contentGraph={fingerprint=c37b52c8a3bf35c1236a2326c3892bdc61f04a0efb0bda1f7874a428545a7330, edges=109, modules=18, nodes=133, mappedNodeCounts={neoforge=78, echo_runtime_standalone=78, echo_native=78}, canonical=true, crossRuntimeParity=true}, adapterCore={rejected=0, revoked=0, acceptedByDomain={blocks=14, recipes=4, gameplay=1, items=24, entities=3, services=1, worldgen=1}, ready=true, accepted=48, canonicalRuntimeBridge=true}, runtimeContent={blocks=16, recipes=4, items=24, gameExtensions=1, entityDefinitions=3}, world={spawnedEntities=4, chunks=25, saveReload=true, contentIdentityVerified=true}}\n",
-        "stderrTail": "",
-        "ok": true,
-        "reportPath": "C:\\Development\\Github\\ECHO-Standalone-Engine\\build\\phase6-performance-comparison\\engine\\run-3\\headless-smoke\\headless-smoke-report.json",
-        "report": {
-          "schema": "echo.engine.headless_smoke.v2",
-          "status": "PASS",
-          "engineVersion": "2.0.0-beta.2",
-          "packId": "ashfall-standalone-engine-edition",
-          "installedModules": 18,
-          "contentGraph": {
-            "fingerprint": "c37b52c8a3bf35c1236a2326c3892bdc61f04a0efb0bda1f7874a428545a7330",
-            "edges": 109,
-            "modules": 18,
-            "nodes": 133,
-            "mappedNodeCounts": {
-              "neoforge": 78,
-              "echo_runtime_standalone": 78,
-              "echo_native": 78
-            },
-            "canonical": true,
-            "crossRuntimeParity": true
-          },
-          "adapterCore": {
-            "rejected": 0,
-            "revoked": 0,
-            "acceptedByDomain": {
-              "blocks": 14,
-              "recipes": 4,
-              "gameplay": 1,
-              "items": 24,
-              "entities": 3,
-              "services": 1,
-              "worldgen": 1
-            },
-            "ready": true,
-            "accepted": 48,
-            "canonicalRuntimeBridge": true
-          },
-          "runtimeContent": {
-            "blocks": 16,
-            "recipes": 4,
-            "items": 24,
-            "gameExtensions": 1,
-            "entityDefinitions": 3
-          },
-          "world": {
-            "spawnedEntities": 4,
-            "chunks": 25,
-            "saveReload": true,
-            "contentIdentityVerified": true
-          }
-        },
-        "metrics": {
-          "saveReload": true,
-          "contentIdentityVerified": true,
-          "contentGraph": {
-            "fingerprint": "c37b52c8a3bf35c1236a2326c3892bdc61f04a0efb0bda1f7874a428545a7330",
-            "edges": 109,
-            "modules": 18,
-            "nodes": 133,
-            "mappedNodeCounts": {
-              "neoforge": 78,
-              "echo_runtime_standalone": 78,
-              "echo_native": 78
-            },
-            "canonical": true,
-            "crossRuntimeParity": true
-          },
-          "adapterCore": {
-            "rejected": 0,
-            "revoked": 0,
-            "acceptedByDomain": {
-              "blocks": 14,
-              "recipes": 4,
-              "gameplay": 1,
-              "items": 24,
-              "entities": 3,
-              "services": 1,
-              "worldgen": 1
-            },
-            "ready": true,
-            "accepted": 48,
-            "canonicalRuntimeBridge": true
           }
         }
       }
@@ -511,9 +513,9 @@
         "cwd": "C:\\Development\\Github\\ECHO-Standalone-Runtime",
         "exitCode": 0,
         "timedOut": false,
-        "wallMs": 3340.243,
-        "peakRssBytes": 5173248,
-        "stdoutTail": "p:compileJava UP-TO-DATE\n> Task :echo-runtime-app:processResources NO-SOURCE\n> Task :echo-runtime-app:classes UP-TO-DATE\n> Task :echo-runtime-app:jar UP-TO-DATE\n> Task :echo-runtime-assets:processResources NO-SOURCE\n> Task :echo-runtime-assets:classes UP-TO-DATE\n> Task :echo-runtime-assets:jar UP-TO-DATE\n> Task :echo-runtime-audio:processResources NO-SOURCE\n> Task :echo-runtime-audio:classes UP-TO-DATE\n> Task :echo-runtime-audio:jar UP-TO-DATE\n> Task :echo-runtime-client:compileJava UP-TO-DATE\n> Task :echo-runtime-client:processResources UP-TO-DATE\n> Task :echo-runtime-client:classes UP-TO-DATE\n> Task :echo-runtime-client:jar UP-TO-DATE\n> Task :echo-runtime-compat:processResources NO-SOURCE\n> Task :echo-runtime-compat:classes UP-TO-DATE\n> Task :echo-runtime-compat:jar UP-TO-DATE\n> Task :echo-runtime-contracts:processResources NO-SOURCE\n> Task :echo-runtime-contracts:classes UP-TO-DATE\n> Task :echo-runtime-contracts:jar UP-TO-DATE\n> Task :echo-runtime-core:processResources NO-SOURCE\n> Task :echo-runtime-core:classes UP-TO-DATE\n> Task :echo-runtime-core:jar UP-TO-DATE\n> Task :echo-runtime-data:processResources UP-TO-DATE\n> Task :echo-runtime-data:classes UP-TO-DATE\n> Task :echo-runtime-data:jar UP-TO-DATE\n> Task :echo-runtime-devtools:compileJava UP-TO-DATE\n> Task :echo-runtime-devtools:processResources NO-SOURCE\n> Task :echo-runtime-devtools:classes UP-TO-DATE\n> Task :echo-runtime-devtools:jar UP-TO-DATE\n> Task :echo-runtime-entity:processResources NO-SOURCE\n> Task :echo-runtime-entity:classes UP-TO-DATE\n> Task :echo-runtime-entity:jar UP-TO-DATE\n> Task :echo-runtime-gameplay:processResources NO-SOURCE\n> Task :echo-runtime-gameplay:classes UP-TO-DATE\n> Task :echo-runtime-gameplay:jar UP-TO-DATE\n> Task :echo-runtime-input:processResources NO-SOURCE\n> Task :echo-runtime-input:classes UP-TO-DATE\n> Task :echo-runtime-input:jar UP-TO-DATE\n> Task :echo-runtime-item:processResources NO-SOURCE\n> Task :echo-runtime-item:classes UP-TO-DATE\n> Task :echo-runtime-item:jar UP-TO-DATE\n> Task :echo-runtime-modules:processResources NO-SOURCE\n> Task :echo-runtime-modules:classes UP-TO-DATE\n> Task :echo-runtime-modules:jar UP-TO-DATE\n> Task :echo-runtime-nbt:processResources NO-SOURCE\n> Task :echo-runtime-nbt:classes UP-TO-DATE\n> Task :echo-runtime-nbt:jar UP-TO-DATE\n> Task :echo-runtime-network:processResources NO-SOURCE\n> Task :echo-runtime-network:classes UP-TO-DATE\n> Task :echo-runtime-network:jar UP-TO-DATE\n> Task :echo-runtime-packos:processResources NO-SOURCE\n> Task :echo-runtime-packos:classes UP-TO-DATE\n> Task :echo-runtime-packos:jar UP-TO-DATE\n> Task :echo-runtime-player:processResources NO-SOURCE\n> Task :echo-runtime-player:classes UP-TO-DATE\n> Task :echo-runtime-player:jar UP-TO-DATE\n> Task :echo-runtime-render:processResources NO-SOURCE\n> Task :echo-runtime-render:classes UP-TO-DATE\n> Task :echo-runtime-render:jar UP-TO-DATE\n> Task :echo-runtime-save:processResources NO-SOURCE\n> Task :echo-runtime-save:classes UP-TO-DATE\n> Task :echo-runtime-save:jar UP-TO-DATE\n> Task :echo-runtime-scripting:processResources NO-SOURCE\n> Task :echo-runtime-scripting:classes UP-TO-DATE\n> Task :echo-runtime-scripting:jar UP-TO-DATE\n> Task :echo-runtime-testkit:compileJava UP-TO-DATE\n> Task :echo-runtime-testkit:processResources NO-SOURCE\n> Task :echo-runtime-testkit:classes UP-TO-DATE\n> Task :echo-runtime-ui:processResources NO-SOURCE\n> Task :echo-runtime-ui:classes UP-TO-DATE\n> Task :echo-runtime-ui:jar UP-TO-DATE\n> Task :echo-runtime-world:processResources UP-TO-DATE\n> Task :echo-runtime-world:classes UP-TO-DATE\n> Task :echo-runtime-world:jar UP-TO-DATE\n\n> Task :runStandaloneContentGraphLoadSmoke\ncontent graph load smoke PASS graphs=133 nodes=7743 edges=7720 features=1687 exportPlans=532 hytalePlans=133 hytaleBlockedNodes=59 checked=23 failures=0\n\nBUILD SUCCESSFUL in 3s\n51 actionable tasks: 1 executed, 50 up-to-date\nConsider enabling configuration cache to speed up this build: https://docs.gradle.org/9.2.1/userguide/configuration_cache_enabling.html\n",
+        "wallMs": 5241.671,
+        "peakRssBytes": 5033984,
+        "stdoutTail": "cripting:compileJava UP-TO-DATE\n> Task :echo-runtime-app:compileJava UP-TO-DATE\n> Task :echo-runtime-app:processResources NO-SOURCE\n> Task :echo-runtime-app:classes UP-TO-DATE\n> Task :echo-runtime-app:jar UP-TO-DATE\n> Task :echo-runtime-assets:processResources NO-SOURCE\n> Task :echo-runtime-assets:classes UP-TO-DATE\n> Task :echo-runtime-assets:jar UP-TO-DATE\n> Task :echo-runtime-audio:processResources NO-SOURCE\n> Task :echo-runtime-audio:classes UP-TO-DATE\n> Task :echo-runtime-audio:jar UP-TO-DATE\n> Task :echo-runtime-client:compileJava\n> Task :echo-runtime-client:processResources UP-TO-DATE\n> Task :echo-runtime-client:classes\n> Task :echo-runtime-client:jar\n> Task :echo-runtime-compat:processResources NO-SOURCE\n> Task :echo-runtime-compat:classes UP-TO-DATE\n> Task :echo-runtime-compat:jar UP-TO-DATE\n> Task :echo-runtime-contracts:processResources NO-SOURCE\n> Task :echo-runtime-contracts:classes UP-TO-DATE\n> Task :echo-runtime-contracts:jar UP-TO-DATE\n> Task :echo-runtime-core:processResources NO-SOURCE\n> Task :echo-runtime-core:classes UP-TO-DATE\n> Task :echo-runtime-core:jar UP-TO-DATE\n> Task :echo-runtime-data:processResources UP-TO-DATE\n> Task :echo-runtime-data:classes UP-TO-DATE\n> Task :echo-runtime-data:jar UP-TO-DATE\n> Task :echo-runtime-devtools:compileJava UP-TO-DATE\n> Task :echo-runtime-devtools:processResources NO-SOURCE\n> Task :echo-runtime-devtools:classes UP-TO-DATE\n> Task :echo-runtime-devtools:jar UP-TO-DATE\n> Task :echo-runtime-entity:processResources NO-SOURCE\n> Task :echo-runtime-entity:classes UP-TO-DATE\n> Task :echo-runtime-entity:jar UP-TO-DATE\n> Task :echo-runtime-gameplay:processResources NO-SOURCE\n> Task :echo-runtime-gameplay:classes UP-TO-DATE\n> Task :echo-runtime-gameplay:jar UP-TO-DATE\n> Task :echo-runtime-input:processResources NO-SOURCE\n> Task :echo-runtime-input:classes UP-TO-DATE\n> Task :echo-runtime-input:jar UP-TO-DATE\n> Task :echo-runtime-item:processResources NO-SOURCE\n> Task :echo-runtime-item:classes UP-TO-DATE\n> Task :echo-runtime-item:jar UP-TO-DATE\n> Task :echo-runtime-modules:processResources NO-SOURCE\n> Task :echo-runtime-modules:classes UP-TO-DATE\n> Task :echo-runtime-modules:jar UP-TO-DATE\n> Task :echo-runtime-nbt:processResources NO-SOURCE\n> Task :echo-runtime-nbt:classes UP-TO-DATE\n> Task :echo-runtime-nbt:jar UP-TO-DATE\n> Task :echo-runtime-network:processResources NO-SOURCE\n> Task :echo-runtime-network:classes UP-TO-DATE\n> Task :echo-runtime-network:jar UP-TO-DATE\n> Task :echo-runtime-packos:processResources NO-SOURCE\n> Task :echo-runtime-packos:classes UP-TO-DATE\n> Task :echo-runtime-packos:jar UP-TO-DATE\n> Task :echo-runtime-player:processResources NO-SOURCE\n> Task :echo-runtime-player:classes UP-TO-DATE\n> Task :echo-runtime-player:jar UP-TO-DATE\n> Task :echo-runtime-render:processResources NO-SOURCE\n> Task :echo-runtime-render:classes UP-TO-DATE\n> Task :echo-runtime-render:jar UP-TO-DATE\n> Task :echo-runtime-save:processResources NO-SOURCE\n> Task :echo-runtime-save:classes UP-TO-DATE\n> Task :echo-runtime-save:jar UP-TO-DATE\n> Task :echo-runtime-scripting:processResources NO-SOURCE\n> Task :echo-runtime-scripting:classes UP-TO-DATE\n> Task :echo-runtime-scripting:jar UP-TO-DATE\n> Task :echo-runtime-testkit:compileJava\n> Task :echo-runtime-testkit:processResources NO-SOURCE\n> Task :echo-runtime-testkit:classes\n> Task :echo-runtime-ui:processResources NO-SOURCE\n> Task :echo-runtime-ui:classes UP-TO-DATE\n> Task :echo-runtime-ui:jar UP-TO-DATE\n> Task :echo-runtime-world:processResources UP-TO-DATE\n> Task :echo-runtime-world:classes UP-TO-DATE\n> Task :echo-runtime-world:jar UP-TO-DATE\n\n> Task :runStandaloneContentGraphLoadSmoke\ncontent graph load smoke PASS graphs=133 nodes=7743 edges=7720 features=1687 exportPlans=532 hytalePlans=133 hytaleBlockedNodes=59 checked=23 failures=0\n\nBUILD SUCCESSFUL in 5s\n51 actionable tasks: 4 executed, 47 up-to-date\nConsider enabling configuration cache to speed up this build: https://docs.gradle.org/9.2.1/userguide/configuration_cache_enabling.html\n",
         "stderrTail": ""
       },
       {
@@ -527,8 +529,8 @@
         "cwd": "C:\\Development\\Github\\ECHO-Standalone-Runtime",
         "exitCode": 0,
         "timedOut": false,
-        "wallMs": 2556.613,
-        "peakRssBytes": 5173248,
+        "wallMs": 2370.773,
+        "peakRssBytes": 5177344,
         "stdoutTail": "pting:compileJava UP-TO-DATE\n> Task :echo-runtime-app:compileJava UP-TO-DATE\n> Task :echo-runtime-app:processResources NO-SOURCE\n> Task :echo-runtime-app:classes UP-TO-DATE\n> Task :echo-runtime-app:jar UP-TO-DATE\n> Task :echo-runtime-assets:processResources NO-SOURCE\n> Task :echo-runtime-assets:classes UP-TO-DATE\n> Task :echo-runtime-assets:jar UP-TO-DATE\n> Task :echo-runtime-audio:processResources NO-SOURCE\n> Task :echo-runtime-audio:classes UP-TO-DATE\n> Task :echo-runtime-audio:jar UP-TO-DATE\n> Task :echo-runtime-client:compileJava UP-TO-DATE\n> Task :echo-runtime-client:processResources UP-TO-DATE\n> Task :echo-runtime-client:classes UP-TO-DATE\n> Task :echo-runtime-client:jar UP-TO-DATE\n> Task :echo-runtime-compat:processResources NO-SOURCE\n> Task :echo-runtime-compat:classes UP-TO-DATE\n> Task :echo-runtime-compat:jar UP-TO-DATE\n> Task :echo-runtime-contracts:processResources NO-SOURCE\n> Task :echo-runtime-contracts:classes UP-TO-DATE\n> Task :echo-runtime-contracts:jar UP-TO-DATE\n> Task :echo-runtime-core:processResources NO-SOURCE\n> Task :echo-runtime-core:classes UP-TO-DATE\n> Task :echo-runtime-core:jar UP-TO-DATE\n> Task :echo-runtime-data:processResources UP-TO-DATE\n> Task :echo-runtime-data:classes UP-TO-DATE\n> Task :echo-runtime-data:jar UP-TO-DATE\n> Task :echo-runtime-devtools:compileJava UP-TO-DATE\n> Task :echo-runtime-devtools:processResources NO-SOURCE\n> Task :echo-runtime-devtools:classes UP-TO-DATE\n> Task :echo-runtime-devtools:jar UP-TO-DATE\n> Task :echo-runtime-entity:processResources NO-SOURCE\n> Task :echo-runtime-entity:classes UP-TO-DATE\n> Task :echo-runtime-entity:jar UP-TO-DATE\n> Task :echo-runtime-gameplay:processResources NO-SOURCE\n> Task :echo-runtime-gameplay:classes UP-TO-DATE\n> Task :echo-runtime-gameplay:jar UP-TO-DATE\n> Task :echo-runtime-input:processResources NO-SOURCE\n> Task :echo-runtime-input:classes UP-TO-DATE\n> Task :echo-runtime-input:jar UP-TO-DATE\n> Task :echo-runtime-item:processResources NO-SOURCE\n> Task :echo-runtime-item:classes UP-TO-DATE\n> Task :echo-runtime-item:jar UP-TO-DATE\n> Task :echo-runtime-modules:processResources NO-SOURCE\n> Task :echo-runtime-modules:classes UP-TO-DATE\n> Task :echo-runtime-modules:jar UP-TO-DATE\n> Task :echo-runtime-nbt:processResources NO-SOURCE\n> Task :echo-runtime-nbt:classes UP-TO-DATE\n> Task :echo-runtime-nbt:jar UP-TO-DATE\n> Task :echo-runtime-network:processResources NO-SOURCE\n> Task :echo-runtime-network:classes UP-TO-DATE\n> Task :echo-runtime-network:jar UP-TO-DATE\n> Task :echo-runtime-packos:processResources NO-SOURCE\n> Task :echo-runtime-packos:classes UP-TO-DATE\n> Task :echo-runtime-packos:jar UP-TO-DATE\n> Task :echo-runtime-player:processResources NO-SOURCE\n> Task :echo-runtime-player:classes UP-TO-DATE\n> Task :echo-runtime-player:jar UP-TO-DATE\n> Task :echo-runtime-render:processResources NO-SOURCE\n> Task :echo-runtime-render:classes UP-TO-DATE\n> Task :echo-runtime-render:jar UP-TO-DATE\n> Task :echo-runtime-save:processResources NO-SOURCE\n> Task :echo-runtime-save:classes UP-TO-DATE\n> Task :echo-runtime-save:jar UP-TO-DATE\n> Task :echo-runtime-scripting:processResources NO-SOURCE\n> Task :echo-runtime-scripting:classes UP-TO-DATE\n> Task :echo-runtime-scripting:jar UP-TO-DATE\n> Task :echo-runtime-testkit:compileJava UP-TO-DATE\n> Task :echo-runtime-testkit:processResources NO-SOURCE\n> Task :echo-runtime-testkit:classes UP-TO-DATE\n> Task :echo-runtime-ui:processResources NO-SOURCE\n> Task :echo-runtime-ui:classes UP-TO-DATE\n> Task :echo-runtime-ui:jar UP-TO-DATE\n> Task :echo-runtime-world:processResources UP-TO-DATE\n> Task :echo-runtime-world:classes UP-TO-DATE\n> Task :echo-runtime-world:jar UP-TO-DATE\n\n> Task :runStandaloneSaveRuntimeSmoke\nphase14.7 save runtime smoke PASS files=2 backups=1 migrationSteps=1 corruptionIssues=1 journalEntries=11\n\nBUILD SUCCESSFUL in 2s\n51 actionable tasks: 1 executed, 50 up-to-date\nConsider enabling configuration cache to speed up this build: https://docs.gradle.org/9.2.1/userguide/configuration_cache_enabling.html\n",
         "stderrTail": ""
       },
@@ -543,9 +545,27 @@
         "cwd": "C:\\Development\\Github\\ECHO-Standalone-Runtime",
         "exitCode": 0,
         "timedOut": false,
-        "wallMs": 33137.982,
-        "peakRssBytes": 5029888,
-        "stdoutTail": "cripting:compileJava UP-TO-DATE\n> Task :echo-runtime-app:compileJava UP-TO-DATE\n> Task :echo-runtime-app:processResources NO-SOURCE\n> Task :echo-runtime-app:classes UP-TO-DATE\n> Task :echo-runtime-app:jar UP-TO-DATE\n> Task :echo-runtime-assets:processResources NO-SOURCE\n> Task :echo-runtime-assets:classes UP-TO-DATE\n> Task :echo-runtime-assets:jar UP-TO-DATE\n> Task :echo-runtime-audio:processResources NO-SOURCE\n> Task :echo-runtime-audio:classes UP-TO-DATE\n> Task :echo-runtime-audio:jar UP-TO-DATE\n> Task :echo-runtime-client:compileJava UP-TO-DATE\n> Task :echo-runtime-client:processResources UP-TO-DATE\n> Task :echo-runtime-client:classes UP-TO-DATE\n> Task :echo-runtime-client:jar UP-TO-DATE\n> Task :echo-runtime-compat:processResources NO-SOURCE\n> Task :echo-runtime-compat:classes UP-TO-DATE\n> Task :echo-runtime-compat:jar UP-TO-DATE\n> Task :echo-runtime-contracts:processResources NO-SOURCE\n> Task :echo-runtime-contracts:classes UP-TO-DATE\n> Task :echo-runtime-contracts:jar UP-TO-DATE\n> Task :echo-runtime-core:processResources NO-SOURCE\n> Task :echo-runtime-core:classes UP-TO-DATE\n> Task :echo-runtime-core:jar UP-TO-DATE\n> Task :echo-runtime-data:processResources UP-TO-DATE\n> Task :echo-runtime-data:classes UP-TO-DATE\n> Task :echo-runtime-data:jar UP-TO-DATE\n> Task :echo-runtime-devtools:compileJava UP-TO-DATE\n> Task :echo-runtime-devtools:processResources NO-SOURCE\n> Task :echo-runtime-devtools:classes UP-TO-DATE\n> Task :echo-runtime-devtools:jar UP-TO-DATE\n> Task :echo-runtime-entity:processResources NO-SOURCE\n> Task :echo-runtime-entity:classes UP-TO-DATE\n> Task :echo-runtime-entity:jar UP-TO-DATE\n> Task :echo-runtime-gameplay:processResources NO-SOURCE\n> Task :echo-runtime-gameplay:classes UP-TO-DATE\n> Task :echo-runtime-gameplay:jar UP-TO-DATE\n> Task :echo-runtime-input:processResources NO-SOURCE\n> Task :echo-runtime-input:classes UP-TO-DATE\n> Task :echo-runtime-input:jar UP-TO-DATE\n> Task :echo-runtime-item:processResources NO-SOURCE\n> Task :echo-runtime-item:classes UP-TO-DATE\n> Task :echo-runtime-item:jar UP-TO-DATE\n> Task :echo-runtime-modules:processResources NO-SOURCE\n> Task :echo-runtime-modules:classes UP-TO-DATE\n> Task :echo-runtime-modules:jar UP-TO-DATE\n> Task :echo-runtime-nbt:processResources NO-SOURCE\n> Task :echo-runtime-nbt:classes UP-TO-DATE\n> Task :echo-runtime-nbt:jar UP-TO-DATE\n> Task :echo-runtime-network:processResources NO-SOURCE\n> Task :echo-runtime-network:classes UP-TO-DATE\n> Task :echo-runtime-network:jar UP-TO-DATE\n> Task :echo-runtime-packos:processResources NO-SOURCE\n> Task :echo-runtime-packos:classes UP-TO-DATE\n> Task :echo-runtime-packos:jar UP-TO-DATE\n> Task :echo-runtime-player:processResources NO-SOURCE\n> Task :echo-runtime-player:classes UP-TO-DATE\n> Task :echo-runtime-player:jar UP-TO-DATE\n> Task :echo-runtime-render:processResources NO-SOURCE\n> Task :echo-runtime-render:classes UP-TO-DATE\n> Task :echo-runtime-render:jar UP-TO-DATE\n> Task :echo-runtime-save:processResources NO-SOURCE\n> Task :echo-runtime-save:classes UP-TO-DATE\n> Task :echo-runtime-save:jar UP-TO-DATE\n> Task :echo-runtime-scripting:processResources NO-SOURCE\n> Task :echo-runtime-scripting:classes UP-TO-DATE\n> Task :echo-runtime-scripting:jar UP-TO-DATE\n> Task :echo-runtime-testkit:compileJava UP-TO-DATE\n> Task :echo-runtime-testkit:processResources NO-SOURCE\n> Task :echo-runtime-testkit:classes UP-TO-DATE\n> Task :echo-runtime-ui:processResources NO-SOURCE\n> Task :echo-runtime-ui:classes UP-TO-DATE\n> Task :echo-runtime-ui:jar UP-TO-DATE\n> Task :echo-runtime-world:processResources UP-TO-DATE\n> Task :echo-runtime-world:classes UP-TO-DATE\n> Task :echo-runtime-world:jar UP-TO-DATE\n> Task :runStandaloneAlphaReadinessSmoke\nphase14.20 alpha readiness smoke PASS status=READY checks=48 blocked=0 supportBundle=true reports=6\n\nBUILD SUCCESSFUL in 32s\n52 actionable tasks: 2 executed, 50 up-to-date\nConsider enabling configuration cache to speed up this build: https://docs.gradle.org/9.2.1/userguide/configuration_cache_enabling.html\n",
+        "wallMs": 35815.742,
+        "peakRssBytes": 5042176,
+        "stdoutTail": "me-player:compileJava UP-TO-DATE\n> Task :echo-runtime-scripting:compileJava UP-TO-DATE\n> Task :echo-runtime-app:compileJava UP-TO-DATE\n> Task :echo-runtime-app:processResources NO-SOURCE\n> Task :echo-runtime-app:classes UP-TO-DATE\n> Task :echo-runtime-app:jar UP-TO-DATE\n> Task :echo-runtime-assets:processResources NO-SOURCE\n> Task :echo-runtime-assets:classes UP-TO-DATE\n> Task :echo-runtime-assets:jar UP-TO-DATE\n> Task :echo-runtime-audio:processResources NO-SOURCE\n> Task :echo-runtime-audio:classes UP-TO-DATE\n> Task :echo-runtime-audio:jar UP-TO-DATE\n> Task :echo-runtime-client:compileJava\n> Task :echo-runtime-client:processResources UP-TO-DATE\n> Task :echo-runtime-client:classes\n> Task :echo-runtime-client:jar\n> Task :echo-runtime-compat:processResources NO-SOURCE\n> Task :echo-runtime-compat:classes UP-TO-DATE\n> Task :echo-runtime-compat:jar UP-TO-DATE\n> Task :echo-runtime-contracts:processResources NO-SOURCE\n> Task :echo-runtime-contracts:classes UP-TO-DATE\n> Task :echo-runtime-contracts:jar UP-TO-DATE\n> Task :echo-runtime-core:processResources NO-SOURCE\n> Task :echo-runtime-core:classes UP-TO-DATE\n> Task :echo-runtime-core:jar UP-TO-DATE\n> Task :echo-runtime-data:processResources UP-TO-DATE\n> Task :echo-runtime-data:classes UP-TO-DATE\n> Task :echo-runtime-data:jar UP-TO-DATE\n> Task :echo-runtime-devtools:compileJava UP-TO-DATE\n> Task :echo-runtime-devtools:processResources NO-SOURCE\n> Task :echo-runtime-devtools:classes UP-TO-DATE\n> Task :echo-runtime-devtools:jar UP-TO-DATE\n> Task :echo-runtime-entity:processResources NO-SOURCE\n> Task :echo-runtime-entity:classes UP-TO-DATE\n> Task :echo-runtime-entity:jar UP-TO-DATE\n> Task :echo-runtime-gameplay:processResources NO-SOURCE\n> Task :echo-runtime-gameplay:classes UP-TO-DATE\n> Task :echo-runtime-gameplay:jar UP-TO-DATE\n> Task :echo-runtime-input:processResources NO-SOURCE\n> Task :echo-runtime-input:classes UP-TO-DATE\n> Task :echo-runtime-input:jar UP-TO-DATE\n> Task :echo-runtime-item:processResources NO-SOURCE\n> Task :echo-runtime-item:classes UP-TO-DATE\n> Task :echo-runtime-item:jar UP-TO-DATE\n> Task :echo-runtime-modules:processResources NO-SOURCE\n> Task :echo-runtime-modules:classes UP-TO-DATE\n> Task :echo-runtime-modules:jar UP-TO-DATE\n> Task :echo-runtime-nbt:processResources NO-SOURCE\n> Task :echo-runtime-nbt:classes UP-TO-DATE\n> Task :echo-runtime-nbt:jar UP-TO-DATE\n> Task :echo-runtime-network:processResources NO-SOURCE\n> Task :echo-runtime-network:classes UP-TO-DATE\n> Task :echo-runtime-network:jar UP-TO-DATE\n> Task :echo-runtime-packos:processResources NO-SOURCE\n> Task :echo-runtime-packos:classes UP-TO-DATE\n> Task :echo-runtime-packos:jar UP-TO-DATE\n> Task :echo-runtime-player:processResources NO-SOURCE\n> Task :echo-runtime-player:classes UP-TO-DATE\n> Task :echo-runtime-player:jar UP-TO-DATE\n> Task :echo-runtime-render:processResources NO-SOURCE\n> Task :echo-runtime-render:classes UP-TO-DATE\n> Task :echo-runtime-render:jar UP-TO-DATE\n> Task :echo-runtime-save:processResources NO-SOURCE\n> Task :echo-runtime-save:classes UP-TO-DATE\n> Task :echo-runtime-save:jar UP-TO-DATE\n> Task :echo-runtime-scripting:processResources NO-SOURCE\n> Task :echo-runtime-scripting:classes UP-TO-DATE\n> Task :echo-runtime-scripting:jar UP-TO-DATE\n> Task :echo-runtime-testkit:compileJava\n> Task :echo-runtime-testkit:processResources NO-SOURCE\n> Task :echo-runtime-testkit:classes\n> Task :echo-runtime-ui:processResources NO-SOURCE\n> Task :echo-runtime-ui:classes UP-TO-DATE\n> Task :echo-runtime-ui:jar UP-TO-DATE\n> Task :echo-runtime-world:processResources UP-TO-DATE\n> Task :echo-runtime-world:classes UP-TO-DATE\n> Task :echo-runtime-world:jar UP-TO-DATE\n> Task :runStandaloneAlphaReadinessSmoke\nphase14.20 alpha readiness smoke PASS status=READY checks=48 blocked=0 supportBundle=true reports=6\n\nBUILD SUCCESSFUL in 35s\n52 actionable tasks: 5 executed, 47 up-to-date\nConsider enabling configuration cache to speed up this build: https://docs.gradle.org/9.2.1/userguide/configuration_cache_enabling.html\n",
+        "stderrTail": ""
+      }
+    ],
+    "clientLaunchProxyRuns": [
+      {
+        "label": "legacy-client-launch-runStandaloneClientRuntimeAssemblySmoke",
+        "command": [
+          "C:\\Development\\Github\\ECHO-Standalone-Runtime\\gradlew.bat",
+          "--console",
+          "plain",
+          "runStandaloneClientRuntimeAssemblySmoke"
+        ],
+        "cwd": "C:\\Development\\Github\\ECHO-Standalone-Runtime",
+        "exitCode": 0,
+        "timedOut": false,
+        "wallMs": 66397.25,
+        "peakRssBytes": 5038080,
+        "stdoutTail": " UP-TO-DATE\n> Task :echo-runtime-player:compileJava UP-TO-DATE\n> Task :echo-runtime-scripting:compileJava UP-TO-DATE\n> Task :echo-runtime-app:compileJava UP-TO-DATE\n> Task :echo-runtime-app:processResources NO-SOURCE\n> Task :echo-runtime-app:classes UP-TO-DATE\n> Task :echo-runtime-app:jar UP-TO-DATE\n> Task :echo-runtime-assets:processResources NO-SOURCE\n> Task :echo-runtime-assets:classes UP-TO-DATE\n> Task :echo-runtime-assets:jar UP-TO-DATE\n> Task :echo-runtime-audio:processResources NO-SOURCE\n> Task :echo-runtime-audio:classes UP-TO-DATE\n> Task :echo-runtime-audio:jar UP-TO-DATE\n> Task :echo-runtime-client:compileJava\n> Task :echo-runtime-client:processResources UP-TO-DATE\n> Task :echo-runtime-client:classes\n> Task :echo-runtime-client:jar\n> Task :echo-runtime-compat:processResources NO-SOURCE\n> Task :echo-runtime-compat:classes UP-TO-DATE\n> Task :echo-runtime-compat:jar UP-TO-DATE\n> Task :echo-runtime-contracts:processResources NO-SOURCE\n> Task :echo-runtime-contracts:classes UP-TO-DATE\n> Task :echo-runtime-contracts:jar UP-TO-DATE\n> Task :echo-runtime-core:processResources NO-SOURCE\n> Task :echo-runtime-core:classes UP-TO-DATE\n> Task :echo-runtime-core:jar UP-TO-DATE\n> Task :echo-runtime-data:processResources UP-TO-DATE\n> Task :echo-runtime-data:classes UP-TO-DATE\n> Task :echo-runtime-data:jar UP-TO-DATE\n> Task :echo-runtime-devtools:compileJava UP-TO-DATE\n> Task :echo-runtime-devtools:processResources NO-SOURCE\n> Task :echo-runtime-devtools:classes UP-TO-DATE\n> Task :echo-runtime-devtools:jar UP-TO-DATE\n> Task :echo-runtime-entity:processResources NO-SOURCE\n> Task :echo-runtime-entity:classes UP-TO-DATE\n> Task :echo-runtime-entity:jar UP-TO-DATE\n> Task :echo-runtime-gameplay:processResources NO-SOURCE\n> Task :echo-runtime-gameplay:classes UP-TO-DATE\n> Task :echo-runtime-gameplay:jar UP-TO-DATE\n> Task :echo-runtime-input:processResources NO-SOURCE\n> Task :echo-runtime-input:classes UP-TO-DATE\n> Task :echo-runtime-input:jar UP-TO-DATE\n> Task :echo-runtime-item:processResources NO-SOURCE\n> Task :echo-runtime-item:classes UP-TO-DATE\n> Task :echo-runtime-item:jar UP-TO-DATE\n> Task :echo-runtime-modules:processResources NO-SOURCE\n> Task :echo-runtime-modules:classes UP-TO-DATE\n> Task :echo-runtime-modules:jar UP-TO-DATE\n> Task :echo-runtime-nbt:processResources NO-SOURCE\n> Task :echo-runtime-nbt:classes UP-TO-DATE\n> Task :echo-runtime-nbt:jar UP-TO-DATE\n> Task :echo-runtime-network:processResources NO-SOURCE\n> Task :echo-runtime-network:classes UP-TO-DATE\n> Task :echo-runtime-network:jar UP-TO-DATE\n> Task :echo-runtime-packos:processResources NO-SOURCE\n> Task :echo-runtime-packos:classes UP-TO-DATE\n> Task :echo-runtime-packos:jar UP-TO-DATE\n> Task :echo-runtime-player:processResources NO-SOURCE\n> Task :echo-runtime-player:classes UP-TO-DATE\n> Task :echo-runtime-player:jar UP-TO-DATE\n> Task :echo-runtime-render:processResources NO-SOURCE\n> Task :echo-runtime-render:classes UP-TO-DATE\n> Task :echo-runtime-render:jar UP-TO-DATE\n> Task :echo-runtime-save:processResources NO-SOURCE\n> Task :echo-runtime-save:classes UP-TO-DATE\n> Task :echo-runtime-save:jar UP-TO-DATE\n> Task :echo-runtime-scripting:processResources NO-SOURCE\n> Task :echo-runtime-scripting:classes UP-TO-DATE\n> Task :echo-runtime-scripting:jar UP-TO-DATE\n> Task :echo-runtime-testkit:compileJava\n> Task :echo-runtime-testkit:processResources NO-SOURCE\n> Task :echo-runtime-testkit:classes\n> Task :echo-runtime-ui:processResources NO-SOURCE\n> Task :echo-runtime-ui:classes UP-TO-DATE\n> Task :echo-runtime-ui:jar UP-TO-DATE\n> Task :echo-runtime-world:processResources UP-TO-DATE\n> Task :echo-runtime-world:classes UP-TO-DATE\n> Task :echo-runtime-world:jar UP-TO-DATE\n> Task :runStandaloneClientRuntimeAssemblySmoke\nclient runtime assembly smoke PASS width=960 title=MAIN_MENU\n\nBUILD SUCCESSFUL in 1m 6s\n51 actionable tasks: 4 executed, 47 up-to-date\nConsider enabling configuration cache to speed up this build: https://docs.gradle.org/9.2.1/userguide/configuration_cache_enabling.html\n",
         "stderrTail": ""
       }
     ],
@@ -555,15 +575,27 @@
       "alphaReady": true,
       "taskFailureRate": 0.0,
       "taskWallMs": {
-        "min": 2556.613,
-        "median": 3340.243,
-        "p95": 30158.208,
-        "max": 33137.982
+        "min": 2370.773,
+        "median": 5241.671,
+        "p95": 32758.335,
+        "max": 35815.742
       },
       "taskPeakRssBytes": {
-        "min": 5029888,
-        "median": 5173248,
-        "max": 5173248
+        "min": 5033984,
+        "median": 5042176,
+        "max": 5177344
+      },
+      "clientLaunchProxyFailureRate": 0.0,
+      "clientLaunchProxyWallMs": {
+        "min": 66397.25,
+        "median": 66397.25,
+        "p95": 66397.25,
+        "max": 66397.25
+      },
+      "clientLaunchProxyPeakRssBytes": {
+        "min": 5038080,
+        "median": 5038080,
+        "max": 5038080
       }
     }
   },

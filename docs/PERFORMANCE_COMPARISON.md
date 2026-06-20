@@ -39,6 +39,22 @@ The default legacy tasks are:
 
 Additional tasks can be supplied with repeated `--legacy-task <task>` arguments.
 
+## Optional Legacy Client Launch Proxy
+
+To measure the legacy client startup proxy during the same comparison:
+
+```powershell
+python .\scripts\compare_runtime_performance.py --iterations 3 --run-legacy --run-legacy-client-launch
+```
+
+The default proxy task is:
+
+- `runStandaloneClientRuntimeAssemblySmoke`
+
+Additional proxy tasks can be supplied with repeated `--legacy-client-launch-task <task>` arguments.
+
+This proxy exercises the player-facing client assembly route and records wall time plus sampled peak RSS. It is advisory evidence only: it is not a visible packaged player launch and it does not satisfy the replacement gate by itself.
+
 ## Guardrail
 
 The report intentionally keeps `replacementGate.status` at `NOT_READY_FOR_REPLACEMENT_DECISION` until direct legacy player-launch startup, memory, content graph load, save/load, failure-rate, gameplay, and fallback evidence are all comparable. Gradle smoke task timings are useful runtime evidence, but they are not the same as measuring a player launch.

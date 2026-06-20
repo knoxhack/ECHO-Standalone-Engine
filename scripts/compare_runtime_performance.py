@@ -26,6 +26,9 @@ DEFAULT_LEGACY_TASKS = (
     "runStandaloneAlphaReadinessSmoke",
 )
 DEFAULT_LEGACY_GRADLE_ARGS = ("--console", "plain")
+DEFAULT_LEGACY_CLIENT_LAUNCH_TASKS = (
+    "runStandaloneClientRuntimeAssemblySmoke",
+)
 LEGACY_REPORTS = {
     "contentGraph": Path("reports/echo/standalone/content-graph-load.json"),
     "saveRuntime": Path("reports/echo/standalone/runtime-save.json"),
@@ -361,25 +364,44 @@ def legacy_report_summary(key: str, document: dict[str, Any] | None) -> dict[str
 def run_legacy_tasks(args: argparse.Namespace) -> list[dict[str, Any]]:
     if not args.run_legacy:
         return []
+    return run_legacy_gradle_tasks(args, args.legacy_task, "legacy")
+
+
+def run_legacy_client_launch_tasks(args: argparse.Namespace) -> list[dict[str, Any]]:
+    if not args.run_legacy_client_launch:
+        return []
+    return run_legacy_gradle_tasks(args, args.legacy_client_launch_task, "legacy-client-launch")
+
+
+def run_legacy_gradle_tasks(args: argparse.Namespace, tasks: list[str], label_prefix: str) -> list[dict[str, Any]]:
     wrapper = args.legacy_runtime_root / ("gradlew.bat" if os.name == "nt" else "gradlew")
     if not wrapper.is_file():
         raise FileNotFoundError(f"Legacy Gradle wrapper not found: {wrapper}")
     runs = []
-    for task in args.legacy_task:
+    for task in tasks:
         command = [str(wrapper), *DEFAULT_LEGACY_GRADLE_ARGS, task]
-        runs.append(run_measured(f"legacy-{task}", command, args.legacy_runtime_root, args.timeout_seconds))
+        runs.append(run_measured(f"{label_prefix}-{task}", command, args.legacy_runtime_root, args.timeout_seconds))
     return runs
 
 
-def summarize_legacy(legacy_root: Path, task_runs: list[dict[str, Any]]) -> dict[str, Any]:
+def summarize_legacy(
+    legacy_root: Path,
+    task_runs: list[dict[str, Any]],
+    client_launch_runs: list[dict[str, Any]],
+) -> dict[str, Any]:
     reports = collect_legacy_reports(legacy_root)
     content_graph = reports["contentGraph"]
     save = reports["saveRuntime"]
     alpha = reports["alphaReadiness"]
+    task_summary = summarize_runs([{**run, "ok": run.get("exitCode") == 0 and not run.get("timedOut")} for run in task_runs])
+    client_launch_summary = summarize_runs(
+        [{**run, "ok": run.get("exitCode") == 0 and not run.get("timedOut")} for run in client_launch_runs]
+    )
     return {
         "runtime": "echo-standalone-runtime",
         "reports": reports,
         "taskRuns": task_runs,
+        "clientLaunchProxyRuns": client_launch_runs,
         "summary": {
             "contentGraphPass": content_graph.get("status") == "PASS",
             "saveRuntimePass": save.get("status") == "PASS",
@@ -388,8 +410,15 @@ def summarize_legacy(legacy_root: Path, task_runs: list[dict[str, Any]]) -> dict
                 len([run for run in task_runs if run.get("exitCode") != 0 or run.get("timedOut")]) / len(task_runs),
                 4,
             ) if task_runs else None,
-            "taskWallMs": summarize_runs([{**run, "ok": run.get("exitCode") == 0 and not run.get("timedOut")} for run in task_runs])["startupWallMs"] if task_runs else None,
-            "taskPeakRssBytes": summarize_runs([{**run, "ok": run.get("exitCode") == 0 and not run.get("timedOut")} for run in task_runs])["peakRssBytes"] if task_runs else None,
+            "taskWallMs": task_summary["startupWallMs"] if task_runs else None,
+            "taskPeakRssBytes": task_summary["peakRssBytes"] if task_runs else None,
+            "clientLaunchProxyFailureRate": round(
+                len([run for run in client_launch_runs if run.get("exitCode") != 0 or run.get("timedOut")])
+                / len(client_launch_runs),
+                4,
+            ) if client_launch_runs else None,
+            "clientLaunchProxyWallMs": client_launch_summary["startupWallMs"] if client_launch_runs else None,
+            "clientLaunchProxyPeakRssBytes": client_launch_summary["peakRssBytes"] if client_launch_runs else None,
         },
     }
 
@@ -428,7 +457,13 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--work-dir", type=Path, default=root / "build" / "phase6-performance-comparison")
     parser.add_argument("--out", type=Path, default=root / "reports" / "PHASE6_PERFORMANCE_COMPARISON.json")
     parser.add_argument("--run-legacy", action="store_true", help="Also invoke selected legacy Standalone Runtime Gradle smoke tasks.")
+    parser.add_argument(
+        "--run-legacy-client-launch",
+        action="store_true",
+        help="Also invoke selected legacy client startup proxy tasks. This is not visible packaged player-launch evidence.",
+    )
     parser.add_argument("--legacy-task", action="append", default=None)
+    parser.add_argument("--legacy-client-launch-task", action="append", default=None)
     args = parser.parse_args()
     args.engine_root = args.engine_root.resolve()
     args.legacy_runtime_root = args.legacy_runtime_root.resolve()
@@ -438,6 +473,8 @@ def parse_args() -> argparse.Namespace:
         parser.error("--iterations must be at least 1")
     if args.legacy_task is None:
         args.legacy_task = list(DEFAULT_LEGACY_TASKS)
+    if args.legacy_client_launch_task is None:
+        args.legacy_client_launch_task = list(DEFAULT_LEGACY_CLIENT_LAUNCH_TASKS)
     return args
 
 
@@ -445,7 +482,8 @@ def main() -> None:
     args = parse_args()
     engine = benchmark_engine(args)
     legacy_task_runs = run_legacy_tasks(args)
-    legacy = summarize_legacy(args.legacy_runtime_root, legacy_task_runs)
+    legacy_client_launch_runs = run_legacy_client_launch_tasks(args)
+    legacy = summarize_legacy(args.legacy_runtime_root, legacy_task_runs, legacy_client_launch_runs)
     report = {
         "schema": "echo.standalone_engine.performance_comparison.v1",
         "generatedAt": iso_now(),
@@ -461,9 +499,11 @@ def main() -> None:
         "methodology": {
             "engine": "Runs the packaged ECHO Standalone Engine JAR with --headless-smoke and measures process wall time plus sampled peak RSS.",
             "legacy": "Ingests existing legacy Standalone Runtime reports; with --run-legacy, measures selected Gradle smoke tasks as task-level evidence.",
+            "legacyClientLaunchProxy": "With --run-legacy-client-launch, measures selected legacy client startup proxy tasks. These exercise the player-facing client assembly but are not visible packaged player-launch evidence.",
             "comparabilityWarning": "Legacy Gradle task timings are not direct player-launch timings and must not be used alone for replacement decisions.",
             "iterations": args.iterations,
             "legacyTasksExecuted": args.run_legacy,
+            "legacyClientLaunchProxyExecuted": args.run_legacy_client_launch,
         },
         "engine": engine,
         "legacyStandaloneRuntime": legacy,
