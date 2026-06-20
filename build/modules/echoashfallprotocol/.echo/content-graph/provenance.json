@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "echo.content_graph.provenance.v1",
+  "moduleId": "echoashfallprotocol",
+  "sourceRepository": "knoxhack/ECHO-Modules",
+  "sourcePath": "addons/echoashfallprotocol",
+  "generatedBy": "ECHO-Standalone-Canonical-Engine canonical fixture generator",
+  "canonical": true,
+  "runtimeTargets": [
+    "echo_native",
+    "neoforge",
+    "echo_runtime_standalone"
+  ]
+}

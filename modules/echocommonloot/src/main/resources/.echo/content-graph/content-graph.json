@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "echo.content_graph.v1",
+  "moduleId": "echocommonloot",
+  "nodes": [
+    {
+      "id": "echocommonloot:loot/starter_salvage",
+      "kind": "LOOT_TABLE",
+      "displayName": "Starter Salvage",
+      "rolls": 1
+    },
+    {
+      "id": "echocommonloot:loot/debris_salvage",
+      "kind": "LOOT_TABLE",
+      "displayName": "Debris Salvage",
+      "rolls": 1
+    }
+  ],
+  "edges": [
+    {
+      "id": "echocommonloot:edge/starter_scrap",
+      "type": "loot_table_outputs_item",
+      "source": "echocommonloot:loot/starter_salvage",
+      "target": "echomaterialcore:item/scrap_metal",
+      "count": 8
+    },
+    {
+      "id": "echocommonloot:edge/starter_wire",
+      "type": "loot_table_outputs_item",
+      "source": "echocommonloot:loot/starter_salvage",
+      "target": "echomaterialcore:item/scrap_wire",
+      "count": 4
+    },
+    {
+      "id": "echocommonloot:edge/debris_scrap",
+      "type": "loot_table_outputs_item",
+      "source": "echocommonloot:loot/debris_salvage",
+      "target": "echomaterialcore:item/scrap_metal",
+      "count": 1
+    }
+  ]
+}

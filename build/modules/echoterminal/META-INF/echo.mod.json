@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "echo.module.descriptor.v1",
+  "id": "echoterminal",
+  "name": "ECHO Terminal",
+  "version": "1.0.0",
+  "kind": "foundation",
+  "side": "both",
+  "standalone": true,
+  "official": true,
+  "requires": [
+    {
+      "id": "echoscreencore",
+      "version": "1.0.0",
+      "optional": false
+    },
+    {
+      "id": "echostationcore",
+      "version": "1.0.0",
+      "optional": false
+    }
+  ],
+  "optional": [],
+  "access": {
+    "nativeEntrypoint": "",
+    "nativeClasspath": [
+      "."
+    ],
+    "permissions": [],
+    "contentNamespaces": [
+      "echoterminal"
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "echo.content_graph.provenance.v1",
+  "moduleId": "echoworldstarter",
+  "sourceRepository": "knoxhack/ECHO-Modules",
+  "sourcePath": "addons/echoworldstarter",
+  "generatedBy": "ECHO-Standalone-Canonical-Engine canonical fixture generator",
+  "canonical": true,
+  "runtimeTargets": [
+    "echo_native",
+    "neoforge",
+    "echo_runtime_standalone"
+  ]
+}

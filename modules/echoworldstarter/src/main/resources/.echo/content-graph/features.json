@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "echo.content_feature_list.v1",
+  "moduleId": "echoworldstarter",
+  "features": [
+    {
+      "id": "echoworldstarter:feature/first_hour",
+      "name": "First-Hour Spawn Contract",
+      "nodeIds": [
+        "echoworldstarter:capability/spawn_safety",
+        "echoworldstarter:service/starter_loadout"
+      ]
+    }
+  ]
+}

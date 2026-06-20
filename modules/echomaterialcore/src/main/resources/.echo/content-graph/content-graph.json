@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "echo.content_graph.v1",
+  "moduleId": "echomaterialcore",
+  "nodes": [
+    {
+      "id": "echomaterialcore:item/scrap_metal",
+      "kind": "ITEM",
+      "displayName": "Scrap Metal",
+      "maxStack": 64,
+      "category": "MATERIAL"
+    },
+    {
+      "id": "echomaterialcore:item/scrap_wire",
+      "kind": "ITEM",
+      "displayName": "Scrap Wire",
+      "maxStack": 64,
+      "category": "MATERIAL"
+    },
+    {
+      "id": "echomaterialcore:item/filter_mesh",
+      "kind": "ITEM",
+      "displayName": "Filter Mesh",
+      "maxStack": 32,
+      "category": "MATERIAL"
+    },
+    {
+      "id": "echomaterialcore:item/machine_casing",
+      "kind": "ITEM",
+      "displayName": "Machine Casing",
+      "maxStack": 32,
+      "category": "COMPONENT"
+    }
+  ],
+  "edges": []
+}

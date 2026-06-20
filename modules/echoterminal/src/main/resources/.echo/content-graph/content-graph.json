@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "echo.content_graph.v1",
+  "moduleId": "echoterminal",
+  "nodes": [
+    {
+      "id": "echoterminal:block/echo_terminal",
+      "kind": "BLOCK",
+      "displayName": "Field Terminal",
+      "argb": "#314757",
+      "solid": true,
+      "opaque": true,
+      "hardness": 2.2,
+      "emittedLight": 5,
+      "dropNodeId": "echoterminal:item/echo_terminal"
+    },
+    {
+      "id": "echoterminal:item/echo_terminal",
+      "kind": "ITEM",
+      "displayName": "Field Terminal",
+      "maxStack": 8,
+      "placesBlockNodeId": "echoterminal:block/echo_terminal"
+    },
+    {
+      "id": "echoterminal:ui/field_terminal",
+      "kind": "UI_SCREEN",
+      "displayName": "Field Terminal Screen"
+    },
+    {
+      "id": "echoterminal:service/terminal_route",
+      "kind": "SERVICE",
+      "displayName": "Terminal Route Service"
+    }
+  ],
+  "edges": [
+    {
+      "id": "echoterminal:edge/item_places_terminal",
+      "type": "item_places_block",
+      "source": "echoterminal:item/echo_terminal",
+      "target": "echoterminal:block/echo_terminal"
+    },
+    {
+      "id": "echoterminal:edge/block_opens_screen",
+      "type": "block_opens_ui",
+      "source": "echoterminal:block/echo_terminal",
+      "target": "echoterminal:ui/field_terminal"
+    },
+    {
+      "id": "echoterminal:edge/service_routes_screen",
+      "type": "service_routes_ui",
+      "source": "echoterminal:service/terminal_route",
+      "target": "echoterminal:ui/field_terminal"
+    },
+    {
+      "id": "echoterminal:block/echo_terminal:drops",
+      "type": "block_drops_item",
+      "source": "echoterminal:block/echo_terminal",
+      "target": "echoterminal:item/echo_terminal",
+      "count": 1
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 2,
+  "engineVersion": "2.0.0-beta.2",
+  "pack": {
+    "version": "2.0.0-beta.2",
+    "id": "ashfall-standalone-engine-edition"
+  },
+  "contentIdentity": {
+    "moduleFingerprints": {
+      "echoweathercore": "09fb4acd601b4e4342d2e6208b4cc2a024ac12e83a570cc4e6b3f36f6622aed3",
+      "echoashfallprotocol": "6696f7ff39b31e4461c21d8ab3f449cd36047bf8699e6078f06af7100b20006e",
+      "echoworldstarter": "e1728dea5891be56ed17bb594f35f17614944cbab4bba8523c94634c37662901",
+      "echoadaptercore": "e3b484796afacfd1300f9ea5554014cfead62e9211292b344e49c5ff579589df",
+      "echoscreencore": "7a9ba1b22a1538923032fac586e533d7616852c51bec8743b0d7931e496fcd1a",
+      "echofoundationcore": "f4553c8768ddd7ca51ff15eb4805f4db771d308e9eb1cce7e6628fd847faace3",
+      "echostationcore": "c6621129fefda5c16dd069650b0ab551efabedfdf97ec22a978a852657c286de",
+      "echomaterialcore": "56748d38a80b4e1010eed5dbcb7a28668728c75c23fbe6be183448cb71b46d7d",
+      "echocreatureroles": "ec31f99f95122959e739e201de9bbd52c61ad10a3b1faf0303f3c148c83c8cf2",
+      "echotoolcore": "38ed1458c5d8708c5f9d73ea618a2ad28986b1712e1b0320fa5833a0e87134d9",
+      "echoterminal": "522f07251cb352e97ddf1bdb159efcba0ac6aae5c1497f7a3a5acefb137380e5",
+      "echocommonloot": "3c51cf089d2fef08465960eec52d768011cc9f6281df7ef0d24d4cea7d9d69d0"
+    },
+    "contentGraphFingerprint": "0590f2ac1dfdc4f384cd8542ae18d757aed229a5b6de7c0caeef4c35cdfb32f9"
+  },
+  "seed": 424242,
+  "timeSeconds": 10.050000000000079,
+  "player": {
+    "x": 0.5,
+    "y": 16.05,
+    "z": 0.5,
+    "yaw": 0.0,
+    "pitch": 0.0,
+    "health": 20.0,
+    "hunger": 19.87960000000028,
+    "hydration": 19.81940000000042,
+    "exposure": 3.009999999999958,
+    "selectedSlot": 0,
+    "inventory": [
+      {
+        "slot": 0,
+        "item": "echoashfallprotocol:clean_water_bottle",
+        "count": 3
+      },
+      {
+        "slot": 1,
+        "item": "echoashfallprotocol:emergency_ration",
+        "count": 3
+      },
+      {
+        "slot": 2,
+        "item": "echoashfallprotocol:scrap_metal",
+        "count": 12
+      },
+      {
+        "slot": 3,
+        "item": "echoashfallprotocol:scrap_wire",
+        "count": 6
+      },
+      {
+        "slot": 4,
+        "item": "echoashfallprotocol:filter_mesh",
+        "count": 3
+      },
+      {
+        "slot": 5,
+        "item": "echoashfallprotocol:filter_cartridge_basic",
+        "count": 2
+      },
+      {
+        "slot": 6,
+        "item": "echoashfallprotocol:power_cell",
+        "count": 1
+      },
+      {
+        "slot": 7,
+        "item": "echoashfallprotocol:portable_signal_scanner",
+        "count": 1
+      },
+      {
+        "slot": 8,
+        "item": "echoashfallprotocol:ash_campfire",
+        "count": 2
+      },
+      {
+        "slot": 9,
+        "item": "echoashfallprotocol:field_pick",
+        "count": 1
+      }
+    ]
+  },
+  "moduleStates": {
+    "echoadaptercore": {},
+    "echoashfallprotocol": {
+      "objectiveNodeId": "echoashfallprotocol:objective/inspect_terminal",
+      "starterGranted": "true",
+      "warningClock": "10.033333333333411",
+      "damageClock": "0.033333333333348654"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "schemaVersion": "echo.module.descriptor.v1",
+  "id": "echoadaptercore",
+  "name": "ECHO AdapterCore",
+  "version": "1.0.0",
+  "kind": "foundation",
+  "side": "both",
+  "standalone": true,
+  "official": true,
+  "requires": [],
+  "optional": [],
+  "access": {
+    "nativeEntrypoint": "dev.echo.modules.adaptercore.EchoAdapterCoreModule",
+    "nativeClasspath": [
+      "."
+    ],
+    "permissions": [
+      "adaptercore.services"
+    ],
+    "contentNamespaces": [
+      "echoadaptercore"
+    ]
+  }
+}

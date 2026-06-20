@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "echo.content_graph.export_plan.v1",
+  "moduleId": "echofoundationcore",
+  "runtimeTarget": "echo_runtime_standalone",
+  "mappings": [
+    {
+      "nodeId": "echofoundationcore:capability/survival_foundation",
+      "runtimeId": "echofoundationcore:capability/survival_foundation",
+      "kind": "CAPABILITY",
+      "adapter": "adaptercore.standalone.capability"
+    },
+    {
+      "nodeId": "echofoundationcore:service/content_foundation",
+      "runtimeId": "echofoundationcore:service/content_foundation",
+      "kind": "SERVICE",
+      "adapter": "adaptercore.standalone.service"
+    }
+  ]
+}

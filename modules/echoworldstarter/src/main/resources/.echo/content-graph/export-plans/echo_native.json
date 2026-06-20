@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "echo.content_graph.export_plan.v1",
+  "moduleId": "echoworldstarter",
+  "runtimeTarget": "echo_native",
+  "mappings": [
+    {
+      "nodeId": "echoworldstarter:capability/spawn_safety",
+      "runtimeId": "echoworldstarter:capability/spawn_safety",
+      "kind": "CAPABILITY",
+      "adapter": "adaptercore.native.capability"
+    },
+    {
+      "nodeId": "echoworldstarter:service/starter_loadout",
+      "runtimeId": "echoworldstarter:service/starter_loadout",
+      "kind": "SERVICE",
+      "adapter": "adaptercore.native.service"
+    }
+  ]
+}

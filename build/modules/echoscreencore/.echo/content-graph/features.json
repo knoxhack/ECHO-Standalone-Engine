@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "echo.content_feature_list.v1",
+  "moduleId": "echoscreencore",
+  "features": [
+    {
+      "id": "echoscreencore:feature/core_screens",
+      "name": "Core Screens",
+      "nodeIds": [
+        "echoscreencore:ui/inventory",
+        "echoscreencore:ui/mission_log"
+      ]
+    }
+  ]
+}

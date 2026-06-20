@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "echo.content_graph.export_plan.v1",
+  "moduleId": "echotoolcore",
+  "runtimeTarget": "neoforge",
+  "mappings": [
+    {
+      "nodeId": "echotoolcore:item/scrap_knife",
+      "runtimeId": "echoashfallprotocol:scrap_knife",
+      "kind": "ITEM",
+      "adapter": "adaptercore.neoforge.item"
+    },
+    {
+      "nodeId": "echotoolcore:item/field_pick",
+      "runtimeId": "echoashfallprotocol:field_pick",
+      "kind": "ITEM",
+      "adapter": "adaptercore.neoforge.item"
+    },
+    {
+      "nodeId": "echotoolcore:recipe/scrap_knife",
+      "runtimeId": "echoashfallprotocol:craft_scrap_knife",
+      "kind": "RECIPE",
+      "adapter": "adaptercore.neoforge.recipe"
+    }
+  ]
+}

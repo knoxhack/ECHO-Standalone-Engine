@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "echo.content_feature_list.v1",
+  "moduleId": "echoadaptercore",
+  "features": [
+    {
+      "id": "echoadaptercore:feature/canonical_runtime_bridge",
+      "name": "Canonical AdapterCore Runtime Bridge",
+      "nodeIds": [
+        "echoadaptercore:capability/runtime_bridge",
+        "echoadaptercore:service/runtime_bridge"
+      ]
+    }
+  ]
+}

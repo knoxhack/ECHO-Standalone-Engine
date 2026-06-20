@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "echo.content_graph.export_plan.v1",
+  "moduleId": "echocommonloot",
+  "runtimeTarget": "echo_native",
+  "mappings": [
+    {
+      "nodeId": "echocommonloot:loot/starter_salvage",
+      "runtimeId": "echocommonloot:loot/starter_salvage",
+      "kind": "LOOT_TABLE",
+      "adapter": "adaptercore.native.loot"
+    },
+    {
+      "nodeId": "echocommonloot:loot/debris_salvage",
+      "runtimeId": "echocommonloot:loot/debris_salvage",
+      "kind": "LOOT_TABLE",
+      "adapter": "adaptercore.native.loot"
+    }
+  ]
+}

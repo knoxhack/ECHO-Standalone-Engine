@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "id": "echodataexample",
+  "name": "ECHO Data Addon Example",
+  "version": "1.0.0",
+  "entrypoint": "",
+  "trust": "data-only",
+  "dependencies": [],
+  "permissions": ["content.register"]
+}

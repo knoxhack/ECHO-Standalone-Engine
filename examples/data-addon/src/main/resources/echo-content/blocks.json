@@ -1,0 +1,12 @@
+[
+  {
+    "id": "echodataexample:signal_glass",
+    "displayName": "Signal Glass",
+    "color": "#55C8E8",
+    "solid": true,
+    "opaque": false,
+    "hardness": 0.4,
+    "emittedLight": 9,
+    "properties": {"drop": "echodataexample:signal_glass"}
+  }
+]

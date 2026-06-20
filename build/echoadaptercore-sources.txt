@@ -1,0 +1,1 @@
+"C:/Development/Github/ECHO-Standalone-Engine/modules/echoadaptercore/src/main/java/dev/echo/modules/adaptercore/EchoAdapterCoreModule.java"

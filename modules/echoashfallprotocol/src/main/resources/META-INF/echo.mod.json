@@ -1,0 +1,81 @@
+{
+  "schemaVersion": "echo.module.descriptor.v1",
+  "id": "echoashfallprotocol",
+  "name": "ECHO Ashfall Protocol",
+  "version": "1.0.0",
+  "kind": "experience",
+  "side": "both",
+  "standalone": true,
+  "official": true,
+  "requires": [
+    {
+      "id": "echoadaptercore",
+      "version": "1.0.0",
+      "optional": false
+    },
+    {
+      "id": "echofoundationcore",
+      "version": "1.0.0",
+      "optional": false
+    },
+    {
+      "id": "echomaterialcore",
+      "version": "1.0.0",
+      "optional": false
+    },
+    {
+      "id": "echotoolcore",
+      "version": "1.0.0",
+      "optional": false
+    },
+    {
+      "id": "echostationcore",
+      "version": "1.0.0",
+      "optional": false
+    },
+    {
+      "id": "echoworldstarter",
+      "version": "1.0.0",
+      "optional": false
+    },
+    {
+      "id": "echocommonloot",
+      "version": "1.0.0",
+      "optional": false
+    },
+    {
+      "id": "echocreatureroles",
+      "version": "1.0.0",
+      "optional": false
+    },
+    {
+      "id": "echoweathercore",
+      "version": "1.0.0",
+      "optional": false
+    },
+    {
+      "id": "echoscreencore",
+      "version": "1.0.0",
+      "optional": false
+    },
+    {
+      "id": "echoterminal",
+      "version": "1.0.0",
+      "optional": false
+    }
+  ],
+  "optional": [],
+  "access": {
+    "nativeEntrypoint": "dev.echo.modules.ashfall.AshfallModule",
+    "nativeClasspath": [
+      "."
+    ],
+    "permissions": [
+      "adaptercore.worldgen",
+      "adaptercore.gameplay"
+    ],
+    "contentNamespaces": [
+      "echoashfallprotocol"
+    ]
+  }
+}

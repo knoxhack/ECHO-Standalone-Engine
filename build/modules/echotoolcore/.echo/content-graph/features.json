@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "echo.content_feature_list.v1",
+  "moduleId": "echotoolcore",
+  "features": [
+    {
+      "id": "echotoolcore:feature/field_tools",
+      "name": "Field Tools",
+      "nodeIds": [
+        "echotoolcore:item/scrap_knife",
+        "echotoolcore:item/field_pick"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "echo.content_graph.export_plan.v1",
+  "moduleId": "echocreatureroles",
+  "runtimeTarget": "neoforge",
+  "mappings": [
+    {
+      "nodeId": "echocreatureroles:capability/hostile_pursuer",
+      "runtimeId": "echocreatureroles:capability/hostile_pursuer",
+      "kind": "CAPABILITY",
+      "adapter": "adaptercore.neoforge.capability"
+    },
+    {
+      "nodeId": "echocreatureroles:capability/scavenger",
+      "runtimeId": "echocreatureroles:capability/scavenger",
+      "kind": "CAPABILITY",
+      "adapter": "adaptercore.neoforge.capability"
+    },
+    {
+      "nodeId": "echocreatureroles:capability/pack_hunter",
+      "runtimeId": "echocreatureroles:capability/pack_hunter",
+      "kind": "CAPABILITY",
+      "adapter": "adaptercore.neoforge.capability"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+[
+  {
+    "id": "echodataexample:craft_signal_glass",
+    "ingredients": {"echodataexample:signal_dust": 4},
+    "result": "echodataexample:signal_glass",
+    "resultCount": 2
+  }
+]

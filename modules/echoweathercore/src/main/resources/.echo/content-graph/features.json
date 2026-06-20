@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "echo.content_feature_list.v1",
+  "moduleId": "echoweathercore",
+  "features": [
+    {
+      "id": "echoweathercore:feature/weather_contract",
+      "name": "Weather Runtime Contract",
+      "nodeIds": [
+        "echoweathercore:capability/weather_schedule",
+        "echoweathercore:service/weather_runtime"
+      ]
+    }
+  ]
+}

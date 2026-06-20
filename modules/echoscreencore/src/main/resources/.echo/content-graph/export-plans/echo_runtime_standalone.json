@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "echo.content_graph.export_plan.v1",
+  "moduleId": "echoscreencore",
+  "runtimeTarget": "echo_runtime_standalone",
+  "mappings": [
+    {
+      "nodeId": "echoscreencore:ui/inventory",
+      "runtimeId": "echoscreencore:ui/inventory",
+      "kind": "UI_SCREEN",
+      "adapter": "adaptercore.standalone.screen"
+    },
+    {
+      "nodeId": "echoscreencore:ui/mission_log",
+      "runtimeId": "echoscreencore:ui/mission_log",
+      "kind": "UI_SCREEN",
+      "adapter": "adaptercore.standalone.screen"
+    },
+    {
+      "nodeId": "echoscreencore:service/screen_router",
+      "runtimeId": "echoscreencore:service/screen_router",
+      "kind": "SERVICE",
+      "adapter": "adaptercore.standalone.service"
+    }
+  ]
+}

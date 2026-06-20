@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "echo.content_graph.v1",
+  "moduleId": "echoscreencore",
+  "nodes": [
+    {
+      "id": "echoscreencore:ui/inventory",
+      "kind": "UI_SCREEN",
+      "displayName": "Inventory"
+    },
+    {
+      "id": "echoscreencore:ui/mission_log",
+      "kind": "UI_SCREEN",
+      "displayName": "Mission Log"
+    },
+    {
+      "id": "echoscreencore:service/screen_router",
+      "kind": "SERVICE",
+      "displayName": "Screen Route Service"
+    }
+  ],
+  "edges": [
+    {
+      "id": "echoscreencore:edge/router_inventory",
+      "type": "service_routes_ui",
+      "source": "echoscreencore:service/screen_router",
+      "target": "echoscreencore:ui/inventory"
+    },
+    {
+      "id": "echoscreencore:edge/router_mission",
+      "type": "service_routes_ui",
+      "source": "echoscreencore:service/screen_router",
+      "target": "echoscreencore:ui/mission_log"
+    }
+  ]
+}

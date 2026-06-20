@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://echo.example/schemas/echo-module.v1.json",
+  "title": "ECHO Standalone Module Descriptor",
+  "type": "object",
+  "required": ["schemaVersion", "id", "name", "version", "entrypoint", "trust", "dependencies", "permissions"],
+  "properties": {
+    "schemaVersion": {"const": 1},
+    "id": {"type": "string", "pattern": "^[a-z0-9_.-]+$"},
+    "name": {"type": "string", "minLength": 1},
+    "version": {"type": "string", "minLength": 1},
+    "entrypoint": {"type": "string"},
+    "trust": {"enum": ["official", "developer", "data-only"]},
+    "dependencies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id"],
+        "properties": {
+          "id": {"type": "string"},
+          "version": {"type": "string"},
+          "optional": {"type": "boolean"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "permissions": {"type": "array", "items": {"type": "string"}, "uniqueItems": true}
+  },
+  "additionalProperties": false
+}

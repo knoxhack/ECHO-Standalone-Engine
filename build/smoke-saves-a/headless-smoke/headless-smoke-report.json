@@ -1,0 +1,49 @@
+{
+  "schema": "echo.engine.headless_smoke.v2",
+  "status": "PASS",
+  "engineVersion": "2.0.0-beta.2",
+  "packId": "ashfall-standalone-engine-edition",
+  "installedModules": 12,
+  "contentGraph": {
+    "fingerprint": "0590f2ac1dfdc4f384cd8542ae18d757aed229a5b6de7c0caeef4c35cdfb32f9",
+    "edges": 85,
+    "modules": 12,
+    "nodes": 78,
+    "mappedNodeCounts": {
+      "neoforge": 78,
+      "echo_runtime_standalone": 78,
+      "echo_native": 78
+    },
+    "canonical": true,
+    "crossRuntimeParity": true
+  },
+  "adapterCore": {
+    "accepted": 48,
+    "canonicalRuntimeBridge": true,
+    "rejected": 0,
+    "revoked": 0,
+    "acceptedByDomain": {
+      "worldgen": 1,
+      "blocks": 14,
+      "recipes": 4,
+      "gameplay": 1,
+      "items": 24,
+      "entities": 3,
+      "services": 1
+    },
+    "ready": true
+  },
+  "runtimeContent": {
+    "blocks": 16,
+    "recipes": 4,
+    "items": 24,
+    "gameExtensions": 1,
+    "entityDefinitions": 3
+  },
+  "world": {
+    "contentIdentityVerified": true,
+    "spawnedEntities": 4,
+    "chunks": 25,
+    "saveReload": true
+  }
+}

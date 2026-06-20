@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "echo.content_graph.v1",
+  "moduleId": "echotoolcore",
+  "nodes": [
+    {
+      "id": "echotoolcore:item/scrap_knife",
+      "kind": "ITEM",
+      "displayName": "Scrap Knife",
+      "maxStack": 1,
+      "category": "TOOL",
+      "miningSpeed": 1.2
+    },
+    {
+      "id": "echotoolcore:item/field_pick",
+      "kind": "ITEM",
+      "displayName": "Field Pick",
+      "maxStack": 1,
+      "category": "TOOL",
+      "miningSpeed": 2.4
+    },
+    {
+      "id": "echotoolcore:recipe/scrap_knife",
+      "kind": "RECIPE",
+      "displayName": "Craft Scrap Knife",
+      "ingredients": {
+        "echomaterialcore:item/scrap_metal": 2,
+        "echomaterialcore:item/scrap_wire": 1
+      },
+      "resultNodeId": "echotoolcore:item/scrap_knife",
+      "resultCount": 1
+    }
+  ],
+  "edges": [
+    {
+      "id": "echotoolcore:edge/knife_consumes_metal",
+      "type": "recipe_consumes_item",
+      "source": "echotoolcore:recipe/scrap_knife",
+      "target": "echomaterialcore:item/scrap_metal",
+      "count": 2
+    },
+    {
+      "id": "echotoolcore:edge/knife_consumes_wire",
+      "type": "recipe_consumes_item",
+      "source": "echotoolcore:recipe/scrap_knife",
+      "target": "echomaterialcore:item/scrap_wire",
+      "count": 1
+    },
+    {
+      "id": "echotoolcore:edge/knife_outputs",
+      "type": "recipe_outputs_item",
+      "source": "echotoolcore:recipe/scrap_knife",
+      "target": "echotoolcore:item/scrap_knife",
+      "count": 1
+    }
+  ]
+}

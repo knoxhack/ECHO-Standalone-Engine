@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "echo.content_graph.export_plan.v1",
+  "moduleId": "echostationcore",
+  "runtimeTarget": "echo_runtime_standalone",
+  "mappings": [
+    {
+      "nodeId": "echostationcore:block/field_workbench",
+      "runtimeId": "echoashfallprotocol:field_workbench",
+      "kind": "BLOCK",
+      "adapter": "adaptercore.standalone.block"
+    },
+    {
+      "nodeId": "echostationcore:item/field_workbench",
+      "runtimeId": "echoashfallprotocol:field_workbench",
+      "kind": "ITEM",
+      "adapter": "adaptercore.standalone.item"
+    },
+    {
+      "nodeId": "echostationcore:block/storage_crate",
+      "runtimeId": "echoashfallprotocol:storage_crate",
+      "kind": "BLOCK",
+      "adapter": "adaptercore.standalone.block"
+    },
+    {
+      "nodeId": "echostationcore:item/storage_crate",
+      "runtimeId": "echoashfallprotocol:storage_crate",
+      "kind": "ITEM",
+      "adapter": "adaptercore.standalone.item"
+    }
+  ]
+}

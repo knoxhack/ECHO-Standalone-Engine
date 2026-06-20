@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://echo.example/schemas/echo-blocks.v1.json",
+  "title": "ECHO Block Definitions",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["id", "displayName", "color", "solid", "opaque", "hardness"],
+    "properties": {
+      "id": {"type": "string", "pattern": "^[a-z0-9_.-]+:[a-z0-9_./-]+$"},
+      "displayName": {"type": "string", "minLength": 1},
+      "color": {"type": "string", "pattern": "^#[A-Fa-f0-9]{6,8}$"},
+      "solid": {"type": "boolean"},
+      "opaque": {"type": "boolean"},
+      "hardness": {"type": "number", "minimum": 0},
+      "hazardPerSecond": {"type": "number", "minimum": 0},
+      "emittedLight": {"type": "integer", "minimum": 0, "maximum": 15},
+      "properties": {"type": "object", "additionalProperties": {"type": ["string", "number", "boolean"]}}
+    },
+    "additionalProperties": false
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "echo.content_feature_list.v1",
+  "moduleId": "echocommonloot",
+  "features": [
+    {
+      "id": "echocommonloot:feature/salvage_tables",
+      "name": "Salvage Loot Tables",
+      "nodeIds": [
+        "echocommonloot:loot/starter_salvage",
+        "echocommonloot:loot/debris_salvage"
+      ]
+    }
+  ]
+}

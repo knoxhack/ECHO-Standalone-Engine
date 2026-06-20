@@ -1,0 +1,289 @@
+{
+  "schemaVersion": "echo.content_graph.export_plan.v1",
+  "moduleId": "echoashfallprotocol",
+  "runtimeTarget": "echo_native",
+  "mappings": [
+    {
+      "nodeId": "echoashfallprotocol:block/scorched_ash",
+      "runtimeId": "echoashfallprotocol:scorched_ash",
+      "kind": "BLOCK",
+      "adapter": "adaptercore.native.block"
+    },
+    {
+      "nodeId": "echoashfallprotocol:item/scorched_ash",
+      "runtimeId": "echoashfallprotocol:scorched_ash",
+      "kind": "ITEM",
+      "adapter": "adaptercore.native.item"
+    },
+    {
+      "nodeId": "echoashfallprotocol:block/ash_soil",
+      "runtimeId": "echoashfallprotocol:ash_soil",
+      "kind": "BLOCK",
+      "adapter": "adaptercore.native.block"
+    },
+    {
+      "nodeId": "echoashfallprotocol:item/ash_soil",
+      "runtimeId": "echoashfallprotocol:ash_soil",
+      "kind": "ITEM",
+      "adapter": "adaptercore.native.item"
+    },
+    {
+      "nodeId": "echoashfallprotocol:block/fallout_dust",
+      "runtimeId": "echoashfallprotocol:fallout_dust",
+      "kind": "BLOCK",
+      "adapter": "adaptercore.native.block"
+    },
+    {
+      "nodeId": "echoashfallprotocol:item/fallout_dust",
+      "runtimeId": "echoashfallprotocol:fallout_dust",
+      "kind": "ITEM",
+      "adapter": "adaptercore.native.item"
+    },
+    {
+      "nodeId": "echoashfallprotocol:block/rusted_metal_debris",
+      "runtimeId": "echoashfallprotocol:rusted_metal_debris",
+      "kind": "BLOCK",
+      "adapter": "adaptercore.native.block"
+    },
+    {
+      "nodeId": "echoashfallprotocol:block/ash_campfire",
+      "runtimeId": "echoashfallprotocol:ash_campfire",
+      "kind": "BLOCK",
+      "adapter": "adaptercore.native.block"
+    },
+    {
+      "nodeId": "echoashfallprotocol:item/ash_campfire",
+      "runtimeId": "echoashfallprotocol:ash_campfire",
+      "kind": "ITEM",
+      "adapter": "adaptercore.native.item"
+    },
+    {
+      "nodeId": "echoashfallprotocol:block/echo_cache",
+      "runtimeId": "echoashfallprotocol:echo_cache",
+      "kind": "BLOCK",
+      "adapter": "adaptercore.native.block"
+    },
+    {
+      "nodeId": "echoashfallprotocol:block/power_node",
+      "runtimeId": "echoashfallprotocol:power_node",
+      "kind": "BLOCK",
+      "adapter": "adaptercore.native.block"
+    },
+    {
+      "nodeId": "echoashfallprotocol:block/rain_collector",
+      "runtimeId": "echoashfallprotocol:rain_collector",
+      "kind": "BLOCK",
+      "adapter": "adaptercore.native.block"
+    },
+    {
+      "nodeId": "echoashfallprotocol:item/rain_collector",
+      "runtimeId": "echoashfallprotocol:rain_collector",
+      "kind": "ITEM",
+      "adapter": "adaptercore.native.item"
+    },
+    {
+      "nodeId": "echoashfallprotocol:block/water_purifier",
+      "runtimeId": "echoashfallprotocol:water_purifier",
+      "kind": "BLOCK",
+      "adapter": "adaptercore.native.block"
+    },
+    {
+      "nodeId": "echoashfallprotocol:item/water_purifier",
+      "runtimeId": "echoashfallprotocol:water_purifier",
+      "kind": "ITEM",
+      "adapter": "adaptercore.native.item"
+    },
+    {
+      "nodeId": "echoashfallprotocol:block/scrap_press",
+      "runtimeId": "echoashfallprotocol:scrap_press",
+      "kind": "BLOCK",
+      "adapter": "adaptercore.native.block"
+    },
+    {
+      "nodeId": "echoashfallprotocol:item/scrap_press",
+      "runtimeId": "echoashfallprotocol:scrap_press",
+      "kind": "ITEM",
+      "adapter": "adaptercore.native.item"
+    },
+    {
+      "nodeId": "echoashfallprotocol:block/radiation_cleanser",
+      "runtimeId": "echoashfallprotocol:radiation_cleanser",
+      "kind": "BLOCK",
+      "adapter": "adaptercore.native.block"
+    },
+    {
+      "nodeId": "echoashfallprotocol:item/radiation_cleanser",
+      "runtimeId": "echoashfallprotocol:radiation_cleanser",
+      "kind": "ITEM",
+      "adapter": "adaptercore.native.item"
+    },
+    {
+      "nodeId": "echoashfallprotocol:item/clean_water_bottle",
+      "runtimeId": "echoashfallprotocol:clean_water_bottle",
+      "kind": "ITEM",
+      "adapter": "adaptercore.native.item"
+    },
+    {
+      "nodeId": "echoashfallprotocol:item/dirty_water_bottle",
+      "runtimeId": "echoashfallprotocol:dirty_water_bottle",
+      "kind": "ITEM",
+      "adapter": "adaptercore.native.item"
+    },
+    {
+      "nodeId": "echoashfallprotocol:item/emergency_ration",
+      "runtimeId": "echoashfallprotocol:emergency_ration",
+      "kind": "ITEM",
+      "adapter": "adaptercore.native.item"
+    },
+    {
+      "nodeId": "echoashfallprotocol:item/filter_cartridge_basic",
+      "runtimeId": "echoashfallprotocol:filter_cartridge_basic",
+      "kind": "ITEM",
+      "adapter": "adaptercore.native.item"
+    },
+    {
+      "nodeId": "echoashfallprotocol:item/power_cell",
+      "runtimeId": "echoashfallprotocol:power_cell",
+      "kind": "ITEM",
+      "adapter": "adaptercore.native.item"
+    },
+    {
+      "nodeId": "echoashfallprotocol:item/compressed_scrap",
+      "runtimeId": "echoashfallprotocol:compressed_scrap",
+      "kind": "ITEM",
+      "adapter": "adaptercore.native.item"
+    },
+    {
+      "nodeId": "echoashfallprotocol:item/portable_signal_scanner",
+      "runtimeId": "echoashfallprotocol:portable_signal_scanner",
+      "kind": "ITEM",
+      "adapter": "adaptercore.native.item"
+    },
+    {
+      "nodeId": "echoashfallprotocol:recipe/filter_cartridge_basic",
+      "runtimeId": "echoashfallprotocol:filter_cartridge_basic",
+      "kind": "RECIPE",
+      "adapter": "adaptercore.native.recipe"
+    },
+    {
+      "nodeId": "echoashfallprotocol:recipe/power_cell",
+      "runtimeId": "echoashfallprotocol:power_cell",
+      "kind": "RECIPE",
+      "adapter": "adaptercore.native.recipe"
+    },
+    {
+      "nodeId": "echoashfallprotocol:recipe/rain_collector",
+      "runtimeId": "echoashfallprotocol:rain_collector",
+      "kind": "RECIPE",
+      "adapter": "adaptercore.native.recipe"
+    },
+    {
+      "nodeId": "echoashfallprotocol:entity/ash_wraith",
+      "runtimeId": "echoashfallprotocol:ash_wraith",
+      "kind": "ENTITY",
+      "adapter": "adaptercore.native.entity"
+    },
+    {
+      "nodeId": "echoashfallprotocol:entity/irradiated_wolf",
+      "runtimeId": "echoashfallprotocol:irradiated_wolf",
+      "kind": "ENTITY",
+      "adapter": "adaptercore.native.entity"
+    },
+    {
+      "nodeId": "echoashfallprotocol:entity/wasteland_scavenger",
+      "runtimeId": "echoashfallprotocol:wasteland_scavenger",
+      "kind": "ENTITY",
+      "adapter": "adaptercore.native.entity"
+    },
+    {
+      "nodeId": "echoashfallprotocol:worldgen/ashlands",
+      "runtimeId": "echoashfallprotocol:worldgen/ashlands",
+      "kind": "WORLD_GENERATOR",
+      "adapter": "adaptercore.native.worldgen"
+    },
+    {
+      "nodeId": "echoashfallprotocol:system/ashfall_runtime",
+      "runtimeId": "echoashfallprotocol:system/ashfall_runtime",
+      "kind": "GAMEPLAY_SYSTEM",
+      "adapter": "adaptercore.native.gameplay"
+    },
+    {
+      "nodeId": "echoashfallprotocol:survival/basic_needs",
+      "runtimeId": "echoashfallprotocol:survival/basic_needs",
+      "kind": "SURVIVAL_PROFILE",
+      "adapter": "adaptercore.native.survival"
+    },
+    {
+      "nodeId": "echoashfallprotocol:hazard/toxic_ash",
+      "runtimeId": "echoashfallprotocol:hazard/toxic_ash",
+      "kind": "HAZARD",
+      "adapter": "adaptercore.native.hazard"
+    },
+    {
+      "nodeId": "echoashfallprotocol:weather/ash_storm",
+      "runtimeId": "echoashfallprotocol:weather/ash_storm",
+      "kind": "WEATHER_PROFILE",
+      "adapter": "adaptercore.native.weather"
+    },
+    {
+      "nodeId": "echoashfallprotocol:mission/crash_protocol",
+      "runtimeId": "echoashfallprotocol:mission/crash_protocol",
+      "kind": "MISSION",
+      "adapter": "adaptercore.native.mission"
+    },
+    {
+      "nodeId": "echoashfallprotocol:objective/inspect_terminal",
+      "runtimeId": "echoashfallprotocol:objective/inspect_terminal",
+      "kind": "OBJECTIVE",
+      "adapter": "adaptercore.native.objective"
+    },
+    {
+      "nodeId": "echoashfallprotocol:objective/recover_cache",
+      "runtimeId": "echoashfallprotocol:objective/recover_cache",
+      "kind": "OBJECTIVE",
+      "adapter": "adaptercore.native.objective"
+    },
+    {
+      "nodeId": "echoashfallprotocol:objective/repair_power",
+      "runtimeId": "echoashfallprotocol:objective/repair_power",
+      "kind": "OBJECTIVE",
+      "adapter": "adaptercore.native.objective"
+    },
+    {
+      "nodeId": "echoashfallprotocol:objective/stabilize",
+      "runtimeId": "echoashfallprotocol:objective/stabilize",
+      "kind": "OBJECTIVE",
+      "adapter": "adaptercore.native.objective"
+    },
+    {
+      "nodeId": "echoashfallprotocol:machine/rain_collector",
+      "runtimeId": "echoashfallprotocol:machine/rain_collector",
+      "kind": "MACHINE",
+      "adapter": "adaptercore.native.machine"
+    },
+    {
+      "nodeId": "echoashfallprotocol:machine/water_purifier",
+      "runtimeId": "echoashfallprotocol:machine/water_purifier",
+      "kind": "MACHINE",
+      "adapter": "adaptercore.native.machine"
+    },
+    {
+      "nodeId": "echoashfallprotocol:machine/scrap_press",
+      "runtimeId": "echoashfallprotocol:machine/scrap_press",
+      "kind": "MACHINE",
+      "adapter": "adaptercore.native.machine"
+    },
+    {
+      "nodeId": "echoashfallprotocol:machine/radiation_cleanser",
+      "runtimeId": "echoashfallprotocol:machine/radiation_cleanser",
+      "kind": "MACHINE",
+      "adapter": "adaptercore.native.machine"
+    },
+    {
+      "nodeId": "echoashfallprotocol:loot/crash_cache",
+      "runtimeId": "echoashfallprotocol:loot/crash_cache",
+      "kind": "LOOT_TABLE",
+      "adapter": "adaptercore.native.loot"
+    }
+  ]
+}

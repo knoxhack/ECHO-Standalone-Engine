@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "echo.content_graph.export_plan.v1",
+  "moduleId": "echoweathercore",
+  "runtimeTarget": "echo_native",
+  "mappings": [
+    {
+      "nodeId": "echoweathercore:capability/weather_schedule",
+      "runtimeId": "echoweathercore:capability/weather_schedule",
+      "kind": "CAPABILITY",
+      "adapter": "adaptercore.native.capability"
+    },
+    {
+      "nodeId": "echoweathercore:service/weather_runtime",
+      "runtimeId": "echoweathercore:service/weather_runtime",
+      "kind": "SERVICE",
+      "adapter": "adaptercore.native.service"
+    }
+  ]
+}

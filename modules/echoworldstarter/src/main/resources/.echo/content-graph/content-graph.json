@@ -1,0 +1,102 @@
+{
+  "schemaVersion": "echo.content_graph.v1",
+  "moduleId": "echoworldstarter",
+  "nodes": [
+    {
+      "id": "echoworldstarter:capability/spawn_safety",
+      "kind": "CAPABILITY",
+      "displayName": "Spawn Safety Contract",
+      "contractId": "echo.worldstarter.spawn_safety.v1"
+    },
+    {
+      "id": "echoworldstarter:service/starter_loadout",
+      "kind": "SERVICE",
+      "displayName": "Starter Loadout Contract",
+      "contractId": "echo.worldstarter.loadout.v1",
+      "items": {
+        "echoashfallprotocol:item/clean_water_bottle": 3,
+        "echoashfallprotocol:item/emergency_ration": 3,
+        "echomaterialcore:item/scrap_metal": 12,
+        "echomaterialcore:item/scrap_wire": 6,
+        "echomaterialcore:item/filter_mesh": 3,
+        "echoashfallprotocol:item/filter_cartridge_basic": 2,
+        "echoashfallprotocol:item/power_cell": 1,
+        "echoashfallprotocol:item/portable_signal_scanner": 1,
+        "echoashfallprotocol:item/ash_campfire": 2,
+        "echotoolcore:item/field_pick": 1
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "echoworldstarter:edge/starter/0",
+      "type": "service_grants_item",
+      "source": "echoworldstarter:service/starter_loadout",
+      "target": "echoashfallprotocol:item/clean_water_bottle",
+      "count": 3
+    },
+    {
+      "id": "echoworldstarter:edge/starter/1",
+      "type": "service_grants_item",
+      "source": "echoworldstarter:service/starter_loadout",
+      "target": "echoashfallprotocol:item/emergency_ration",
+      "count": 3
+    },
+    {
+      "id": "echoworldstarter:edge/starter/2",
+      "type": "service_grants_item",
+      "source": "echoworldstarter:service/starter_loadout",
+      "target": "echomaterialcore:item/scrap_metal",
+      "count": 12
+    },
+    {
+      "id": "echoworldstarter:edge/starter/3",
+      "type": "service_grants_item",
+      "source": "echoworldstarter:service/starter_loadout",
+      "target": "echomaterialcore:item/scrap_wire",
+      "count": 6
+    },
+    {
+      "id": "echoworldstarter:edge/starter/4",
+      "type": "service_grants_item",
+      "source": "echoworldstarter:service/starter_loadout",
+      "target": "echomaterialcore:item/filter_mesh",
+      "count": 3
+    },
+    {
+      "id": "echoworldstarter:edge/starter/5",
+      "type": "service_grants_item",
+      "source": "echoworldstarter:service/starter_loadout",
+      "target": "echoashfallprotocol:item/filter_cartridge_basic",
+      "count": 2
+    },
+    {
+      "id": "echoworldstarter:edge/starter/6",
+      "type": "service_grants_item",
+      "source": "echoworldstarter:service/starter_loadout",
+      "target": "echoashfallprotocol:item/power_cell",
+      "count": 1
+    },
+    {
+      "id": "echoworldstarter:edge/starter/7",
+      "type": "service_grants_item",
+      "source": "echoworldstarter:service/starter_loadout",
+      "target": "echoashfallprotocol:item/portable_signal_scanner",
+      "count": 1
+    },
+    {
+      "id": "echoworldstarter:edge/starter/8",
+      "type": "service_grants_item",
+      "source": "echoworldstarter:service/starter_loadout",
+      "target": "echoashfallprotocol:item/ash_campfire",
+      "count": 2
+    },
+    {
+      "id": "echoworldstarter:edge/starter/9",
+      "type": "service_grants_item",
+      "source": "echoworldstarter:service/starter_loadout",
+      "target": "echotoolcore:item/field_pick",
+      "count": 1
+    }
+  ]
+}

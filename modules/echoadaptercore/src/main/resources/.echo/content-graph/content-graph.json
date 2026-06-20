@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "echo.content_graph.v1",
+  "moduleId": "echoadaptercore",
+  "nodes": [
+    {
+      "id": "echoadaptercore:capability/runtime_bridge",
+      "kind": "CAPABILITY",
+      "displayName": "AdapterCore Runtime Bridge",
+      "contractId": "echo.adaptercore.runtime.v1",
+      "runtimeRequired": true
+    },
+    {
+      "id": "echoadaptercore:service/runtime_bridge",
+      "kind": "SERVICE",
+      "displayName": "AdapterCore Runtime Service",
+      "contractId": "echo.adaptercore.runtime.v1",
+      "runtimeRequired": true
+    }
+  ],
+  "edges": [
+    {
+      "id": "echoadaptercore:edge/service_implements_bridge",
+      "type": "service_implements_capability",
+      "source": "echoadaptercore:service/runtime_bridge",
+      "target": "echoadaptercore:capability/runtime_bridge"
+    }
+  ]
+}

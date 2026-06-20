@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "echo.content_feature_list.v1",
+  "moduleId": "echostationcore",
+  "features": [
+    {
+      "id": "echostationcore:feature/starter_stations",
+      "name": "Starter Stations",
+      "nodeIds": [
+        "echostationcore:block/field_workbench",
+        "echostationcore:block/storage_crate"
+      ]
+    }
+  ]
+}

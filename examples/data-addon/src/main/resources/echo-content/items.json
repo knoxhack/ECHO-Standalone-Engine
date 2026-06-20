@@ -1,0 +1,13 @@
+[
+  {
+    "id": "echodataexample:signal_glass",
+    "displayName": "Signal Glass",
+    "maxStack": 64,
+    "placesBlock": "echodataexample:signal_glass"
+  },
+  {
+    "id": "echodataexample:signal_dust",
+    "displayName": "Signal Dust",
+    "maxStack": 64
+  }
+]

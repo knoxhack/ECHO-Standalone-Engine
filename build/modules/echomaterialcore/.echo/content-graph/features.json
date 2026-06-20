@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "echo.content_feature_list.v1",
+  "moduleId": "echomaterialcore",
+  "features": [
+    {
+      "id": "echomaterialcore:feature/salvage_materials",
+      "name": "Salvage Materials",
+      "nodeIds": [
+        "echomaterialcore:item/scrap_metal",
+        "echomaterialcore:item/scrap_wire",
+        "echomaterialcore:item/filter_mesh",
+        "echomaterialcore:item/machine_casing"
+      ]
+    }
+  ]
+}

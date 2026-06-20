@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "echo.content_graph.export_plan.v1",
+  "moduleId": "echoweathercore",
+  "runtimeTarget": "neoforge",
+  "mappings": [
+    {
+      "nodeId": "echoweathercore:capability/weather_schedule",
+      "runtimeId": "echoweathercore:capability/weather_schedule",
+      "kind": "CAPABILITY",
+      "adapter": "adaptercore.neoforge.capability"
+    },
+    {
+      "nodeId": "echoweathercore:service/weather_runtime",
+      "runtimeId": "echoweathercore:service/weather_runtime",
+      "kind": "SERVICE",
+      "adapter": "adaptercore.neoforge.service"
+    }
+  ]
+}

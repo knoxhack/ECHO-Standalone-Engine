@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "echo.content_feature_list.v1",
+  "moduleId": "echofoundationcore",
+  "features": [
+    {
+      "id": "echofoundationcore:feature/shared_survival",
+      "name": "Shared Survival Foundation",
+      "nodeIds": [
+        "echofoundationcore:capability/survival_foundation"
+      ]
+    }
+  ]
+}

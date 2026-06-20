@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "echo.content_graph.v1",
+  "moduleId": "echofoundationcore",
+  "nodes": [
+    {
+      "id": "echofoundationcore:capability/survival_foundation",
+      "kind": "CAPABILITY",
+      "displayName": "Shared Survival Foundation",
+      "contractId": "echo.foundation.survival.v1"
+    },
+    {
+      "id": "echofoundationcore:service/content_foundation",
+      "kind": "SERVICE",
+      "displayName": "Foundation Content Contract",
+      "contractId": "echo.foundation.content.v1"
+    }
+  ],
+  "edges": [
+    {
+      "id": "echofoundationcore:edge/content_uses_adaptercore",
+      "type": "module_requires_capability",
+      "source": "echofoundationcore:service/content_foundation",
+      "target": "echoadaptercore:capability/runtime_bridge"
+    }
+  ]
+}

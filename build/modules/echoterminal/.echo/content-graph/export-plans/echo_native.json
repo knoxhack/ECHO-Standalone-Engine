@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "echo.content_graph.export_plan.v1",
+  "moduleId": "echoterminal",
+  "runtimeTarget": "echo_native",
+  "mappings": [
+    {
+      "nodeId": "echoterminal:block/echo_terminal",
+      "runtimeId": "echoterminal:echo_terminal",
+      "kind": "BLOCK",
+      "adapter": "adaptercore.native.block"
+    },
+    {
+      "nodeId": "echoterminal:item/echo_terminal",
+      "runtimeId": "echoterminal:echo_terminal",
+      "kind": "ITEM",
+      "adapter": "adaptercore.native.item"
+    },
+    {
+      "nodeId": "echoterminal:ui/field_terminal",
+      "runtimeId": "echoterminal:screen/field_terminal",
+      "kind": "UI_SCREEN",
+      "adapter": "adaptercore.native.screen"
+    },
+    {
+      "nodeId": "echoterminal:service/terminal_route",
+      "runtimeId": "echoterminal:service/terminal_route",
+      "kind": "SERVICE",
+      "adapter": "adaptercore.native.service"
+    }
+  ]
+}

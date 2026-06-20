@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "echo.content_graph.export_plan.v1",
+  "moduleId": "echomaterialcore",
+  "runtimeTarget": "echo_runtime_standalone",
+  "mappings": [
+    {
+      "nodeId": "echomaterialcore:item/scrap_metal",
+      "runtimeId": "echoashfallprotocol:scrap_metal",
+      "kind": "ITEM",
+      "adapter": "adaptercore.standalone.item"
+    },
+    {
+      "nodeId": "echomaterialcore:item/scrap_wire",
+      "runtimeId": "echoashfallprotocol:scrap_wire",
+      "kind": "ITEM",
+      "adapter": "adaptercore.standalone.item"
+    },
+    {
+      "nodeId": "echomaterialcore:item/filter_mesh",
+      "runtimeId": "echoashfallprotocol:filter_mesh",
+      "kind": "ITEM",
+      "adapter": "adaptercore.standalone.item"
+    },
+    {
+      "nodeId": "echomaterialcore:item/machine_casing",
+      "runtimeId": "echoashfallprotocol:machine_casing",
+      "kind": "ITEM",
+      "adapter": "adaptercore.standalone.item"
+    }
+  ]
+}

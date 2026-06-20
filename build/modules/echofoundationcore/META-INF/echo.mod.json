@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "echo.module.descriptor.v1",
+  "id": "echofoundationcore",
+  "name": "ECHO Foundation Core",
+  "version": "1.0.0",
+  "kind": "foundation",
+  "side": "both",
+  "standalone": true,
+  "official": true,
+  "requires": [
+    {
+      "id": "echoadaptercore",
+      "version": "1.0.0",
+      "optional": false
+    }
+  ],
+  "optional": [],
+  "access": {
+    "nativeEntrypoint": "",
+    "nativeClasspath": [
+      "."
+    ],
+    "permissions": [],
+    "contentNamespaces": [
+      "echofoundationcore"
+    ]
+  }
+}

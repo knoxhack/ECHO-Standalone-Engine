@@ -1,0 +1,24 @@
+{
+  "schemaVersion": "echo.content_graph.v1",
+  "moduleId": "echoweathercore",
+  "nodes": [
+    {
+      "id": "echoweathercore:capability/weather_schedule",
+      "kind": "CAPABILITY",
+      "displayName": "Weather Schedule Contract"
+    },
+    {
+      "id": "echoweathercore:service/weather_runtime",
+      "kind": "SERVICE",
+      "displayName": "Weather Runtime Contract"
+    }
+  ],
+  "edges": [
+    {
+      "id": "echoweathercore:edge/runtime_implements_schedule",
+      "type": "service_implements_capability",
+      "source": "echoweathercore:service/weather_runtime",
+      "target": "echoweathercore:capability/weather_schedule"
+    }
+  ]
+}

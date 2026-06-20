@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "echo.content_feature_list.v1",
+  "moduleId": "echoterminal",
+  "features": [
+    {
+      "id": "echoterminal:feature/field_terminal",
+      "name": "Field Terminal",
+      "nodeIds": [
+        "echoterminal:block/echo_terminal",
+        "echoterminal:ui/field_terminal"
+      ]
+    }
+  ]
+}

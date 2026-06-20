@@ -1,0 +1,14 @@
+package dev.echo.engine.game;
+
+import dev.echo.engine.world.Chunk;
+import dev.echo.engine.world.VoxelWorld;
+import java.awt.event.KeyEvent;
+
+public final class PlayerController {
+    private static final double GRAVITY=-22.0;private static final double JUMP_SPEED=8.2;private static final double WALK_SPEED=4.8;private static final double SPRINT_SPEED=7.8;
+    public void update(Player player,VoxelWorld world,InputState input,double dt){double[] mouse=input.consumeMouseDelta();player.setYaw(player.yaw()+mouse[0]*0.12);player.setPitch(player.pitch()-mouse[1]*0.12);for(int i=0;i<Inventory.HOTBAR_SIZE;i++)if(input.consumeKey(KeyEvent.VK_1+i))player.inventory().select(i);int wheel=input.consumeWheel();if(wheel!=0)player.inventory().select(player.inventory().selected()+wheel);
+        double forward=(input.keyDown(KeyEvent.VK_W)?1:0)-(input.keyDown(KeyEvent.VK_S)?1:0);double strafe=(input.keyDown(KeyEvent.VK_D)?1:0)-(input.keyDown(KeyEvent.VK_A)?1:0);double length=Math.hypot(forward,strafe);if(length>1){forward/=length;strafe/=length;}double yaw=Math.toRadians(player.yaw());double speed=input.keyDown(KeyEvent.VK_SHIFT)?SPRINT_SPEED:WALK_SPEED;double desiredX=(forward*Math.sin(yaw)+strafe*Math.cos(yaw))*speed;double desiredZ=(forward*Math.cos(yaw)-strafe*Math.sin(yaw))*speed;double response=1-Math.exp(-(player.grounded()?18:6)*dt);double vx=lerp(player.velocityX(),desiredX,response),vz=lerp(player.velocityZ(),desiredZ,response),vy=player.velocityY()+GRAVITY*dt;if(player.grounded()&&input.consumeKey(KeyEvent.VK_SPACE))vy=JUMP_SPEED;player.setVelocity(vx,vy,vz);move(player,world,vx*dt,vy*dt,vz*dt);if(player.y()<-8){player.setPosition(0,world.surfaceY(0,0)+2,0);player.setVelocity(0,0,0);player.setHealth(player.health()-2);}}
+    private void move(Player p,VoxelWorld world,double dx,double dy,double dz){boolean grounded=false;if(canMove(p,world,dx,0,0))p.setPosition(p.x()+dx,p.y(),p.z());else p.setVelocity(0,p.velocityY(),p.velocityZ());if(canMove(p,world,0,dy,0))p.setPosition(p.x(),p.y()+dy,p.z());else{if(dy<0)grounded=true;p.setVelocity(p.velocityX(),0,p.velocityZ());}if(canMove(p,world,0,0,dz))p.setPosition(p.x(),p.y(),p.z()+dz);else p.setVelocity(p.velocityX(),p.velocityY(),0);if(!grounded)grounded=world.collides(p.x()-Player.WIDTH/2,p.y()-0.06,p.z()-Player.WIDTH/2,p.x()+Player.WIDTH/2,p.y(),p.z()+Player.WIDTH/2);p.setGrounded(grounded);}
+    private boolean canMove(Player p,VoxelWorld world,double dx,double dy,double dz){double minX=p.x()+dx-Player.WIDTH/2,maxX=p.x()+dx+Player.WIDTH/2,minY=p.y()+dy,maxY=p.y()+dy+Player.HEIGHT,minZ=p.z()+dz-Player.WIDTH/2,maxZ=p.z()+dz+Player.WIDTH/2;if(minY<0||maxY>=Chunk.HEIGHT)return false;return!world.collides(minX,minY,minZ,maxX,maxY,maxZ);}
+    private static double lerp(double a,double b,double t){return a+(b-a)*t;}
+}

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "echo.content_feature_list.v1",
+  "moduleId": "echoashfallprotocol",
+  "features": [
+    {
+      "id": "echoashfallprotocol:feature/ashlands_world",
+      "name": "Ashlands World",
+      "nodeIds": [
+        "echoashfallprotocol:worldgen/ashlands",
+        "echoashfallprotocol:block/scorched_ash",
+        "echoashfallprotocol:block/ash_soil",
+        "echoashfallprotocol:block/fallout_dust"
+      ]
+    },
+    {
+      "id": "echoashfallprotocol:feature/survival_pressure",
+      "name": "Ashfall Survival Pressure",
+      "nodeIds": [
+        "echoashfallprotocol:system/ashfall_runtime",
+        "echoashfallprotocol:survival/basic_needs",
+        "echoashfallprotocol:hazard/toxic_ash",
+        "echoashfallprotocol:weather/ash_storm"
+      ]
+    },
+    {
+      "id": "echoashfallprotocol:feature/crash_protocol",
+      "name": "Crash Protocol Mission",
+      "nodeIds": [
+        "echoashfallprotocol:mission/crash_protocol",
+        "echoashfallprotocol:objective/inspect_terminal",
+        "echoashfallprotocol:objective/recover_cache",
+        "echoashfallprotocol:objective/repair_power"
+      ]
+    },
+    {
+      "id": "echoashfallprotocol:feature/field_machines",
+      "name": "Field Machines",
+      "nodeIds": [
+        "echoashfallprotocol:machine/rain_collector",
+        "echoashfallprotocol:machine/water_purifier",
+        "echoashfallprotocol:machine/scrap_press",
+        "echoashfallprotocol:machine/radiation_cleanser"
+      ]
+    }
+  ]
+}

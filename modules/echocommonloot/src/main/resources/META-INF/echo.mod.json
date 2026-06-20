@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "echo.module.descriptor.v1",
+  "id": "echocommonloot",
+  "name": "ECHO Common Loot",
+  "version": "1.0.0",
+  "kind": "foundation",
+  "side": "both",
+  "standalone": true,
+  "official": true,
+  "requires": [
+    {
+      "id": "echomaterialcore",
+      "version": "1.0.0",
+      "optional": false
+    }
+  ],
+  "optional": [],
+  "access": {
+    "nativeEntrypoint": "",
+    "nativeClasspath": [
+      "."
+    ],
+    "permissions": [],
+    "contentNamespaces": [
+      "echocommonloot"
+    ]
+  }
+}

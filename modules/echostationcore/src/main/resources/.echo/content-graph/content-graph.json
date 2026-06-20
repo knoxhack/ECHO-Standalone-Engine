@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "echo.content_graph.v1",
+  "moduleId": "echostationcore",
+  "nodes": [
+    {
+      "id": "echostationcore:block/field_workbench",
+      "kind": "BLOCK",
+      "displayName": "Field Workbench",
+      "argb": "#786853",
+      "solid": true,
+      "opaque": true,
+      "hardness": 1.8,
+      "dropNodeId": "echostationcore:item/field_workbench"
+    },
+    {
+      "id": "echostationcore:item/field_workbench",
+      "kind": "ITEM",
+      "displayName": "Field Workbench",
+      "maxStack": 16,
+      "placesBlockNodeId": "echostationcore:block/field_workbench"
+    },
+    {
+      "id": "echostationcore:block/storage_crate",
+      "kind": "BLOCK",
+      "displayName": "Storage Crate",
+      "argb": "#6A4F38",
+      "solid": true,
+      "opaque": true,
+      "hardness": 1.4,
+      "dropNodeId": "echostationcore:item/storage_crate"
+    },
+    {
+      "id": "echostationcore:item/storage_crate",
+      "kind": "ITEM",
+      "displayName": "Storage Crate",
+      "maxStack": 16,
+      "placesBlockNodeId": "echostationcore:block/storage_crate"
+    }
+  ],
+  "edges": [
+    {
+      "id": "echostationcore:edge/workbench_item_places_block",
+      "type": "item_places_block",
+      "source": "echostationcore:item/field_workbench",
+      "target": "echostationcore:block/field_workbench"
+    },
+    {
+      "id": "echostationcore:edge/crate_item_places_block",
+      "type": "item_places_block",
+      "source": "echostationcore:item/storage_crate",
+      "target": "echostationcore:block/storage_crate"
+    },
+    {
+      "id": "echostationcore:block/field_workbench:drops",
+      "type": "block_drops_item",
+      "source": "echostationcore:block/field_workbench",
+      "target": "echostationcore:item/field_workbench",
+      "count": 1
+    },
+    {
+      "id": "echostationcore:block/storage_crate:drops",
+      "type": "block_drops_item",
+      "source": "echostationcore:block/storage_crate",
+      "target": "echostationcore:item/storage_crate",
+      "count": 1
+    }
+  ]
+}

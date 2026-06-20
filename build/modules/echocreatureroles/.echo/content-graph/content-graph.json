@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "echo.content_graph.v1",
+  "moduleId": "echocreatureroles",
+  "nodes": [
+    {
+      "id": "echocreatureroles:capability/hostile_pursuer",
+      "kind": "CAPABILITY",
+      "displayName": "Hostile Pursuer Role"
+    },
+    {
+      "id": "echocreatureroles:capability/scavenger",
+      "kind": "CAPABILITY",
+      "displayName": "Scavenger Role"
+    },
+    {
+      "id": "echocreatureroles:capability/pack_hunter",
+      "kind": "CAPABILITY",
+      "displayName": "Pack Hunter Role"
+    }
+  ],
+  "edges": []
+}

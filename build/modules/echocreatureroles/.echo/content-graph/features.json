@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "echo.content_feature_list.v1",
+  "moduleId": "echocreatureroles",
+  "features": [
+    {
+      "id": "echocreatureroles:feature/survival_pressure_roles",
+      "name": "Survival Pressure Roles",
+      "nodeIds": [
+        "echocreatureroles:capability/hostile_pursuer",
+        "echocreatureroles:capability/scavenger",
+        "echocreatureroles:capability/pack_hunter"
+      ]
+    }
+  ]
+}
