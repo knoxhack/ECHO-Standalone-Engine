@@ -1,0 +1,610 @@
+{
+  "schemaVersion": "echo.content_graph.v1",
+  "moduleId": "echocore",
+  "nodes": [
+    {
+      "schemaVersion": "echo.content_graph.node.v1",
+      "kind": "echo:module",
+      "id": "echocore:module",
+      "moduleId": "echocore",
+      "displayName": "ECHO: Core",
+      "source": {
+        "repo": "ECHO-Modules",
+        "path": "addons/echocore/src/main/resources/META-INF/echo.mod.json",
+        "format": "json"
+      },
+      "aliases": [],
+      "capabilities": [],
+      "runtimeHints": {
+        "neoforge": {
+          "declared": true
+        },
+        "echo_native": {
+          "declared": true
+        },
+        "echo_runtime_standalone": {
+          "declared": true
+        },
+        "hytale": {}
+      },
+      "data": {
+        "version": "1.0.0",
+        "kind": "library",
+        "role": "foundation",
+        "channel": "stable",
+        "official": true,
+        "trustLevel": "official",
+        "side": "common",
+        "standalone": true,
+        "apiStability": "stable"
+      },
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T18:22:20.465Z"
+      }
+    },
+    {
+      "schemaVersion": "echo.content_graph.node.v1",
+      "kind": "echo:system",
+      "id": "echocore:system/echo.core",
+      "moduleId": "echocore",
+      "displayName": "echo.core",
+      "source": {
+        "repo": "ECHO-Modules",
+        "path": "addons/echocore",
+        "format": "generated"
+      },
+      "aliases": [],
+      "capabilities": [],
+      "runtimeHints": {
+        "neoforge": {},
+        "echo_native": {},
+        "echo_runtime_standalone": {},
+        "hytale": {}
+      },
+      "data": {
+        "capability": "echo.core"
+      },
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T18:22:20.465Z"
+      }
+    },
+    {
+      "schemaVersion": "echo.content_graph.node.v1",
+      "kind": "echo:system",
+      "id": "echocore:system/echo.services",
+      "moduleId": "echocore",
+      "displayName": "echo.services",
+      "source": {
+        "repo": "ECHO-Modules",
+        "path": "addons/echocore",
+        "format": "generated"
+      },
+      "aliases": [],
+      "capabilities": [],
+      "runtimeHints": {
+        "neoforge": {},
+        "echo_native": {},
+        "echo_runtime_standalone": {},
+        "hytale": {}
+      },
+      "data": {
+        "capability": "echo.services"
+      },
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T18:22:20.465Z"
+      }
+    },
+    {
+      "schemaVersion": "echo.content_graph.node.v1",
+      "kind": "echo:system",
+      "id": "echocore:system/echo.runtime_modules",
+      "moduleId": "echocore",
+      "displayName": "echo.runtime_modules",
+      "source": {
+        "repo": "ECHO-Modules",
+        "path": "addons/echocore",
+        "format": "generated"
+      },
+      "aliases": [],
+      "capabilities": [],
+      "runtimeHints": {
+        "neoforge": {},
+        "echo_native": {},
+        "echo_runtime_standalone": {},
+        "hytale": {}
+      },
+      "data": {
+        "capability": "echo.runtime_modules"
+      },
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T18:22:20.465Z"
+      }
+    },
+    {
+      "schemaVersion": "echo.content_graph.node.v1",
+      "kind": "echo:system",
+      "id": "echocore:system/echo.spine",
+      "moduleId": "echocore",
+      "displayName": "echo.spine",
+      "source": {
+        "repo": "ECHO-Modules",
+        "path": "addons/echocore",
+        "format": "generated"
+      },
+      "aliases": [],
+      "capabilities": [],
+      "runtimeHints": {
+        "neoforge": {},
+        "echo_native": {},
+        "echo_runtime_standalone": {},
+        "hytale": {}
+      },
+      "data": {
+        "capability": "echo.spine"
+      },
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T18:22:20.465Z"
+      }
+    },
+    {
+      "schemaVersion": "echo.content_graph.node.v1",
+      "kind": "echo:system",
+      "id": "echocore:system/echo.config",
+      "moduleId": "echocore",
+      "displayName": "echo.config",
+      "source": {
+        "repo": "ECHO-Modules",
+        "path": "addons/echocore",
+        "format": "generated"
+      },
+      "aliases": [],
+      "capabilities": [],
+      "runtimeHints": {
+        "neoforge": {},
+        "echo_native": {},
+        "echo_runtime_standalone": {},
+        "hytale": {}
+      },
+      "data": {
+        "capability": "echo.config"
+      },
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T18:22:20.465Z"
+      }
+    },
+    {
+      "schemaVersion": "echo.content_graph.node.v1",
+      "kind": "echo:system",
+      "id": "echocore:system/echo.missions",
+      "moduleId": "echocore",
+      "displayName": "echo.missions",
+      "source": {
+        "repo": "ECHO-Modules",
+        "path": "addons/echocore",
+        "format": "generated"
+      },
+      "aliases": [],
+      "capabilities": [],
+      "runtimeHints": {
+        "neoforge": {},
+        "echo_native": {},
+        "echo_runtime_standalone": {},
+        "hytale": {}
+      },
+      "data": {
+        "capability": "echo.missions"
+      },
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T18:22:20.465Z"
+      }
+    },
+    {
+      "schemaVersion": "echo.content_graph.node.v1",
+      "kind": "echo:system",
+      "id": "echocore:system/echo.network",
+      "moduleId": "echocore",
+      "displayName": "echo.network",
+      "source": {
+        "repo": "ECHO-Modules",
+        "path": "addons/echocore",
+        "format": "generated"
+      },
+      "aliases": [],
+      "capabilities": [],
+      "runtimeHints": {
+        "neoforge": {},
+        "echo_native": {},
+        "echo_runtime_standalone": {},
+        "hytale": {}
+      },
+      "data": {
+        "capability": "echo.network"
+      },
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T18:22:20.465Z"
+      }
+    },
+    {
+      "schemaVersion": "echo.content_graph.node.v1",
+      "kind": "echo:system",
+      "id": "echocore:system/echo.index",
+      "moduleId": "echocore",
+      "displayName": "echo.index",
+      "source": {
+        "repo": "ECHO-Modules",
+        "path": "addons/echocore",
+        "format": "generated"
+      },
+      "aliases": [],
+      "capabilities": [],
+      "runtimeHints": {
+        "neoforge": {},
+        "echo_native": {},
+        "echo_runtime_standalone": {},
+        "hytale": {}
+      },
+      "data": {
+        "capability": "echo.index"
+      },
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T18:22:20.465Z"
+      }
+    },
+    {
+      "schemaVersion": "echo.content_graph.node.v1",
+      "kind": "echo:system",
+      "id": "echocore:system/echo.world",
+      "moduleId": "echocore",
+      "displayName": "echo.world",
+      "source": {
+        "repo": "ECHO-Modules",
+        "path": "addons/echocore",
+        "format": "generated"
+      },
+      "aliases": [],
+      "capabilities": [],
+      "runtimeHints": {
+        "neoforge": {},
+        "echo_native": {},
+        "echo_runtime_standalone": {},
+        "hytale": {}
+      },
+      "data": {
+        "capability": "echo.world"
+      },
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T18:22:20.465Z"
+      }
+    },
+    {
+      "schemaVersion": "echo.content_graph.node.v1",
+      "kind": "echo:system",
+      "id": "echocore:system/echo.map",
+      "moduleId": "echocore",
+      "displayName": "echo.map",
+      "source": {
+        "repo": "ECHO-Modules",
+        "path": "addons/echocore",
+        "format": "generated"
+      },
+      "aliases": [],
+      "capabilities": [],
+      "runtimeHints": {
+        "neoforge": {},
+        "echo_native": {},
+        "echo_runtime_standalone": {},
+        "hytale": {}
+      },
+      "data": {
+        "capability": "echo.map"
+      },
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T18:22:20.465Z"
+      }
+    },
+    {
+      "schemaVersion": "echo.content_graph.node.v1",
+      "kind": "echo:system",
+      "id": "echocore:system/echo.factions",
+      "moduleId": "echocore",
+      "displayName": "echo.factions",
+      "source": {
+        "repo": "ECHO-Modules",
+        "path": "addons/echocore",
+        "format": "generated"
+      },
+      "aliases": [],
+      "capabilities": [],
+      "runtimeHints": {
+        "neoforge": {},
+        "echo_native": {},
+        "echo_runtime_standalone": {},
+        "hytale": {}
+      },
+      "data": {
+        "capability": "echo.factions"
+      },
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T18:22:20.465Z"
+      }
+    },
+    {
+      "schemaVersion": "echo.content_graph.node.v1",
+      "kind": "echo:system",
+      "id": "echocore:system/echo.diagnostics",
+      "moduleId": "echocore",
+      "displayName": "echo.diagnostics",
+      "source": {
+        "repo": "ECHO-Modules",
+        "path": "addons/echocore",
+        "format": "generated"
+      },
+      "aliases": [],
+      "capabilities": [],
+      "runtimeHints": {
+        "neoforge": {},
+        "echo_native": {},
+        "echo_runtime_standalone": {},
+        "hytale": {}
+      },
+      "data": {
+        "capability": "echo.diagnostics"
+      },
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T18:22:20.465Z"
+      }
+    },
+    {
+      "schemaVersion": "echo.content_graph.node.v1",
+      "kind": "echo:setting",
+      "id": "echocore:setting/gamemode/ashfall",
+      "moduleId": "echocore",
+      "displayName": "ashfall",
+      "source": {
+        "repo": "ECHO-Modules",
+        "path": "addons/echocore",
+        "format": "generated"
+      },
+      "aliases": [],
+      "capabilities": [],
+      "runtimeHints": {
+        "neoforge": {},
+        "echo_native": {},
+        "echo_runtime_standalone": {},
+        "hytale": {}
+      },
+      "data": {
+        "settingType": "gameMode"
+      },
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T18:22:20.465Z"
+      }
+    },
+    {
+      "schemaVersion": "echo.content_graph.node.v1",
+      "kind": "echo:setting",
+      "id": "echocore:setting/gamemode/echo_prime",
+      "moduleId": "echocore",
+      "displayName": "echo_prime",
+      "source": {
+        "repo": "ECHO-Modules",
+        "path": "addons/echocore",
+        "format": "generated"
+      },
+      "aliases": [],
+      "capabilities": [],
+      "runtimeHints": {
+        "neoforge": {},
+        "echo_native": {},
+        "echo_runtime_standalone": {},
+        "hytale": {}
+      },
+      "data": {
+        "settingType": "gameMode"
+      },
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T18:22:20.465Z"
+      }
+    },
+    {
+      "schemaVersion": "echo.content_graph.node.v1",
+      "kind": "echo:setting",
+      "id": "echocore:setting/gamemode/arcana_division",
+      "moduleId": "echocore",
+      "displayName": "arcana_division",
+      "source": {
+        "repo": "ECHO-Modules",
+        "path": "addons/echocore",
+        "format": "generated"
+      },
+      "aliases": [],
+      "capabilities": [],
+      "runtimeHints": {
+        "neoforge": {},
+        "echo_native": {},
+        "echo_runtime_standalone": {},
+        "hytale": {}
+      },
+      "data": {
+        "settingType": "gameMode"
+      },
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T18:22:20.465Z"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "schemaVersion": "echo.content_graph.edge.v1",
+      "id": "echocore:system_declares_capability_echocore_system_echo.core_echocore_module",
+      "kind": "system_declares_capability",
+      "from": "echocore:system/echo.core",
+      "to": "echocore:module",
+      "moduleId": "echocore",
+      "data": {},
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T18:22:20.465Z"
+      }
+    },
+    {
+      "schemaVersion": "echo.content_graph.edge.v1",
+      "id": "echocore:system_declares_capability_echocore_system_echo.services_echocore_module",
+      "kind": "system_declares_capability",
+      "from": "echocore:system/echo.services",
+      "to": "echocore:module",
+      "moduleId": "echocore",
+      "data": {},
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T18:22:20.465Z"
+      }
+    },
+    {
+      "schemaVersion": "echo.content_graph.edge.v1",
+      "id": "echocore:system_declares_capability_echocore_system_echo.runtime_modules_echocore_module",
+      "kind": "system_declares_capability",
+      "from": "echocore:system/echo.runtime_modules",
+      "to": "echocore:module",
+      "moduleId": "echocore",
+      "data": {},
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T18:22:20.465Z"
+      }
+    },
+    {
+      "schemaVersion": "echo.content_graph.edge.v1",
+      "id": "echocore:system_declares_capability_echocore_system_echo.spine_echocore_module",
+      "kind": "system_declares_capability",
+      "from": "echocore:system/echo.spine",
+      "to": "echocore:module",
+      "moduleId": "echocore",
+      "data": {},
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T18:22:20.465Z"
+      }
+    },
+    {
+      "schemaVersion": "echo.content_graph.edge.v1",
+      "id": "echocore:system_declares_capability_echocore_system_echo.config_echocore_module",
+      "kind": "system_declares_capability",
+      "from": "echocore:system/echo.config",
+      "to": "echocore:module",
+      "moduleId": "echocore",
+      "data": {},
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T18:22:20.465Z"
+      }
+    },
+    {
+      "schemaVersion": "echo.content_graph.edge.v1",
+      "id": "echocore:system_declares_capability_echocore_system_echo.missions_echocore_module",
+      "kind": "system_declares_capability",
+      "from": "echocore:system/echo.missions",
+      "to": "echocore:module",
+      "moduleId": "echocore",
+      "data": {},
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T18:22:20.465Z"
+      }
+    },
+    {
+      "schemaVersion": "echo.content_graph.edge.v1",
+      "id": "echocore:system_declares_capability_echocore_system_echo.network_echocore_module",
+      "kind": "system_declares_capability",
+      "from": "echocore:system/echo.network",
+      "to": "echocore:module",
+      "moduleId": "echocore",
+      "data": {},
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T18:22:20.465Z"
+      }
+    },
+    {
+      "schemaVersion": "echo.content_graph.edge.v1",
+      "id": "echocore:system_declares_capability_echocore_system_echo.index_echocore_module",
+      "kind": "system_declares_capability",
+      "from": "echocore:system/echo.index",
+      "to": "echocore:module",
+      "moduleId": "echocore",
+      "data": {},
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T18:22:20.465Z"
+      }
+    },
+    {
+      "schemaVersion": "echo.content_graph.edge.v1",
+      "id": "echocore:system_declares_capability_echocore_system_echo.world_echocore_module",
+      "kind": "system_declares_capability",
+      "from": "echocore:system/echo.world",
+      "to": "echocore:module",
+      "moduleId": "echocore",
+      "data": {},
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T18:22:20.465Z"
+      }
+    },
+    {
+      "schemaVersion": "echo.content_graph.edge.v1",
+      "id": "echocore:system_declares_capability_echocore_system_echo.map_echocore_module",
+      "kind": "system_declares_capability",
+      "from": "echocore:system/echo.map",
+      "to": "echocore:module",
+      "moduleId": "echocore",
+      "data": {},
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T18:22:20.465Z"
+      }
+    },
+    {
+      "schemaVersion": "echo.content_graph.edge.v1",
+      "id": "echocore:system_declares_capability_echocore_system_echo.factions_echocore_module",
+      "kind": "system_declares_capability",
+      "from": "echocore:system/echo.factions",
+      "to": "echocore:module",
+      "moduleId": "echocore",
+      "data": {},
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T18:22:20.465Z"
+      }
+    },
+    {
+      "schemaVersion": "echo.content_graph.edge.v1",
+      "id": "echocore:system_declares_capability_echocore_system_echo.diagnostics_echocore_module",
+      "kind": "system_declares_capability",
+      "from": "echocore:system/echo.diagnostics",
+      "to": "echocore:module",
+      "moduleId": "echocore",
+      "data": {},
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T18:22:20.465Z"
+      }
+    }
+  ]
+}

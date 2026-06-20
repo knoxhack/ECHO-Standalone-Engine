@@ -6,24 +6,31 @@
     "version": "2.0.0-beta.2"
   },
   "contentIdentity": {
-    "contentGraphFingerprint": "0590f2ac1dfdc4f384cd8542ae18d757aed229a5b6de7c0caeef4c35cdfb32f9",
+    "contentGraphFingerprint": "2e97d9ecd54d6b6b875f29261a46f799b8db92cca56e0f990a7a02b2421da5ff",
     "moduleFingerprints": {
-      "echoscreencore": "7a9ba1b22a1538923032fac586e533d7616852c51bec8743b0d7931e496fcd1a",
-      "echoadaptercore": "e3b484796afacfd1300f9ea5554014cfead62e9211292b344e49c5ff579589df",
       "echoworldstarter": "e1728dea5891be56ed17bb594f35f17614944cbab4bba8523c94634c37662901",
+      "echohealthcore": "9f379d9cc2037938de66f2137f6d55a4d3a950482c805788c40c6a4e140119db",
+      "echoscreencore": "7a9ba1b22a1538923032fac586e533d7616852c51bec8743b0d7931e496fcd1a",
+      "echostationcore": "c6621129fefda5c16dd069650b0ab551efabedfdf97ec22a978a852657c286de",
+      "echotoolcore": "38ed1458c5d8708c5f9d73ea618a2ad28986b1712e1b0320fa5833a0e87134d9",
+      "echocontentcore": "e6fdee7d2dcc647ff1444573996db10b1a67a6ca2bfccbe3e98ab438a045740c",
+      "echofoundationcore": "f4553c8768ddd7ca51ff15eb4805f4db771d308e9eb1cce7e6628fd847faace3",
       "echoashfallprotocol": "6696f7ff39b31e4461c21d8ab3f449cd36047bf8699e6078f06af7100b20006e",
-      "echoweathercore": "09fb4acd601b4e4342d2e6208b4cc2a024ac12e83a570cc4e6b3f36f6622aed3",
+      "echohudcore": "ef483238edef4a69fdd5ddbe6031fa9effc4454f53b80391a127577f5a82818c",
+      "echomaterialcore": "56748d38a80b4e1010eed5dbcb7a28668728c75c23fbe6be183448cb71b46d7d",
+      "echoschemacore": "e071fcbc4adc43238369400e0b070430c593d0b92939bb762f8155df727dcf21",
+      "echoadaptercore": "e3b484796afacfd1300f9ea5554014cfead62e9211292b344e49c5ff579589df",
       "echocommonloot": "3c51cf089d2fef08465960eec52d768011cc9f6281df7ef0d24d4cea7d9d69d0",
       "echoterminal": "522f07251cb352e97ddf1bdb159efcba0ac6aae5c1497f7a3a5acefb137380e5",
-      "echotoolcore": "38ed1458c5d8708c5f9d73ea618a2ad28986b1712e1b0320fa5833a0e87134d9",
-      "echocreatureroles": "ec31f99f95122959e739e201de9bbd52c61ad10a3b1faf0303f3c148c83c8cf2",
-      "echomaterialcore": "56748d38a80b4e1010eed5dbcb7a28668728c75c23fbe6be183448cb71b46d7d",
-      "echostationcore": "c6621129fefda5c16dd069650b0ab551efabedfdf97ec22a978a852657c286de",
-      "echofoundationcore": "f4553c8768ddd7ca51ff15eb4805f4db771d308e9eb1cce7e6628fd847faace3"
+      "echocore": "a2b28345992a43b56f44d5ec46df32ad3930799cdbbc5a3663fc5a8887367d24",
+      "echoweathercore": "09fb4acd601b4e4342d2e6208b4cc2a024ac12e83a570cc4e6b3f36f6622aed3",
+      "echoplatformcore": "c26fbc0b7831255f0f20657f9bd36d3d7295957b0802a8cc0895691a3e429b1c",
+      "echovalidationcore": "a5fe3027c873e9cad0e2983503081f9e1752bfdc3fb5d8ac749a41ab0b0f5653",
+      "echocreatureroles": "ec31f99f95122959e739e201de9bbd52c61ad10a3b1faf0303f3c148c83c8cf2"
     }
   },
   "seed": 424242,
-  "timeSeconds": 10.100000000000081,
+  "timeSeconds": 10.083333333333414,
   "player": {
     "x": 0.5,
     "y": 16.05,
@@ -90,10 +97,10 @@
   },
   "moduleStates": {
     "echoashfallprotocol": {
+      "starterGranted": "true",
       "objectiveNodeId": "echoashfallprotocol:objective/inspect_terminal",
       "damageClock": "0.033333333333348654",
-      "warningClock": "10.033333333333411",
-      "starterGranted": "true"
+      "warningClock": "10.033333333333411"
     },
     "echoadaptercore": {}
   }

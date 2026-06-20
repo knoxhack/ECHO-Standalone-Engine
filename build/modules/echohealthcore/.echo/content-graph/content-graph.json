@@ -1,0 +1,224 @@
+{
+  "schemaVersion": "echo.content_graph.v1",
+  "moduleId": "echohealthcore",
+  "nodes": [
+    {
+      "schemaVersion": "echo.content_graph.node.v1",
+      "kind": "echo:module",
+      "id": "echohealthcore:module",
+      "moduleId": "echohealthcore",
+      "displayName": "ECHO: HealthCore",
+      "source": {
+        "repo": "ECHO-Modules",
+        "path": "addons/echohealthcore/src/main/resources/META-INF/echo.mod.json",
+        "format": "json"
+      },
+      "aliases": [],
+      "capabilities": [],
+      "runtimeHints": {
+        "neoforge": {
+          "declared": true
+        },
+        "echo_native": {
+          "declared": true
+        },
+        "echo_runtime_standalone": {
+          "declared": true
+        },
+        "hytale": {}
+      },
+      "data": {
+        "version": "1.0.0",
+        "kind": "library",
+        "role": "health",
+        "channel": "beta",
+        "official": true,
+        "trustLevel": "official",
+        "side": "common",
+        "standalone": true,
+        "apiStability": "beta"
+      },
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T04:22:18.726Z"
+      }
+    },
+    {
+      "schemaVersion": "echo.content_graph.node.v1",
+      "kind": "echo:system",
+      "id": "echohealthcore:system/runtime.health",
+      "moduleId": "echohealthcore",
+      "displayName": "runtime.health",
+      "source": {
+        "repo": "ECHO-Modules",
+        "path": "addons/echohealthcore",
+        "format": "generated"
+      },
+      "aliases": [],
+      "capabilities": [],
+      "runtimeHints": {
+        "neoforge": {},
+        "echo_native": {},
+        "echo_runtime_standalone": {},
+        "hytale": {}
+      },
+      "data": {
+        "capability": "runtime.health"
+      },
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T04:22:18.726Z"
+      }
+    },
+    {
+      "schemaVersion": "echo.content_graph.node.v1",
+      "kind": "echo:setting",
+      "id": "echohealthcore:setting/runtime.health",
+      "moduleId": "echohealthcore",
+      "displayName": "runtime.health",
+      "source": {
+        "repo": "ECHO-Modules",
+        "path": "addons/echohealthcore",
+        "format": "generated"
+      },
+      "aliases": [],
+      "capabilities": [],
+      "runtimeHints": {
+        "neoforge": {},
+        "echo_native": {},
+        "echo_runtime_standalone": {},
+        "hytale": {}
+      },
+      "data": {
+        "settingType": "permission"
+      },
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T04:22:18.726Z"
+      }
+    },
+    {
+      "schemaVersion": "echo.content_graph.node.v1",
+      "kind": "echo:setting",
+      "id": "echohealthcore:setting/diagnostics.write",
+      "moduleId": "echohealthcore",
+      "displayName": "diagnostics.write",
+      "source": {
+        "repo": "ECHO-Modules",
+        "path": "addons/echohealthcore",
+        "format": "generated"
+      },
+      "aliases": [],
+      "capabilities": [],
+      "runtimeHints": {
+        "neoforge": {},
+        "echo_native": {},
+        "echo_runtime_standalone": {},
+        "hytale": {}
+      },
+      "data": {
+        "settingType": "permission"
+      },
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T04:22:18.726Z"
+      }
+    },
+    {
+      "schemaVersion": "echo.content_graph.node.v1",
+      "kind": "echo:setting",
+      "id": "echohealthcore:setting/gamemode/ashfall",
+      "moduleId": "echohealthcore",
+      "displayName": "ashfall",
+      "source": {
+        "repo": "ECHO-Modules",
+        "path": "addons/echohealthcore",
+        "format": "generated"
+      },
+      "aliases": [],
+      "capabilities": [],
+      "runtimeHints": {
+        "neoforge": {},
+        "echo_native": {},
+        "echo_runtime_standalone": {},
+        "hytale": {}
+      },
+      "data": {
+        "settingType": "gameMode"
+      },
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T04:22:18.726Z"
+      }
+    },
+    {
+      "schemaVersion": "echo.content_graph.node.v1",
+      "kind": "echo:setting",
+      "id": "echohealthcore:setting/gamemode/echo_prime",
+      "moduleId": "echohealthcore",
+      "displayName": "echo_prime",
+      "source": {
+        "repo": "ECHO-Modules",
+        "path": "addons/echohealthcore",
+        "format": "generated"
+      },
+      "aliases": [],
+      "capabilities": [],
+      "runtimeHints": {
+        "neoforge": {},
+        "echo_native": {},
+        "echo_runtime_standalone": {},
+        "hytale": {}
+      },
+      "data": {
+        "settingType": "gameMode"
+      },
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T04:22:18.726Z"
+      }
+    },
+    {
+      "schemaVersion": "echo.content_graph.node.v1",
+      "kind": "echo:setting",
+      "id": "echohealthcore:setting/gamemode/arcana_division",
+      "moduleId": "echohealthcore",
+      "displayName": "arcana_division",
+      "source": {
+        "repo": "ECHO-Modules",
+        "path": "addons/echohealthcore",
+        "format": "generated"
+      },
+      "aliases": [],
+      "capabilities": [],
+      "runtimeHints": {
+        "neoforge": {},
+        "echo_native": {},
+        "echo_runtime_standalone": {},
+        "hytale": {}
+      },
+      "data": {
+        "settingType": "gameMode"
+      },
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T04:22:18.726Z"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "schemaVersion": "echo.content_graph.edge.v1",
+      "id": "echohealthcore:system_declares_capability_echohealthcore_system_runtime.health_echohealthcore_module",
+      "kind": "system_declares_capability",
+      "from": "echohealthcore:system/runtime.health",
+      "to": "echohealthcore:module",
+      "moduleId": "echohealthcore",
+      "data": {},
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T04:22:18.726Z"
+      }
+    }
+  ]
+}

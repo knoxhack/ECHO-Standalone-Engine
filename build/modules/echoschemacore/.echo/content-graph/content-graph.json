@@ -1,0 +1,197 @@
+{
+  "schemaVersion": "echo.content_graph.v1",
+  "moduleId": "echoschemacore",
+  "nodes": [
+    {
+      "schemaVersion": "echo.content_graph.node.v1",
+      "kind": "echo:module",
+      "id": "echoschemacore:module",
+      "moduleId": "echoschemacore",
+      "displayName": "ECHO: SchemaCore",
+      "source": {
+        "repo": "ECHO-Modules",
+        "path": "addons/echoschemacore/src/main/resources/META-INF/echo.mod.json",
+        "format": "json"
+      },
+      "aliases": [],
+      "capabilities": [],
+      "runtimeHints": {
+        "neoforge": {
+          "declared": true
+        },
+        "echo_native": {
+          "declared": true
+        },
+        "echo_runtime_standalone": {
+          "declared": true
+        },
+        "hytale": {}
+      },
+      "data": {
+        "version": "1.0.0",
+        "kind": "library",
+        "role": "platform",
+        "channel": "beta",
+        "official": true,
+        "trustLevel": "official",
+        "side": "common",
+        "standalone": true,
+        "apiStability": "beta"
+      },
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T18:22:23.466Z"
+      }
+    },
+    {
+      "schemaVersion": "echo.content_graph.node.v1",
+      "kind": "echo:system",
+      "id": "echoschemacore:system/schema.registry",
+      "moduleId": "echoschemacore",
+      "displayName": "schema.registry",
+      "source": {
+        "repo": "ECHO-Modules",
+        "path": "addons/echoschemacore",
+        "format": "generated"
+      },
+      "aliases": [],
+      "capabilities": [],
+      "runtimeHints": {
+        "neoforge": {},
+        "echo_native": {},
+        "echo_runtime_standalone": {},
+        "hytale": {}
+      },
+      "data": {
+        "capability": "schema.registry"
+      },
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T18:22:23.466Z"
+      }
+    },
+    {
+      "schemaVersion": "echo.content_graph.node.v1",
+      "kind": "echo:setting",
+      "id": "echoschemacore:setting/schema.registry",
+      "moduleId": "echoschemacore",
+      "displayName": "schema.registry",
+      "source": {
+        "repo": "ECHO-Modules",
+        "path": "addons/echoschemacore",
+        "format": "generated"
+      },
+      "aliases": [],
+      "capabilities": [],
+      "runtimeHints": {
+        "neoforge": {},
+        "echo_native": {},
+        "echo_runtime_standalone": {},
+        "hytale": {}
+      },
+      "data": {
+        "settingType": "permission"
+      },
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T18:22:23.466Z"
+      }
+    },
+    {
+      "schemaVersion": "echo.content_graph.node.v1",
+      "kind": "echo:setting",
+      "id": "echoschemacore:setting/gamemode/ashfall",
+      "moduleId": "echoschemacore",
+      "displayName": "ashfall",
+      "source": {
+        "repo": "ECHO-Modules",
+        "path": "addons/echoschemacore",
+        "format": "generated"
+      },
+      "aliases": [],
+      "capabilities": [],
+      "runtimeHints": {
+        "neoforge": {},
+        "echo_native": {},
+        "echo_runtime_standalone": {},
+        "hytale": {}
+      },
+      "data": {
+        "settingType": "gameMode"
+      },
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T18:22:23.466Z"
+      }
+    },
+    {
+      "schemaVersion": "echo.content_graph.node.v1",
+      "kind": "echo:setting",
+      "id": "echoschemacore:setting/gamemode/echo_prime",
+      "moduleId": "echoschemacore",
+      "displayName": "echo_prime",
+      "source": {
+        "repo": "ECHO-Modules",
+        "path": "addons/echoschemacore",
+        "format": "generated"
+      },
+      "aliases": [],
+      "capabilities": [],
+      "runtimeHints": {
+        "neoforge": {},
+        "echo_native": {},
+        "echo_runtime_standalone": {},
+        "hytale": {}
+      },
+      "data": {
+        "settingType": "gameMode"
+      },
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T18:22:23.466Z"
+      }
+    },
+    {
+      "schemaVersion": "echo.content_graph.node.v1",
+      "kind": "echo:setting",
+      "id": "echoschemacore:setting/gamemode/arcana_division",
+      "moduleId": "echoschemacore",
+      "displayName": "arcana_division",
+      "source": {
+        "repo": "ECHO-Modules",
+        "path": "addons/echoschemacore",
+        "format": "generated"
+      },
+      "aliases": [],
+      "capabilities": [],
+      "runtimeHints": {
+        "neoforge": {},
+        "echo_native": {},
+        "echo_runtime_standalone": {},
+        "hytale": {}
+      },
+      "data": {
+        "settingType": "gameMode"
+      },
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T18:22:23.466Z"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "schemaVersion": "echo.content_graph.edge.v1",
+      "id": "echoschemacore:system_declares_capability_echoschemacore_system_schema.registry_echoschemacore_module",
+      "kind": "system_declares_capability",
+      "from": "echoschemacore:system/schema.registry",
+      "to": "echoschemacore:module",
+      "moduleId": "echoschemacore",
+      "data": {},
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T18:22:23.466Z"
+      }
+    }
+  ]
+}

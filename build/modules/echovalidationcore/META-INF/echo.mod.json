@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "echo.module.descriptor.v1",
+  "id": "echovalidationcore",
+  "name": "ECHO: ValidationCore",
+  "version": "1.0.0",
+  "kind": "library",
+  "side": "both",
+  "standalone": true,
+  "official": true,
+  "trust": "official",
+  "requires": [
+    "echocore",
+    "echoplatformcore",
+    "echoschemacore"
+  ],
+  "optional": [],
+  "access": {
+    "nativeClasspath": [
+      "."
+    ],
+    "permissions": [],
+    "contentNamespaces": [
+      "echovalidationcore"
+    ],
+    "contractsOnly": true,
+    "notes": "Graph-only Engine slice import; executable entrypoint intentionally stripped."
+  },
+  "generatedFrom": {
+    "repo": "knoxhack/ECHO-Modules",
+    "artifact": "echovalidationcore-1.0.0-standalone.jar",
+    "mode": "graph-only-engine-slice"
+  }
+}

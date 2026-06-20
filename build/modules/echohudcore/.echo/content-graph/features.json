@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "echo.content_feature_list.v1",
+  "moduleId": "echohudcore",
+  "features": [
+    {
+      "id": "echohudcore:feature/ui/hud_overlay",
+      "title": "ECHO: HUDCore HUD Overlay",
+      "nodes": [
+        "echohudcore:ui/hud_overlay"
+      ],
+      "runtimes": {
+        "neoforge": "supported",
+        "echo_native": "supported",
+        "echo_runtime_standalone": "supported",
+        "hytale": "supported"
+      },
+      "moduleId": "echohudcore",
+      "nodeIds": [
+        "echohudcore:ui/hud_overlay"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "schema": "echo.content_graph.provenance.v1",
+  "graphId": "echoschemacore:graph",
+  "moduleId": "echoschemacore",
+  "generatedAt": "2026-06-20T18:22:23.471Z",
+  "sourceDescriptor": "addons/echoschemacore/src/main/resources/META-INF/echo.mod.json",
+  "nodeCount": 11,
+  "edgeCount": 6,
+  "unresolvedCount": 0,
+  "generatedBy": "scripts/generate-content-graph.mjs",
+  "sourceArtifact": "echoschemacore-1.0.0-standalone.jar",
+  "engineImportMode": "graph-only"
+}

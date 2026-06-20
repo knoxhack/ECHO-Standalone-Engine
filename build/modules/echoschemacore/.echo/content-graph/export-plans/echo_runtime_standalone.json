@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "echo.content_graph.export_plan.v1",
+  "moduleId": "echoschemacore",
+  "runtimeTarget": "echo_runtime_standalone",
+  "mappings": [
+    {
+      "nodeId": "echoschemacore:module",
+      "runtimeId": "echoschemacore:module",
+      "kind": "echo:module",
+      "adapter": "graph.echo_runtime_standalone.echo_module"
+    },
+    {
+      "nodeId": "echoschemacore:system/schema.registry",
+      "runtimeId": "echoschemacore:system/schema.registry",
+      "kind": "echo:system",
+      "adapter": "graph.echo_runtime_standalone.echo_system"
+    },
+    {
+      "nodeId": "echoschemacore:setting/schema.registry",
+      "runtimeId": "echoschemacore:setting/schema.registry",
+      "kind": "echo:setting",
+      "adapter": "graph.echo_runtime_standalone.echo_setting"
+    },
+    {
+      "nodeId": "echoschemacore:setting/gamemode/ashfall",
+      "runtimeId": "echoschemacore:setting/gamemode/ashfall",
+      "kind": "echo:setting",
+      "adapter": "graph.echo_runtime_standalone.echo_setting"
+    },
+    {
+      "nodeId": "echoschemacore:setting/gamemode/echo_prime",
+      "runtimeId": "echoschemacore:setting/gamemode/echo_prime",
+      "kind": "echo:setting",
+      "adapter": "graph.echo_runtime_standalone.echo_setting"
+    },
+    {
+      "nodeId": "echoschemacore:setting/gamemode/arcana_division",
+      "runtimeId": "echoschemacore:setting/gamemode/arcana_division",
+      "kind": "echo:setting",
+      "adapter": "graph.echo_runtime_standalone.echo_setting"
+    }
+  ]
+}

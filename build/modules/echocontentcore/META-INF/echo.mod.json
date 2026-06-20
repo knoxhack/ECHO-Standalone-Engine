@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "echo.module.descriptor.v1",
+  "id": "echocontentcore",
+  "name": "ECHO: ContentCore",
+  "version": "1.0.0",
+  "kind": "library",
+  "side": "both",
+  "standalone": true,
+  "official": true,
+  "trust": "official",
+  "requires": [
+    "echoadaptercore",
+    "echocore",
+    "echoplatformcore",
+    "echoschemacore",
+    "echovalidationcore"
+  ],
+  "optional": [],
+  "access": {
+    "nativeClasspath": [
+      "."
+    ],
+    "permissions": [],
+    "contentNamespaces": [
+      "echocontentcore"
+    ],
+    "contractsOnly": true,
+    "notes": "Graph-only Engine slice import; executable entrypoint intentionally stripped."
+  },
+  "generatedFrom": {
+    "repo": "knoxhack/ECHO-Modules",
+    "artifact": "echocontentcore-1.0.0-standalone.jar",
+    "mode": "graph-only-engine-slice"
+  }
+}

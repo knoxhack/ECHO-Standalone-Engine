@@ -1,0 +1,73 @@
+{
+  "schemaVersion": "echo.content_graph.export_plan.v1",
+  "moduleId": "echohudcore",
+  "runtimeTarget": "echo_runtime_standalone",
+  "mappings": [
+    {
+      "nodeId": "echohudcore:module",
+      "runtimeId": "echohudcore:module",
+      "kind": "echo:module",
+      "adapter": "graph.echo_runtime_standalone.echo_module"
+    },
+    {
+      "nodeId": "echohudcore:system/hud.compass_indicators",
+      "runtimeId": "echohudcore:system/hud.compass_indicators",
+      "kind": "echo:system",
+      "adapter": "graph.echo_runtime_standalone.echo_system"
+    },
+    {
+      "nodeId": "echohudcore:system/hud.hazard_meters",
+      "runtimeId": "echohudcore:system/hud.hazard_meters",
+      "kind": "echo:system",
+      "adapter": "graph.echo_runtime_standalone.echo_system"
+    },
+    {
+      "nodeId": "echohudcore:system/hud.mission_tracker",
+      "runtimeId": "echohudcore:system/hud.mission_tracker",
+      "kind": "echo:system",
+      "adapter": "graph.echo_runtime_standalone.echo_system"
+    },
+    {
+      "nodeId": "echohudcore:system/hud.safe_area",
+      "runtimeId": "echohudcore:system/hud.safe_area",
+      "kind": "echo:system",
+      "adapter": "graph.echo_runtime_standalone.echo_system"
+    },
+    {
+      "nodeId": "echohudcore:system/hud.widgets",
+      "runtimeId": "echohudcore:system/hud.widgets",
+      "kind": "echo:system",
+      "adapter": "graph.echo_runtime_standalone.echo_system"
+    },
+    {
+      "nodeId": "echohudcore:setting/hud.widgets",
+      "runtimeId": "echohudcore:setting/hud.widgets",
+      "kind": "echo:setting",
+      "adapter": "graph.echo_runtime_standalone.echo_setting"
+    },
+    {
+      "nodeId": "echohudcore:setting/ui.screens",
+      "runtimeId": "echohudcore:setting/ui.screens",
+      "kind": "echo:setting",
+      "adapter": "graph.echo_runtime_standalone.echo_setting"
+    },
+    {
+      "nodeId": "echohudcore:setting/ui.overlays",
+      "runtimeId": "echohudcore:setting/ui.overlays",
+      "kind": "echo:setting",
+      "adapter": "graph.echo_runtime_standalone.echo_setting"
+    },
+    {
+      "nodeId": "echohudcore:setting/gamemode/all",
+      "runtimeId": "echohudcore:setting/gamemode/all",
+      "kind": "echo:setting",
+      "adapter": "graph.echo_runtime_standalone.echo_setting"
+    },
+    {
+      "nodeId": "echohudcore:ui/hud_overlay",
+      "runtimeId": "echohudcore:ui/hud_overlay",
+      "kind": "echo:ui_intent",
+      "adapter": "graph.echo_runtime_standalone.echo_ui_intent"
+    }
+  ]
+}

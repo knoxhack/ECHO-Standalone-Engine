@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "echo.content_graph.export_plan.v1",
+  "moduleId": "echovalidationcore",
+  "runtimeTarget": "echo_native",
+  "mappings": [
+    {
+      "nodeId": "echovalidationcore:module",
+      "runtimeId": "echovalidationcore:module",
+      "kind": "echo:module",
+      "adapter": "graph.echo_native.echo_module"
+    },
+    {
+      "nodeId": "echovalidationcore:system/validation.pack",
+      "runtimeId": "echovalidationcore:system/validation.pack",
+      "kind": "echo:system",
+      "adapter": "graph.echo_native.echo_system"
+    },
+    {
+      "nodeId": "echovalidationcore:setting/diagnostics.write",
+      "runtimeId": "echovalidationcore:setting/diagnostics.write",
+      "kind": "echo:setting",
+      "adapter": "graph.echo_native.echo_setting"
+    },
+    {
+      "nodeId": "echovalidationcore:setting/validation.pack",
+      "runtimeId": "echovalidationcore:setting/validation.pack",
+      "kind": "echo:setting",
+      "adapter": "graph.echo_native.echo_setting"
+    },
+    {
+      "nodeId": "echovalidationcore:setting/gamemode/ashfall",
+      "runtimeId": "echovalidationcore:setting/gamemode/ashfall",
+      "kind": "echo:setting",
+      "adapter": "graph.echo_native.echo_setting"
+    },
+    {
+      "nodeId": "echovalidationcore:setting/gamemode/echo_prime",
+      "runtimeId": "echovalidationcore:setting/gamemode/echo_prime",
+      "kind": "echo:setting",
+      "adapter": "graph.echo_native.echo_setting"
+    },
+    {
+      "nodeId": "echovalidationcore:setting/gamemode/arcana_division",
+      "runtimeId": "echovalidationcore:setting/gamemode/arcana_division",
+      "kind": "echo:setting",
+      "adapter": "graph.echo_native.echo_setting"
+    }
+  ]
+}

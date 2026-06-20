@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "echo.module.descriptor.v1",
+  "id": "echoplatformcore",
+  "name": "ECHO: PlatformCore",
+  "version": "1.0.0",
+  "kind": "library",
+  "side": "both",
+  "standalone": true,
+  "official": true,
+  "trust": "official",
+  "requires": [
+    "echocore"
+  ],
+  "optional": [],
+  "access": {
+    "nativeClasspath": [
+      "."
+    ],
+    "permissions": [],
+    "contentNamespaces": [
+      "echoplatformcore"
+    ],
+    "contractsOnly": true,
+    "notes": "Graph-only Engine slice import; executable entrypoint intentionally stripped."
+  },
+  "generatedFrom": {
+    "repo": "knoxhack/ECHO-Modules",
+    "artifact": "echoplatformcore-1.0.0-standalone.jar",
+    "mode": "graph-only-engine-slice"
+  }
+}
