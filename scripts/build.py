@@ -20,7 +20,6 @@ PACK_ID = "ashfall-standalone-engine-edition"
 PACK_NAME = "Ashfall Standalone Engine Edition"
 PACK_MANIFEST = f"{PACK_ID}-beta-{VERSION}.pack.json"
 PACK_ZIP = f"{PACK_ID}-{VERSION}.zip"
-ZIP_ROOT = "AshfallStandaloneEngineEdition"
 ENGINE_JAR = f"echo-standalone-engine-{VERSION}.jar"
 API_JAR = f"echo-engine-api-{VERSION}.jar"
 
@@ -327,13 +326,45 @@ def runtime_zip() -> None:
     epoch = (1980, 1, 1, 0, 0, 0)
     with zipfile.ZipFile(destination, "w", zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
         for path in packaged_paths() + [DIST / "checksums.sha256"]:
-            arcname = (Path(ZIP_ROOT) / path.relative_to(DIST)).as_posix()
+            arcname = path.relative_to(DIST).as_posix()
             info = zipfile.ZipInfo(arcname, epoch)
             mode = 0o100755 if path.name == "run.sh" else 0o100644
             info.external_attr = mode << 16
             archive.writestr(
                 info,
                 path.read_bytes(),
+                compress_type=zipfile.ZIP_DEFLATED,
+                compresslevel=9,
+            )
+
+
+def add_echo_pack_metadata(module_rows: list[dict]) -> None:
+    archive = DIST / PACK_ZIP
+    epoch = (1980, 1, 1, 0, 0, 0)
+    embedded_manifest = pack_manifest(module_rows, required_file_rows(module_rows))
+    export_report = {
+        "schemaVersion": "echo.pack_export_report.v1",
+        "status": "PASS",
+        "pack": PACK_ID,
+        "version": VERSION,
+        "moduleCount": len(module_rows),
+        "fileCount": len(embedded_manifest["files"]),
+        "runtimeTarget": "echo_runtime_standalone",
+        "strictArtifacts": True,
+        "strictContentGraph": True,
+    }
+    entries = {
+        ".echo/pack-manifest.json": json.dumps(embedded_manifest, indent=2) + "\n",
+        ".echo/export-report.json": json.dumps(export_report, indent=2) + "\n",
+        ".echo/checksums.sha256": (DIST / "checksums.sha256").read_text(encoding="ascii"),
+    }
+    with zipfile.ZipFile(archive, "a", zipfile.ZIP_DEFLATED, compresslevel=9) as zip_archive:
+        for arcname, text in entries.items():
+            info = zipfile.ZipInfo(arcname, epoch)
+            info.external_attr = 0o100644 << 16
+            zip_archive.writestr(
+                info,
+                text.encode("utf-8"),
                 compress_type=zipfile.ZIP_DEFLATED,
                 compresslevel=9,
             )
@@ -411,6 +442,7 @@ def main() -> None:
     write_runtime_files()
     checksums()
     runtime_zip()
+    add_echo_pack_metadata(module_rows)
     write_launcher_manifest(module_rows)
     build_report(module_rows)
     print(f"BUILD PASS: {DIST / PACK_ZIP}")

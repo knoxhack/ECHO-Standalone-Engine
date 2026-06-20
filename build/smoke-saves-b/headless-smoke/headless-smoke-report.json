@@ -5,45 +5,45 @@
   "packId": "ashfall-standalone-engine-edition",
   "installedModules": 12,
   "contentGraph": {
-    "canonical": true,
     "mappedNodeCounts": {
-      "echo_native": 78,
+      "neoforge": 78,
       "echo_runtime_standalone": 78,
-      "neoforge": 78
+      "echo_native": 78
     },
-    "nodes": 78,
-    "modules": 12,
-    "edges": 85,
+    "canonical": true,
+    "crossRuntimeParity": true,
     "fingerprint": "0590f2ac1dfdc4f384cd8542ae18d757aed229a5b6de7c0caeef4c35cdfb32f9",
-    "crossRuntimeParity": true
+    "edges": 85,
+    "modules": 12,
+    "nodes": 78
   },
   "adapterCore": {
     "acceptedByDomain": {
-      "services": 1,
-      "entities": 3,
       "items": 24,
-      "gameplay": 1,
-      "recipes": 4,
+      "entities": 3,
+      "services": 1,
+      "worldgen": 1,
       "blocks": 14,
-      "worldgen": 1
+      "recipes": 4,
+      "gameplay": 1
     },
-    "revoked": 0,
-    "rejected": 0,
-    "canonicalRuntimeBridge": true,
+    "ready": true,
     "accepted": 48,
-    "ready": true
+    "canonicalRuntimeBridge": true,
+    "rejected": 0,
+    "revoked": 0
   },
   "runtimeContent": {
     "gameExtensions": 1,
-    "items": 24,
-    "recipes": 4,
+    "entityDefinitions": 3,
     "blocks": 16,
-    "entityDefinitions": 3
+    "recipes": 4,
+    "items": 24
   },
   "world": {
     "chunks": 25,
-    "spawnedEntities": 4,
+    "saveReload": true,
     "contentIdentityVerified": true,
-    "saveReload": true
+    "spawnedEntities": 4
   }
 }

@@ -18,20 +18,20 @@
     "crossRuntimeParity": true
   },
   "adapterCore": {
-    "accepted": 48,
     "canonicalRuntimeBridge": true,
     "rejected": 0,
     "revoked": 0,
     "acceptedByDomain": {
-      "worldgen": 1,
       "blocks": 14,
       "recipes": 4,
       "gameplay": 1,
       "items": 24,
       "entities": 3,
-      "services": 1
+      "services": 1,
+      "worldgen": 1
     },
-    "ready": true
+    "ready": true,
+    "accepted": 48
   },
   "runtimeContent": {
     "blocks": 16,
@@ -41,9 +41,9 @@
     "entityDefinitions": 3
   },
   "world": {
-    "contentIdentityVerified": true,
     "spawnedEntities": 4,
     "chunks": 25,
-    "saveReload": true
+    "saveReload": true,
+    "contentIdentityVerified": true
   }
 }
