@@ -18,11 +18,15 @@ public final class CanonicalRuntimeIntegrationTest {
         PackManifest manifest = PackManifest.load(manifestPath);
         try (ModuleHost host = new ModuleHost(packRoot, manifest)) {
             host.load();
-            TestSupport.require(host.loadedModules().size() == 12, "canonical beta pack should load twelve installed modules");
-            TestSupport.require(host.contentMap().modules().size() == 12, "all installed modules must contribute graph bundles");
-            TestSupport.require(host.contentMap().nodes().size() >= 70, "canonical graph should merge the Foundation and Ashfall nodes");
-            TestSupport.require(host.contentMap().edges().size() >= 50, "canonical graph should preserve semantic relationships");
+            TestSupport.require(host.loadedModules().size() == 18, "canonical beta pack should load eighteen installed modules");
+            TestSupport.require(host.contentMap().modules().size() == 18, "all installed modules must contribute graph bundles");
+            TestSupport.require(host.contentMap().nodes().size() >= 130, "canonical graph should merge the expanded Ashfall Engine slice nodes");
+            TestSupport.require(host.contentMap().edges().size() >= 100, "canonical graph should preserve expanded semantic relationships");
             TestSupport.require(host.contentMap().parityReport().ready(), "cross-runtime export parity must pass");
+            TestSupport.require(host.contentMap().node("echocontentcore:system/content.availability").isPresent(),
+                    "ContentCore availability system should be present in the expanded graph slice");
+            TestSupport.require(host.contentMap().node("echohudcore:ui/hud_overlay").isPresent(),
+                    "HUDCore overlay intent should be present in the expanded graph slice");
             TestSupport.require(host.registries().runtimeBlocks().find(
                     ResourceId.parse("echoashfallprotocol:scorched_ash")
             ).isPresent(), "AdapterCore should materialize graph-defined blocks");

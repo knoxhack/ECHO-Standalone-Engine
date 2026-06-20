@@ -3,15 +3,15 @@
   "status": "PASS",
   "canonical": true,
   "runtimeTarget": "echo_runtime_standalone",
-  "moduleCount": 12,
-  "nodeCount": 78,
-  "edgeCount": 85,
-  "featureCount": 15,
+  "moduleCount": 18,
+  "nodeCount": 133,
+  "edgeCount": 109,
+  "featureCount": 16,
   "unresolvedReferenceCount": 0,
   "exportMappingCounts": {
-    "echo_native": 78,
-    "neoforge": 78,
-    "echo_runtime_standalone": 78
+    "echo_native": 133,
+    "neoforge": 133,
+    "echo_runtime_standalone": 133
   },
   "crossRuntimeTargets": [
     "echo_native",
@@ -62,6 +62,34 @@
       }
     },
     {
+      "moduleId": "echocontentcore",
+      "artifact": "echocontentcore-1.0.0-standalone.jar",
+      "sha256": "e6fdee7d2dcc647ff1444573996db10b1a67a6ca2bfccbe3e98ab438a045740c",
+      "nodes": 9,
+      "edges": 4,
+      "features": 0,
+      "unresolvedReferences": 0,
+      "exportMappings": {
+        "echo_native": 9,
+        "neoforge": 9,
+        "echo_runtime_standalone": 9
+      }
+    },
+    {
+      "moduleId": "echocore",
+      "artifact": "echocore-1.0.0-standalone.jar",
+      "sha256": "a2b28345992a43b56f44d5ec46df32ad3930799cdbbc5a3663fc5a8887367d24",
+      "nodes": 16,
+      "edges": 12,
+      "features": 0,
+      "unresolvedReferences": 0,
+      "exportMappings": {
+        "echo_native": 16,
+        "neoforge": 16,
+        "echo_runtime_standalone": 16
+      }
+    },
+    {
       "moduleId": "echocreatureroles",
       "artifact": "echocreatureroles-1.0.0-standalone.jar",
       "sha256": "ec31f99f95122959e739e201de9bbd52c61ad10a3b1faf0303f3c148c83c8cf2",
@@ -90,6 +118,20 @@
       }
     },
     {
+      "moduleId": "echohudcore",
+      "artifact": "echohudcore-1.0.0-standalone.jar",
+      "sha256": "ef483238edef4a69fdd5ddbe6031fa9effc4454f53b80391a127577f5a82818c",
+      "nodes": 11,
+      "edges": 5,
+      "features": 1,
+      "unresolvedReferences": 0,
+      "exportMappings": {
+        "echo_native": 11,
+        "neoforge": 11,
+        "echo_runtime_standalone": 11
+      }
+    },
+    {
       "moduleId": "echomaterialcore",
       "artifact": "echomaterialcore-1.0.0-standalone.jar",
       "sha256": "56748d38a80b4e1010eed5dbcb7a28668728c75c23fbe6be183448cb71b46d7d",
@@ -101,6 +143,34 @@
         "echo_native": 4,
         "neoforge": 4,
         "echo_runtime_standalone": 4
+      }
+    },
+    {
+      "moduleId": "echoplatformcore",
+      "artifact": "echoplatformcore-1.0.0-standalone.jar",
+      "sha256": "c26fbc0b7831255f0f20657f9bd36d3d7295957b0802a8cc0895691a3e429b1c",
+      "nodes": 6,
+      "edges": 1,
+      "features": 0,
+      "unresolvedReferences": 0,
+      "exportMappings": {
+        "echo_native": 6,
+        "neoforge": 6,
+        "echo_runtime_standalone": 6
+      }
+    },
+    {
+      "moduleId": "echoschemacore",
+      "artifact": "echoschemacore-1.0.0-standalone.jar",
+      "sha256": "e071fcbc4adc43238369400e0b070430c593d0b92939bb762f8155df727dcf21",
+      "nodes": 6,
+      "edges": 1,
+      "features": 0,
+      "unresolvedReferences": 0,
+      "exportMappings": {
+        "echo_native": 6,
+        "neoforge": 6,
+        "echo_runtime_standalone": 6
       }
     },
     {
@@ -157,6 +227,20 @@
         "echo_native": 3,
         "neoforge": 3,
         "echo_runtime_standalone": 3
+      }
+    },
+    {
+      "moduleId": "echovalidationcore",
+      "artifact": "echovalidationcore-1.0.0-standalone.jar",
+      "sha256": "a5fe3027c873e9cad0e2983503081f9e1752bfdc3fb5d8ac749a41ab0b0f5653",
+      "nodes": 7,
+      "edges": 1,
+      "features": 0,
+      "unresolvedReferences": 0,
+      "exportMappings": {
+        "echo_native": 7,
+        "neoforge": 7,
+        "echo_runtime_standalone": 7
       }
     },
     {

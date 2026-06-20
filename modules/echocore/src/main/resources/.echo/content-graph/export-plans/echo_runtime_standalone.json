@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "echo.content_graph.export_plan.v1",
+  "moduleId": "echocore",
+  "runtimeTarget": "echo_runtime_standalone",
+  "mappings": [
+    {
+      "nodeId": "echocore:module",
+      "runtimeId": "echocore:module",
+      "kind": "echo:module",
+      "adapter": "graph.echo_runtime_standalone.echo_module"
+    },
+    {
+      "nodeId": "echocore:system/echo.core",
+      "runtimeId": "echocore:system/echo.core",
+      "kind": "echo:system",
+      "adapter": "graph.echo_runtime_standalone.echo_system"
+    },
+    {
+      "nodeId": "echocore:system/echo.services",
+      "runtimeId": "echocore:system/echo.services",
+      "kind": "echo:system",
+      "adapter": "graph.echo_runtime_standalone.echo_system"
+    },
+    {
+      "nodeId": "echocore:system/echo.runtime_modules",
+      "runtimeId": "echocore:system/echo.runtime_modules",
+      "kind": "echo:system",
+      "adapter": "graph.echo_runtime_standalone.echo_system"
+    },
+    {
+      "nodeId": "echocore:system/echo.spine",
+      "runtimeId": "echocore:system/echo.spine",
+      "kind": "echo:system",
+      "adapter": "graph.echo_runtime_standalone.echo_system"
+    },
+    {
+      "nodeId": "echocore:system/echo.config",
+      "runtimeId": "echocore:system/echo.config",
+      "kind": "echo:system",
+      "adapter": "graph.echo_runtime_standalone.echo_system"
+    },
+    {
+      "nodeId": "echocore:system/echo.missions",
+      "runtimeId": "echocore:system/echo.missions",
+      "kind": "echo:system",
+      "adapter": "graph.echo_runtime_standalone.echo_system"
+    },
+    {
+      "nodeId": "echocore:system/echo.network",
+      "runtimeId": "echocore:system/echo.network",
+      "kind": "echo:system",
+      "adapter": "graph.echo_runtime_standalone.echo_system"
+    },
+    {
+      "nodeId": "echocore:system/echo.index",
+      "runtimeId": "echocore:system/echo.index",
+      "kind": "echo:system",
+      "adapter": "graph.echo_runtime_standalone.echo_system"
+    },
+    {
+      "nodeId": "echocore:system/echo.world",
+      "runtimeId": "echocore:system/echo.world",
+      "kind": "echo:system",
+      "adapter": "graph.echo_runtime_standalone.echo_system"
+    },
+    {
+      "nodeId": "echocore:system/echo.map",
+      "runtimeId": "echocore:system/echo.map",
+      "kind": "echo:system",
+      "adapter": "graph.echo_runtime_standalone.echo_system"
+    },
+    {
+      "nodeId": "echocore:system/echo.factions",
+      "runtimeId": "echocore:system/echo.factions",
+      "kind": "echo:system",
+      "adapter": "graph.echo_runtime_standalone.echo_system"
+    },
+    {
+      "nodeId": "echocore:system/echo.diagnostics",
+      "runtimeId": "echocore:system/echo.diagnostics",
+      "kind": "echo:system",
+      "adapter": "graph.echo_runtime_standalone.echo_system"
+    },
+    {
+      "nodeId": "echocore:setting/gamemode/ashfall",
+      "runtimeId": "echocore:setting/gamemode/ashfall",
+      "kind": "echo:setting",
+      "adapter": "graph.echo_runtime_standalone.echo_setting"
+    },
+    {
+      "nodeId": "echocore:setting/gamemode/echo_prime",
+      "runtimeId": "echocore:setting/gamemode/echo_prime",
+      "kind": "echo:setting",
+      "adapter": "graph.echo_runtime_standalone.echo_setting"
+    },
+    {
+      "nodeId": "echocore:setting/gamemode/arcana_division",
+      "runtimeId": "echocore:setting/gamemode/arcana_division",
+      "kind": "echo:setting",
+      "adapter": "graph.echo_runtime_standalone.echo_setting"
+    }
+  ]
+}

@@ -67,3 +67,9 @@ Right-click:
 This slice proves the architecture needed to port Ashfall systems cleanly: data content, worldgen, survival, objectives, machines, creatures, HUD, inventory, interactions, and save data all originate from a separately built module JAR.
 
 It is not a claim that every class, asset, mission, machine, biome, or entity from the NeoForge edition has already been ported.
+
+## Phase 5 graph expansion
+
+The local Phase 5 slice adds graph-only foundation coverage from `echocore`, `echoplatformcore`, `echoschemacore`, `echovalidationcore`, `echocontentcore`, and `echohudcore`. These modules are imported from ECHO-Modules release graph resources with legacy executable entrypoints stripped so the standalone engine can validate their content graph contracts without loading old runtime code.
+
+Current local evidence validates 18 modules, 133 graph nodes, 109 graph edges, 16 features, and 78 runtime-required nodes mapped across Native, NeoForge, and Standalone Engine targets. This is broader graph coverage for the playable vertical slice, not a full gameplay parity claim.

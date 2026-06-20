@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "echo.module.descriptor.v1",
+  "id": "echohudcore",
+  "name": "ECHO: HUDCore",
+  "version": "1.0.0",
+  "kind": "library",
+  "side": "both",
+  "standalone": true,
+  "official": true,
+  "trust": "official",
+  "requires": [
+    "echoadaptercore",
+    "echocontentcore",
+    "echocore",
+    "echoplatformcore",
+    "echoschemacore",
+    "echovalidationcore"
+  ],
+  "optional": [],
+  "access": {
+    "nativeClasspath": [
+      "."
+    ],
+    "permissions": [],
+    "contentNamespaces": [
+      "echohudcore"
+    ],
+    "contractsOnly": true,
+    "notes": "Graph-only Engine slice import; executable entrypoint intentionally stripped."
+  },
+  "generatedFrom": {
+    "repo": "knoxhack/ECHO-Modules",
+    "artifact": "echohudcore-1.0.0-standalone.jar",
+    "mode": "graph-only-engine-slice"
+  }
+}

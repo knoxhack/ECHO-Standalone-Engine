@@ -165,7 +165,7 @@ def graph_evidence(module_rows: list[dict]) -> dict:
             targets = {}
             for target in target_totals:
                 plan = read_json(f".echo/content-graph/export-plans/{target}.json", {})
-                mappings = plan.get("mappings", plan.get("exports", []))
+                mappings = plan.get("mappings", plan.get("exports", plan.get("nodes", [])))
                 targets[target] = len(mappings)
                 target_totals[target] += len(mappings)
             total_nodes += len(nodes)

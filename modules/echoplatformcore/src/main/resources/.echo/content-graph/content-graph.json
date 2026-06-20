@@ -1,0 +1,197 @@
+{
+  "schemaVersion": "echo.content_graph.v1",
+  "moduleId": "echoplatformcore",
+  "nodes": [
+    {
+      "schemaVersion": "echo.content_graph.node.v1",
+      "kind": "echo:module",
+      "id": "echoplatformcore:module",
+      "moduleId": "echoplatformcore",
+      "displayName": "ECHO: PlatformCore",
+      "source": {
+        "repo": "ECHO-Modules",
+        "path": "addons/echoplatformcore/src/main/resources/META-INF/echo.mod.json",
+        "format": "json"
+      },
+      "aliases": [],
+      "capabilities": [],
+      "runtimeHints": {
+        "neoforge": {
+          "declared": true
+        },
+        "echo_native": {
+          "declared": true
+        },
+        "echo_runtime_standalone": {
+          "declared": true
+        },
+        "hytale": {}
+      },
+      "data": {
+        "version": "1.0.0",
+        "kind": "library",
+        "role": "platform",
+        "channel": "beta",
+        "official": true,
+        "trustLevel": "official",
+        "side": "common",
+        "standalone": true,
+        "apiStability": "beta"
+      },
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T18:22:22.968Z"
+      }
+    },
+    {
+      "schemaVersion": "echo.content_graph.node.v1",
+      "kind": "echo:system",
+      "id": "echoplatformcore:system/platform.contracts",
+      "moduleId": "echoplatformcore",
+      "displayName": "platform.contracts",
+      "source": {
+        "repo": "ECHO-Modules",
+        "path": "addons/echoplatformcore",
+        "format": "generated"
+      },
+      "aliases": [],
+      "capabilities": [],
+      "runtimeHints": {
+        "neoforge": {},
+        "echo_native": {},
+        "echo_runtime_standalone": {},
+        "hytale": {}
+      },
+      "data": {
+        "capability": "platform.contracts"
+      },
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T18:22:22.968Z"
+      }
+    },
+    {
+      "schemaVersion": "echo.content_graph.node.v1",
+      "kind": "echo:setting",
+      "id": "echoplatformcore:setting/platform.contracts",
+      "moduleId": "echoplatformcore",
+      "displayName": "platform.contracts",
+      "source": {
+        "repo": "ECHO-Modules",
+        "path": "addons/echoplatformcore",
+        "format": "generated"
+      },
+      "aliases": [],
+      "capabilities": [],
+      "runtimeHints": {
+        "neoforge": {},
+        "echo_native": {},
+        "echo_runtime_standalone": {},
+        "hytale": {}
+      },
+      "data": {
+        "settingType": "permission"
+      },
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T18:22:22.968Z"
+      }
+    },
+    {
+      "schemaVersion": "echo.content_graph.node.v1",
+      "kind": "echo:setting",
+      "id": "echoplatformcore:setting/gamemode/ashfall",
+      "moduleId": "echoplatformcore",
+      "displayName": "ashfall",
+      "source": {
+        "repo": "ECHO-Modules",
+        "path": "addons/echoplatformcore",
+        "format": "generated"
+      },
+      "aliases": [],
+      "capabilities": [],
+      "runtimeHints": {
+        "neoforge": {},
+        "echo_native": {},
+        "echo_runtime_standalone": {},
+        "hytale": {}
+      },
+      "data": {
+        "settingType": "gameMode"
+      },
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T18:22:22.968Z"
+      }
+    },
+    {
+      "schemaVersion": "echo.content_graph.node.v1",
+      "kind": "echo:setting",
+      "id": "echoplatformcore:setting/gamemode/echo_prime",
+      "moduleId": "echoplatformcore",
+      "displayName": "echo_prime",
+      "source": {
+        "repo": "ECHO-Modules",
+        "path": "addons/echoplatformcore",
+        "format": "generated"
+      },
+      "aliases": [],
+      "capabilities": [],
+      "runtimeHints": {
+        "neoforge": {},
+        "echo_native": {},
+        "echo_runtime_standalone": {},
+        "hytale": {}
+      },
+      "data": {
+        "settingType": "gameMode"
+      },
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T18:22:22.968Z"
+      }
+    },
+    {
+      "schemaVersion": "echo.content_graph.node.v1",
+      "kind": "echo:setting",
+      "id": "echoplatformcore:setting/gamemode/arcana_division",
+      "moduleId": "echoplatformcore",
+      "displayName": "arcana_division",
+      "source": {
+        "repo": "ECHO-Modules",
+        "path": "addons/echoplatformcore",
+        "format": "generated"
+      },
+      "aliases": [],
+      "capabilities": [],
+      "runtimeHints": {
+        "neoforge": {},
+        "echo_native": {},
+        "echo_runtime_standalone": {},
+        "hytale": {}
+      },
+      "data": {
+        "settingType": "gameMode"
+      },
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T18:22:22.968Z"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "schemaVersion": "echo.content_graph.edge.v1",
+      "id": "echoplatformcore:system_declares_capability_echoplatformcore_system_platform.contracts_echoplatformcore_module",
+      "kind": "system_declares_capability",
+      "from": "echoplatformcore:system/platform.contracts",
+      "to": "echoplatformcore:module",
+      "moduleId": "echoplatformcore",
+      "data": {},
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T18:22:22.968Z"
+      }
+    }
+  ]
+}

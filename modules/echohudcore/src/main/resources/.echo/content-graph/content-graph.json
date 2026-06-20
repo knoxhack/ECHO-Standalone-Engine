@@ -1,0 +1,402 @@
+{
+  "schemaVersion": "echo.content_graph.v1",
+  "moduleId": "echohudcore",
+  "nodes": [
+    {
+      "schemaVersion": "echo.content_graph.node.v1",
+      "kind": "echo:module",
+      "id": "echohudcore:module",
+      "moduleId": "echohudcore",
+      "displayName": "ECHO: HUDCore",
+      "source": {
+        "repo": "ECHO-Modules",
+        "path": "addons/echohudcore/src/main/resources/META-INF/echo.mod.json",
+        "format": "json"
+      },
+      "aliases": [],
+      "capabilities": [],
+      "runtimeHints": {
+        "neoforge": {
+          "declared": true
+        },
+        "echo_native": {
+          "declared": true
+        },
+        "echo_runtime_standalone": {
+          "declared": true
+        },
+        "hytale": {}
+      },
+      "data": {
+        "version": "1.0.0",
+        "kind": "library",
+        "role": "hud_core",
+        "channel": "beta",
+        "official": true,
+        "trustLevel": "official",
+        "side": "common",
+        "standalone": true,
+        "apiStability": "beta"
+      },
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T18:22:21.516Z"
+      }
+    },
+    {
+      "schemaVersion": "echo.content_graph.node.v1",
+      "kind": "echo:system",
+      "id": "echohudcore:system/hud.compass_indicators",
+      "moduleId": "echohudcore",
+      "displayName": "hud.compass_indicators",
+      "source": {
+        "repo": "ECHO-Modules",
+        "path": "addons/echohudcore",
+        "format": "generated"
+      },
+      "aliases": [],
+      "capabilities": [],
+      "runtimeHints": {
+        "neoforge": {},
+        "echo_native": {},
+        "echo_runtime_standalone": {},
+        "hytale": {}
+      },
+      "data": {
+        "capability": "hud.compass_indicators"
+      },
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T18:22:21.516Z"
+      }
+    },
+    {
+      "schemaVersion": "echo.content_graph.node.v1",
+      "kind": "echo:system",
+      "id": "echohudcore:system/hud.hazard_meters",
+      "moduleId": "echohudcore",
+      "displayName": "hud.hazard_meters",
+      "source": {
+        "repo": "ECHO-Modules",
+        "path": "addons/echohudcore",
+        "format": "generated"
+      },
+      "aliases": [],
+      "capabilities": [],
+      "runtimeHints": {
+        "neoforge": {},
+        "echo_native": {},
+        "echo_runtime_standalone": {},
+        "hytale": {}
+      },
+      "data": {
+        "capability": "hud.hazard_meters"
+      },
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T18:22:21.516Z"
+      }
+    },
+    {
+      "schemaVersion": "echo.content_graph.node.v1",
+      "kind": "echo:system",
+      "id": "echohudcore:system/hud.mission_tracker",
+      "moduleId": "echohudcore",
+      "displayName": "hud.mission_tracker",
+      "source": {
+        "repo": "ECHO-Modules",
+        "path": "addons/echohudcore",
+        "format": "generated"
+      },
+      "aliases": [],
+      "capabilities": [],
+      "runtimeHints": {
+        "neoforge": {},
+        "echo_native": {},
+        "echo_runtime_standalone": {},
+        "hytale": {}
+      },
+      "data": {
+        "capability": "hud.mission_tracker"
+      },
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T18:22:21.516Z"
+      }
+    },
+    {
+      "schemaVersion": "echo.content_graph.node.v1",
+      "kind": "echo:system",
+      "id": "echohudcore:system/hud.safe_area",
+      "moduleId": "echohudcore",
+      "displayName": "hud.safe_area",
+      "source": {
+        "repo": "ECHO-Modules",
+        "path": "addons/echohudcore",
+        "format": "generated"
+      },
+      "aliases": [],
+      "capabilities": [],
+      "runtimeHints": {
+        "neoforge": {},
+        "echo_native": {},
+        "echo_runtime_standalone": {},
+        "hytale": {}
+      },
+      "data": {
+        "capability": "hud.safe_area"
+      },
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T18:22:21.516Z"
+      }
+    },
+    {
+      "schemaVersion": "echo.content_graph.node.v1",
+      "kind": "echo:system",
+      "id": "echohudcore:system/hud.widgets",
+      "moduleId": "echohudcore",
+      "displayName": "hud.widgets",
+      "source": {
+        "repo": "ECHO-Modules",
+        "path": "addons/echohudcore",
+        "format": "generated"
+      },
+      "aliases": [],
+      "capabilities": [],
+      "runtimeHints": {
+        "neoforge": {},
+        "echo_native": {},
+        "echo_runtime_standalone": {},
+        "hytale": {}
+      },
+      "data": {
+        "capability": "hud.widgets"
+      },
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T18:22:21.516Z"
+      }
+    },
+    {
+      "schemaVersion": "echo.content_graph.node.v1",
+      "kind": "echo:setting",
+      "id": "echohudcore:setting/hud.widgets",
+      "moduleId": "echohudcore",
+      "displayName": "hud.widgets",
+      "source": {
+        "repo": "ECHO-Modules",
+        "path": "addons/echohudcore",
+        "format": "generated"
+      },
+      "aliases": [],
+      "capabilities": [],
+      "runtimeHints": {
+        "neoforge": {},
+        "echo_native": {},
+        "echo_runtime_standalone": {},
+        "hytale": {}
+      },
+      "data": {
+        "settingType": "permission"
+      },
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T18:22:21.516Z"
+      }
+    },
+    {
+      "schemaVersion": "echo.content_graph.node.v1",
+      "kind": "echo:setting",
+      "id": "echohudcore:setting/ui.screens",
+      "moduleId": "echohudcore",
+      "displayName": "ui.screens",
+      "source": {
+        "repo": "ECHO-Modules",
+        "path": "addons/echohudcore",
+        "format": "generated"
+      },
+      "aliases": [],
+      "capabilities": [],
+      "runtimeHints": {
+        "neoforge": {},
+        "echo_native": {},
+        "echo_runtime_standalone": {},
+        "hytale": {}
+      },
+      "data": {
+        "settingType": "permission"
+      },
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T18:22:21.516Z"
+      }
+    },
+    {
+      "schemaVersion": "echo.content_graph.node.v1",
+      "kind": "echo:setting",
+      "id": "echohudcore:setting/ui.overlays",
+      "moduleId": "echohudcore",
+      "displayName": "ui.overlays",
+      "source": {
+        "repo": "ECHO-Modules",
+        "path": "addons/echohudcore",
+        "format": "generated"
+      },
+      "aliases": [],
+      "capabilities": [],
+      "runtimeHints": {
+        "neoforge": {},
+        "echo_native": {},
+        "echo_runtime_standalone": {},
+        "hytale": {}
+      },
+      "data": {
+        "settingType": "permission"
+      },
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T18:22:21.516Z"
+      }
+    },
+    {
+      "schemaVersion": "echo.content_graph.node.v1",
+      "kind": "echo:setting",
+      "id": "echohudcore:setting/gamemode/all",
+      "moduleId": "echohudcore",
+      "displayName": "all",
+      "source": {
+        "repo": "ECHO-Modules",
+        "path": "addons/echohudcore",
+        "format": "generated"
+      },
+      "aliases": [],
+      "capabilities": [],
+      "runtimeHints": {
+        "neoforge": {},
+        "echo_native": {},
+        "echo_runtime_standalone": {},
+        "hytale": {}
+      },
+      "data": {
+        "settingType": "gameMode"
+      },
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T18:22:21.516Z"
+      }
+    },
+    {
+      "schemaVersion": "echo.content_graph.node.v1",
+      "kind": "echo:ui_intent",
+      "id": "echohudcore:ui/hud_overlay",
+      "moduleId": "echohudcore",
+      "displayName": "ECHO: HUDCore HUD Overlay",
+      "source": {
+        "repo": "ECHO-Modules",
+        "path": "addons/echohudcore/src/main/resources/META-INF/echo.mod.json",
+        "format": "json"
+      },
+      "aliases": [],
+      "capabilities": [
+        "hud",
+        "hud_overlay"
+      ],
+      "runtimeHints": {
+        "neoforge": {
+          "declared": true
+        },
+        "echo_native": {
+          "declared": true
+        },
+        "echo_runtime_standalone": {
+          "declared": true
+        },
+        "hytale": {}
+      },
+      "data": {
+        "surface": "hud_overlay",
+        "descriptorRole": "hud_core",
+        "providedCapabilities": [
+          "hud.compass_indicators",
+          "hud.hazard_meters",
+          "hud.mission_tracker",
+          "hud.safe_area",
+          "hud.widgets"
+        ]
+      },
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T18:22:21.516Z"
+      },
+      "intent": "progress_tracker"
+    }
+  ],
+  "edges": [
+    {
+      "schemaVersion": "echo.content_graph.edge.v1",
+      "id": "echohudcore:system_declares_capability_echohudcore_system_hud.compass_indicators_echohudcore_module",
+      "kind": "system_declares_capability",
+      "from": "echohudcore:system/hud.compass_indicators",
+      "to": "echohudcore:module",
+      "moduleId": "echohudcore",
+      "data": {},
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T18:22:21.516Z"
+      }
+    },
+    {
+      "schemaVersion": "echo.content_graph.edge.v1",
+      "id": "echohudcore:system_declares_capability_echohudcore_system_hud.hazard_meters_echohudcore_module",
+      "kind": "system_declares_capability",
+      "from": "echohudcore:system/hud.hazard_meters",
+      "to": "echohudcore:module",
+      "moduleId": "echohudcore",
+      "data": {},
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T18:22:21.516Z"
+      }
+    },
+    {
+      "schemaVersion": "echo.content_graph.edge.v1",
+      "id": "echohudcore:system_declares_capability_echohudcore_system_hud.mission_tracker_echohudcore_module",
+      "kind": "system_declares_capability",
+      "from": "echohudcore:system/hud.mission_tracker",
+      "to": "echohudcore:module",
+      "moduleId": "echohudcore",
+      "data": {},
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T18:22:21.516Z"
+      }
+    },
+    {
+      "schemaVersion": "echo.content_graph.edge.v1",
+      "id": "echohudcore:system_declares_capability_echohudcore_system_hud.safe_area_echohudcore_module",
+      "kind": "system_declares_capability",
+      "from": "echohudcore:system/hud.safe_area",
+      "to": "echohudcore:module",
+      "moduleId": "echohudcore",
+      "data": {},
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T18:22:21.516Z"
+      }
+    },
+    {
+      "schemaVersion": "echo.content_graph.edge.v1",
+      "id": "echohudcore:system_declares_capability_echohudcore_system_hud.widgets_echohudcore_module",
+      "kind": "system_declares_capability",
+      "from": "echohudcore:system/hud.widgets",
+      "to": "echohudcore:module",
+      "moduleId": "echohudcore",
+      "data": {},
+      "provenance": {
+        "generatedBy": "scripts/generate-content-graph.mjs",
+        "generatedAt": "2026-06-20T18:22:21.516Z"
+      }
+    }
+  ]
+}

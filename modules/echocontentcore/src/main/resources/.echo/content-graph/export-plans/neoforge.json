@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "echo.content_graph.export_plan.v1",
+  "moduleId": "echocontentcore",
+  "runtimeTarget": "neoforge",
+  "mappings": [
+    {
+      "nodeId": "echocontentcore:module",
+      "runtimeId": "echocontentcore:module",
+      "kind": "echo:module",
+      "adapter": "graph.neoforge.echo_module"
+    },
+    {
+      "nodeId": "echocontentcore:system/content.availability",
+      "runtimeId": "echocontentcore:system/content.availability",
+      "kind": "echo:system",
+      "adapter": "graph.neoforge.echo_system"
+    },
+    {
+      "nodeId": "echocontentcore:system/content.gates",
+      "runtimeId": "echocontentcore:system/content.gates",
+      "kind": "echo:system",
+      "adapter": "graph.neoforge.echo_system"
+    },
+    {
+      "nodeId": "echocontentcore:system/content.ownership",
+      "runtimeId": "echocontentcore:system/content.ownership",
+      "kind": "echo:system",
+      "adapter": "graph.neoforge.echo_system"
+    },
+    {
+      "nodeId": "echocontentcore:system/content.references",
+      "runtimeId": "echocontentcore:system/content.references",
+      "kind": "echo:system",
+      "adapter": "graph.neoforge.echo_system"
+    },
+    {
+      "nodeId": "echocontentcore:setting/gamemode/ashfall_survival",
+      "runtimeId": "echocontentcore:setting/gamemode/ashfall_survival",
+      "kind": "echo:setting",
+      "adapter": "graph.neoforge.echo_setting"
+    },
+    {
+      "nodeId": "echocontentcore:setting/gamemode/prime_survival",
+      "runtimeId": "echocontentcore:setting/gamemode/prime_survival",
+      "kind": "echo:setting",
+      "adapter": "graph.neoforge.echo_setting"
+    },
+    {
+      "nodeId": "echocontentcore:setting/gamemode/arcana_survival",
+      "runtimeId": "echocontentcore:setting/gamemode/arcana_survival",
+      "kind": "echo:setting",
+      "adapter": "graph.neoforge.echo_setting"
+    },
+    {
+      "nodeId": "echocontentcore:setting/gamemode/dev_tools",
+      "runtimeId": "echocontentcore:setting/gamemode/dev_tools",
+      "kind": "echo:setting",
+      "adapter": "graph.neoforge.echo_setting"
+    }
+  ]
+}

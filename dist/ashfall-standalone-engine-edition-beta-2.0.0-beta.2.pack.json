@@ -36,13 +36,19 @@
     "echoadaptercore",
     "echoashfallprotocol",
     "echocommonloot",
+    "echocontentcore",
+    "echocore",
     "echocreatureroles",
     "echofoundationcore",
+    "echohudcore",
     "echomaterialcore",
+    "echoplatformcore",
+    "echoschemacore",
     "echoscreencore",
     "echostationcore",
     "echoterminal",
     "echotoolcore",
+    "echovalidationcore",
     "echoweathercore",
     "echoworldstarter"
   ],
@@ -68,8 +74,8 @@
       "required": true,
       "side": "client",
       "trust": "official",
-      "sha256": "887036b0acc134cd1443f893afee641cb67de97df679d3bbeb94af3eaf9f8b9c",
-      "size": 13786
+      "sha256": "95a141554b7bd9e852e548df6e74d5f5a5f3b721074d11b65cac4de765c755d5",
+      "size": 20022
     },
     {
       "id": "content-graph-evidence",
@@ -80,8 +86,8 @@
       "required": true,
       "side": "client",
       "trust": "official",
-      "sha256": "90ee2167372b5d1b736302d4fc8c7233e66f1d07b4737afbc9d6f778aadc239c",
-      "size": 5509
+      "sha256": "3abe68cc999c9f913a4c91b118f8a5dd49061bb7f8794a17d61d671655a809e9",
+      "size": 8003
     },
     {
       "id": "checksums",
@@ -92,8 +98,8 @@
       "required": true,
       "side": "client",
       "trust": "official",
-      "sha256": "72fe269e0d7a1d8e33e6f5f79d7324fed27e2a7f8f4c3325f7d04a21945bb1e9",
-      "size": 1817
+      "sha256": "5044e54a4b1f91ce4a1e4fb6400b1450d1b1c71df596e213588603bcff0cc0da",
+      "size": 2463
     },
     {
       "id": "run",
@@ -162,6 +168,34 @@
       "size": 3122
     },
     {
+      "id": "echocontentcore",
+      "moduleId": "echocontentcore",
+      "version": "1.0.0",
+      "artifactFamily": "standalone",
+      "assetName": "echocontentcore-1.0.0-standalone.jar",
+      "artifactName": "echocontentcore-1.0.0-standalone.jar",
+      "path": "mods/echocontentcore-1.0.0-standalone.jar",
+      "required": true,
+      "side": "both",
+      "trust": "official",
+      "sha256": "e6fdee7d2dcc647ff1444573996db10b1a67a6ca2bfccbe3e98ab438a045740c",
+      "size": 3950
+    },
+    {
+      "id": "echocore",
+      "moduleId": "echocore",
+      "version": "1.0.0",
+      "artifactFamily": "standalone",
+      "assetName": "echocore-1.0.0-standalone.jar",
+      "artifactName": "echocore-1.0.0-standalone.jar",
+      "path": "mods/echocore-1.0.0-standalone.jar",
+      "required": true,
+      "side": "both",
+      "trust": "official",
+      "sha256": "a2b28345992a43b56f44d5ec46df32ad3930799cdbbc5a3663fc5a8887367d24",
+      "size": 4320
+    },
+    {
       "id": "echocreatureroles",
       "moduleId": "echocreatureroles",
       "version": "1.0.0",
@@ -190,6 +224,20 @@
       "size": 3205
     },
     {
+      "id": "echohudcore",
+      "moduleId": "echohudcore",
+      "version": "1.0.0",
+      "artifactFamily": "standalone",
+      "assetName": "echohudcore-1.0.0-standalone.jar",
+      "artifactName": "echohudcore-1.0.0-standalone.jar",
+      "path": "mods/echohudcore-1.0.0-standalone.jar",
+      "required": true,
+      "side": "both",
+      "trust": "official",
+      "sha256": "ef483238edef4a69fdd5ddbe6031fa9effc4454f53b80391a127577f5a82818c",
+      "size": 4338
+    },
+    {
       "id": "echomaterialcore",
       "moduleId": "echomaterialcore",
       "version": "1.0.0",
@@ -202,6 +250,34 @@
       "trust": "official",
       "sha256": "56748d38a80b4e1010eed5dbcb7a28668728c75c23fbe6be183448cb71b46d7d",
       "size": 3220
+    },
+    {
+      "id": "echoplatformcore",
+      "moduleId": "echoplatformcore",
+      "version": "1.0.0",
+      "artifactFamily": "standalone",
+      "assetName": "echoplatformcore-1.0.0-standalone.jar",
+      "artifactName": "echoplatformcore-1.0.0-standalone.jar",
+      "path": "mods/echoplatformcore-1.0.0-standalone.jar",
+      "required": true,
+      "side": "both",
+      "trust": "official",
+      "sha256": "c26fbc0b7831255f0f20657f9bd36d3d7295957b0802a8cc0895691a3e429b1c",
+      "size": 3699
+    },
+    {
+      "id": "echoschemacore",
+      "moduleId": "echoschemacore",
+      "version": "1.0.0",
+      "artifactFamily": "standalone",
+      "assetName": "echoschemacore-1.0.0-standalone.jar",
+      "artifactName": "echoschemacore-1.0.0-standalone.jar",
+      "path": "mods/echoschemacore-1.0.0-standalone.jar",
+      "required": true,
+      "side": "both",
+      "trust": "official",
+      "sha256": "e071fcbc4adc43238369400e0b070430c593d0b92939bb762f8155df727dcf21",
+      "size": 3688
     },
     {
       "id": "echoscreencore",
@@ -258,6 +334,20 @@
       "trust": "official",
       "sha256": "38ed1458c5d8708c5f9d73ea618a2ad28986b1712e1b0320fa5833a0e87134d9",
       "size": 3299
+    },
+    {
+      "id": "echovalidationcore",
+      "moduleId": "echovalidationcore",
+      "version": "1.0.0",
+      "artifactFamily": "standalone",
+      "assetName": "echovalidationcore-1.0.0-standalone.jar",
+      "artifactName": "echovalidationcore-1.0.0-standalone.jar",
+      "path": "mods/echovalidationcore-1.0.0-standalone.jar",
+      "required": true,
+      "side": "both",
+      "trust": "official",
+      "sha256": "a5fe3027c873e9cad0e2983503081f9e1752bfdc3fb5d8ac749a41ab0b0f5653",
+      "size": 3805
     },
     {
       "id": "echoweathercore",
@@ -333,6 +423,34 @@
       "size": 3122
     },
     {
+      "id": "echocontentcore",
+      "moduleId": "echocontentcore",
+      "version": "1.0.0",
+      "artifactFamily": "standalone",
+      "assetName": "echocontentcore-1.0.0-standalone.jar",
+      "artifactName": "echocontentcore-1.0.0-standalone.jar",
+      "path": "mods/echocontentcore-1.0.0-standalone.jar",
+      "required": true,
+      "side": "both",
+      "trust": "official",
+      "sha256": "e6fdee7d2dcc647ff1444573996db10b1a67a6ca2bfccbe3e98ab438a045740c",
+      "size": 3950
+    },
+    {
+      "id": "echocore",
+      "moduleId": "echocore",
+      "version": "1.0.0",
+      "artifactFamily": "standalone",
+      "assetName": "echocore-1.0.0-standalone.jar",
+      "artifactName": "echocore-1.0.0-standalone.jar",
+      "path": "mods/echocore-1.0.0-standalone.jar",
+      "required": true,
+      "side": "both",
+      "trust": "official",
+      "sha256": "a2b28345992a43b56f44d5ec46df32ad3930799cdbbc5a3663fc5a8887367d24",
+      "size": 4320
+    },
+    {
       "id": "echocreatureroles",
       "moduleId": "echocreatureroles",
       "version": "1.0.0",
@@ -361,6 +479,20 @@
       "size": 3205
     },
     {
+      "id": "echohudcore",
+      "moduleId": "echohudcore",
+      "version": "1.0.0",
+      "artifactFamily": "standalone",
+      "assetName": "echohudcore-1.0.0-standalone.jar",
+      "artifactName": "echohudcore-1.0.0-standalone.jar",
+      "path": "mods/echohudcore-1.0.0-standalone.jar",
+      "required": true,
+      "side": "both",
+      "trust": "official",
+      "sha256": "ef483238edef4a69fdd5ddbe6031fa9effc4454f53b80391a127577f5a82818c",
+      "size": 4338
+    },
+    {
       "id": "echomaterialcore",
       "moduleId": "echomaterialcore",
       "version": "1.0.0",
@@ -373,6 +505,34 @@
       "trust": "official",
       "sha256": "56748d38a80b4e1010eed5dbcb7a28668728c75c23fbe6be183448cb71b46d7d",
       "size": 3220
+    },
+    {
+      "id": "echoplatformcore",
+      "moduleId": "echoplatformcore",
+      "version": "1.0.0",
+      "artifactFamily": "standalone",
+      "assetName": "echoplatformcore-1.0.0-standalone.jar",
+      "artifactName": "echoplatformcore-1.0.0-standalone.jar",
+      "path": "mods/echoplatformcore-1.0.0-standalone.jar",
+      "required": true,
+      "side": "both",
+      "trust": "official",
+      "sha256": "c26fbc0b7831255f0f20657f9bd36d3d7295957b0802a8cc0895691a3e429b1c",
+      "size": 3699
+    },
+    {
+      "id": "echoschemacore",
+      "moduleId": "echoschemacore",
+      "version": "1.0.0",
+      "artifactFamily": "standalone",
+      "assetName": "echoschemacore-1.0.0-standalone.jar",
+      "artifactName": "echoschemacore-1.0.0-standalone.jar",
+      "path": "mods/echoschemacore-1.0.0-standalone.jar",
+      "required": true,
+      "side": "both",
+      "trust": "official",
+      "sha256": "e071fcbc4adc43238369400e0b070430c593d0b92939bb762f8155df727dcf21",
+      "size": 3688
     },
     {
       "id": "echoscreencore",
@@ -431,6 +591,20 @@
       "size": 3299
     },
     {
+      "id": "echovalidationcore",
+      "moduleId": "echovalidationcore",
+      "version": "1.0.0",
+      "artifactFamily": "standalone",
+      "assetName": "echovalidationcore-1.0.0-standalone.jar",
+      "artifactName": "echovalidationcore-1.0.0-standalone.jar",
+      "path": "mods/echovalidationcore-1.0.0-standalone.jar",
+      "required": true,
+      "side": "both",
+      "trust": "official",
+      "sha256": "a5fe3027c873e9cad0e2983503081f9e1752bfdc3fb5d8ac749a41ab0b0f5653",
+      "size": 3805
+    },
+    {
       "id": "echoweathercore",
       "moduleId": "echoweathercore",
       "version": "1.0.0",
@@ -459,6 +633,6 @@
       "size": 3482
     }
   ],
-  "artifactSha256": "a9dd8b956e47a959dd4173f996a8ede80be102e6ff281c19d00720f6262f4407",
-  "artifactSize": 255102
+  "artifactSha256": "87237a28a26624962889343feefea5edcfc7343b0bd71c44f11c9434a339f3d8",
+  "artifactSize": 276403
 }

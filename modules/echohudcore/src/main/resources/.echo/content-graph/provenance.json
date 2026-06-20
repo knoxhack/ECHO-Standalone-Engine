@@ -1,0 +1,13 @@
+{
+  "schema": "echo.content_graph.provenance.v1",
+  "graphId": "echohudcore:graph",
+  "moduleId": "echohudcore",
+  "generatedAt": "2026-06-20T18:22:21.522Z",
+  "sourceDescriptor": "addons/echohudcore/src/main/resources/META-INF/echo.mod.json",
+  "nodeCount": 20,
+  "edgeCount": 14,
+  "unresolvedCount": 0,
+  "generatedBy": "scripts/generate-content-graph.mjs",
+  "sourceArtifact": "echohudcore-1.0.0-standalone.jar",
+  "engineImportMode": "graph-only"
+}

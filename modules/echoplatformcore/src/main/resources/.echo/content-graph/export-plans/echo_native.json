@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "echo.content_graph.export_plan.v1",
+  "moduleId": "echoplatformcore",
+  "runtimeTarget": "echo_native",
+  "mappings": [
+    {
+      "nodeId": "echoplatformcore:module",
+      "runtimeId": "echoplatformcore:module",
+      "kind": "echo:module",
+      "adapter": "graph.echo_native.echo_module"
+    },
+    {
+      "nodeId": "echoplatformcore:system/platform.contracts",
+      "runtimeId": "echoplatformcore:system/platform.contracts",
+      "kind": "echo:system",
+      "adapter": "graph.echo_native.echo_system"
+    },
+    {
+      "nodeId": "echoplatformcore:setting/platform.contracts",
+      "runtimeId": "echoplatformcore:setting/platform.contracts",
+      "kind": "echo:setting",
+      "adapter": "graph.echo_native.echo_setting"
+    },
+    {
+      "nodeId": "echoplatformcore:setting/gamemode/ashfall",
+      "runtimeId": "echoplatformcore:setting/gamemode/ashfall",
+      "kind": "echo:setting",
+      "adapter": "graph.echo_native.echo_setting"
+    },
+    {
+      "nodeId": "echoplatformcore:setting/gamemode/echo_prime",
+      "runtimeId": "echoplatformcore:setting/gamemode/echo_prime",
+      "kind": "echo:setting",
+      "adapter": "graph.echo_native.echo_setting"
+    },
+    {
+      "nodeId": "echoplatformcore:setting/gamemode/arcana_division",
+      "runtimeId": "echoplatformcore:setting/gamemode/arcana_division",
+      "kind": "echo:setting",
+      "adapter": "graph.echo_native.echo_setting"
+    }
+  ]
+}
