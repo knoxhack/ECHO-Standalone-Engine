@@ -1,0 +1,13 @@
+{
+  "schema": "echo.content_graph.provenance.v1",
+  "graphId": "echohealthcore:graph",
+  "moduleId": "echohealthcore",
+  "generatedAt": "2026-06-20T04:22:18.726Z",
+  "sourceDescriptor": "addons/echohealthcore/src/main/resources/META-INF/echo.mod.json",
+  "nodeCount": 10,
+  "edgeCount": 8,
+  "unresolvedCount": 0,
+  "generatedBy": "scripts/generate-content-graph.mjs",
+  "sourceArtifact": "echohealthcore-1.0.0-standalone.jar",
+  "engineImportMode": "graph-only"
+}

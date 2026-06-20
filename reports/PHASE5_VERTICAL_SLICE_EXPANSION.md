@@ -16,6 +16,7 @@ The expansion imports selected ECHO-Modules release graph resources as Engine-co
 - `echovalidationcore`
 - `echocontentcore`
 - `echohudcore`
+- `echohealthcore`
 
 ## Verification command
 
@@ -27,17 +28,17 @@ powershell -ExecutionPolicy Bypass -File .\scripts\build.ps1
 
 - Build result: PASS
 - Java compile: PASS (`javac --release 21 -Xlint:all -Werror`)
-- Installed module JARs: 18
+- Installed module JARs: 19
 - Content graph status: PASS
-- Content graph modules: 18
-- Content graph nodes: 133
-- Content graph edges: 109
+- Content graph modules: 19
+- Content graph nodes: 140
+- Content graph edges: 110
 - Content graph features: 16
 - Unresolved references: 0
-- Export mapping totals in packaged evidence: 133 per target
+- Export mapping totals in packaged evidence: 140 per target
 - Runtime-required parity mappings in headless smoke: 78 per target
 - Cross-runtime targets: `echo_native`, `neoforge`, `echo_runtime_standalone`
-- Content graph fingerprint: `c37b52c8a3bf35c1236a2326c3892bdc61f04a0efb0bda1f7874a428545a7330`
+- Content graph fingerprint: `2e97d9ecd54d6b6b875f29261a46f799b8db92cca56e0f990a7a02b2421da5ff`
 - Headless smoke: PASS
 - Save/reload content identity: PASS
 

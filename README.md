@@ -59,7 +59,7 @@ powershell -ExecutionPolicy Bypass -File .\scripts\build.ps1
 The build:
 
 1. Compiles the engine and public API with Java 21 and `-Xlint:all -Werror`.
-2. Packages the current 18-module standalone verification slice.
+2. Packages the current 19-module standalone verification slice.
 3. Writes strict module SHA-256 and size evidence into the pack manifests.
 4. Produces `content-graph-evidence.json` with standalone target parity evidence.
 5. Runs JSON, dependency graph, palette/save, render, and headless smoke checks.
@@ -67,7 +67,7 @@ The build:
 
 ## Included Verification Slice
 
-The beta ZIP includes the current 18-module Ashfall/ECHO verification slice:
+The beta ZIP includes the current 19-module Ashfall/ECHO verification slice:
 
 - `echoadaptercore`
 - `echoashfallprotocol`
@@ -82,7 +82,7 @@ The beta ZIP includes the current 18-module Ashfall/ECHO verification slice:
 - `echoweathercore`
 - `echoworldstarter`
 
-The Phase 5 expansion also imports six graph-only ECHO foundation modules from the ECHO-Modules release graph, with old executable entrypoints stripped:
+The Phase 5 expansion also imports seven graph-only ECHO foundation and gameplay-contract modules from the ECHO-Modules release graph, with old executable entrypoints stripped:
 
 - `echocore`
 - `echoplatformcore`
@@ -90,8 +90,9 @@ The Phase 5 expansion also imports six graph-only ECHO foundation modules from t
 - `echovalidationcore`
 - `echocontentcore`
 - `echohudcore`
+- `echohealthcore`
 
-The expanded local slice validates 18 modules, 133 graph nodes, 109 graph edges, 16 features, and 78 runtime-required nodes mapped across `echo_native`, `neoforge`, and `echo_runtime_standalone`. This content set is intentionally labeled as a graph-first playable vertical slice. It verifies the standalone engine path and module graph behavior, but it does not claim full Ashfall gameplay parity with the existing NeoForge or legacy Standalone Runtime lanes.
+The expanded local slice validates 19 modules, 140 graph nodes, 110 graph edges, 16 features, and 78 runtime-required nodes mapped across `echo_native`, `neoforge`, and `echo_runtime_standalone`. This content set is intentionally labeled as a graph-first playable vertical slice. It verifies the standalone engine path and module graph behavior, but it does not claim full Ashfall gameplay parity with the existing NeoForge or legacy Standalone Runtime lanes.
 
 ## Strict Runtime Rules
 

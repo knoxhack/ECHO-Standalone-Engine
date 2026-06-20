@@ -40,6 +40,7 @@
     "echocore",
     "echocreatureroles",
     "echofoundationcore",
+    "echohealthcore",
     "echohudcore",
     "echomaterialcore",
     "echoplatformcore",
@@ -74,8 +75,8 @@
       "required": true,
       "side": "client",
       "trust": "official",
-      "sha256": "95a141554b7bd9e852e548df6e74d5f5a5f3b721074d11b65cac4de765c755d5",
-      "size": 20022
+      "sha256": "01b3771aecb059925099a6ba4907d3fe15c0cebdc2f251a047a0b3213b954ada",
+      "size": 21065
     },
     {
       "id": "content-graph-evidence",
@@ -86,8 +87,8 @@
       "required": true,
       "side": "client",
       "trust": "official",
-      "sha256": "3abe68cc999c9f913a4c91b118f8a5dd49061bb7f8794a17d61d671655a809e9",
-      "size": 8003
+      "sha256": "d873337a323d29925d4b8e4f3ec0e94b995a3d08f993e7fe722f8869bca76dc9",
+      "size": 8417
     },
     {
       "id": "checksums",
@@ -98,8 +99,8 @@
       "required": true,
       "side": "client",
       "trust": "official",
-      "sha256": "5044e54a4b1f91ce4a1e4fb6400b1450d1b1c71df596e213588603bcff0cc0da",
-      "size": 2463
+      "sha256": "ac98c8749bc6ca725bde53a933c7a85d3fc3054a944cd8a16dd9c47dc44e0854",
+      "size": 2571
     },
     {
       "id": "run",
@@ -222,6 +223,20 @@
       "trust": "official",
       "sha256": "f4553c8768ddd7ca51ff15eb4805f4db771d308e9eb1cce7e6628fd847faace3",
       "size": 3205
+    },
+    {
+      "id": "echohealthcore",
+      "moduleId": "echohealthcore",
+      "version": "1.0.0",
+      "artifactFamily": "standalone",
+      "assetName": "echohealthcore-1.0.0-standalone.jar",
+      "artifactName": "echohealthcore-1.0.0-standalone.jar",
+      "path": "mods/echohealthcore-1.0.0-standalone.jar",
+      "required": true,
+      "side": "both",
+      "trust": "official",
+      "sha256": "9f379d9cc2037938de66f2137f6d55a4d3a950482c805788c40c6a4e140119db",
+      "size": 3777
     },
     {
       "id": "echohudcore",
@@ -479,6 +494,20 @@
       "size": 3205
     },
     {
+      "id": "echohealthcore",
+      "moduleId": "echohealthcore",
+      "version": "1.0.0",
+      "artifactFamily": "standalone",
+      "assetName": "echohealthcore-1.0.0-standalone.jar",
+      "artifactName": "echohealthcore-1.0.0-standalone.jar",
+      "path": "mods/echohealthcore-1.0.0-standalone.jar",
+      "required": true,
+      "side": "both",
+      "trust": "official",
+      "sha256": "9f379d9cc2037938de66f2137f6d55a4d3a950482c805788c40c6a4e140119db",
+      "size": 3777
+    },
+    {
       "id": "echohudcore",
       "moduleId": "echohudcore",
       "version": "1.0.0",
@@ -633,6 +662,6 @@
       "size": 3482
     }
   ],
-  "artifactSha256": "87237a28a26624962889343feefea5edcfc7343b0bd71c44f11c9434a339f3d8",
-  "artifactSize": 276403
+  "artifactSha256": "77e7d78c6f65c52c8df5476d7f3929ac8c1b2fcd9582d49a0bf3a120bb01fa56",
+  "artifactSize": 279755
 }

@@ -3,15 +3,15 @@
   "status": "PASS",
   "canonical": true,
   "runtimeTarget": "echo_runtime_standalone",
-  "moduleCount": 18,
-  "nodeCount": 133,
-  "edgeCount": 109,
+  "moduleCount": 19,
+  "nodeCount": 140,
+  "edgeCount": 110,
   "featureCount": 16,
   "unresolvedReferenceCount": 0,
   "exportMappingCounts": {
-    "echo_native": 133,
-    "neoforge": 133,
-    "echo_runtime_standalone": 133
+    "echo_native": 140,
+    "neoforge": 140,
+    "echo_runtime_standalone": 140
   },
   "crossRuntimeTargets": [
     "echo_native",
@@ -115,6 +115,20 @@
         "echo_native": 2,
         "neoforge": 2,
         "echo_runtime_standalone": 2
+      }
+    },
+    {
+      "moduleId": "echohealthcore",
+      "artifact": "echohealthcore-1.0.0-standalone.jar",
+      "sha256": "9f379d9cc2037938de66f2137f6d55a4d3a950482c805788c40c6a4e140119db",
+      "nodes": 7,
+      "edges": 1,
+      "features": 0,
+      "unresolvedReferences": 0,
+      "exportMappings": {
+        "echo_native": 7,
+        "neoforge": 7,
+        "echo_runtime_standalone": 7
       }
     },
     {

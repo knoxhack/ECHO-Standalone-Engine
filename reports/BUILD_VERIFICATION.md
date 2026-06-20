@@ -2,7 +2,7 @@
 
 - Version: `2.0.0-beta.2`
 - Engine compilation: PASS (`javac --release 21 -Xlint:all -Werror`)
-- Installed module JARs: 18
+- Installed module JARs: 19
 - Canonical Content Graph validation: PASS
 - Cross-runtime export parity: PASS
 - AdapterCore mutation audit: PASS

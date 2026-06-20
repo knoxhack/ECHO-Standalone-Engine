@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "echo.content_graph.export_plan.v1",
+  "moduleId": "echohealthcore",
+  "runtimeTarget": "echo_native",
+  "mappings": [
+    {
+      "nodeId": "echohealthcore:module",
+      "runtimeId": "echohealthcore:module",
+      "kind": "echo:module",
+      "adapter": "graph.echo_native.echo_module"
+    },
+    {
+      "nodeId": "echohealthcore:system/runtime.health",
+      "runtimeId": "echohealthcore:system/runtime.health",
+      "kind": "echo:system",
+      "adapter": "graph.echo_native.echo_system"
+    },
+    {
+      "nodeId": "echohealthcore:setting/runtime.health",
+      "runtimeId": "echohealthcore:setting/runtime.health",
+      "kind": "echo:setting",
+      "adapter": "graph.echo_native.echo_setting"
+    },
+    {
+      "nodeId": "echohealthcore:setting/diagnostics.write",
+      "runtimeId": "echohealthcore:setting/diagnostics.write",
+      "kind": "echo:setting",
+      "adapter": "graph.echo_native.echo_setting"
+    },
+    {
+      "nodeId": "echohealthcore:setting/gamemode/ashfall",
+      "runtimeId": "echohealthcore:setting/gamemode/ashfall",
+      "kind": "echo:setting",
+      "adapter": "graph.echo_native.echo_setting"
+    },
+    {
+      "nodeId": "echohealthcore:setting/gamemode/echo_prime",
+      "runtimeId": "echohealthcore:setting/gamemode/echo_prime",
+      "kind": "echo:setting",
+      "adapter": "graph.echo_native.echo_setting"
+    },
+    {
+      "nodeId": "echohealthcore:setting/gamemode/arcana_division",
+      "runtimeId": "echohealthcore:setting/gamemode/arcana_division",
+      "kind": "echo:setting",
+      "adapter": "graph.echo_native.echo_setting"
+    }
+  ]
+}

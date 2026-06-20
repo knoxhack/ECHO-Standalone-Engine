@@ -18,7 +18,7 @@ from pathlib import Path
 from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_RELEASE_ROOT = ROOT.parent / "ECHO-Modules" / "dist" / "echo-module-release"
+DEFAULT_RELEASE_ROOT = ROOT.parent / "ECHO-Modules" / "dist" / "modules-beta-full-20260620"
 
 GRAPH_SLICE_MODULES = [
     "echocore",
@@ -27,6 +27,7 @@ GRAPH_SLICE_MODULES = [
     "echovalidationcore",
     "echocontentcore",
     "echohudcore",
+    "echohealthcore",
 ]
 
 CROSS_RUNTIME_TARGETS = ["echo_native", "neoforge", "echo_runtime_standalone"]
@@ -265,13 +266,24 @@ def import_module(release_root: Path, module_id: str, available: set[str], force
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--release-root", type=Path, default=DEFAULT_RELEASE_ROOT)
+    parser.add_argument(
+        "--module",
+        action="append",
+        dest="modules",
+        help="Import only the named module. Repeat to import a controlled batch.",
+    )
     parser.add_argument("--force", action="store_true")
     args = parser.parse_args()
 
-    available = module_ids_in_engine() | set(GRAPH_SLICE_MODULES)
+    selected_modules = [module_id.strip().lower() for module_id in (args.modules or GRAPH_SLICE_MODULES)]
+    unknown_modules = sorted(set(selected_modules) - set(GRAPH_SLICE_MODULES))
+    if unknown_modules:
+        raise RuntimeError(f"Unknown graph slice module(s): {', '.join(unknown_modules)}")
+
+    available = module_ids_in_engine() | set(selected_modules)
     imported = [
         import_module(args.release_root, module_id, available, args.force)
-        for module_id in GRAPH_SLICE_MODULES
+        for module_id in selected_modules
     ]
     print(json.dumps({
         "schemaVersion": "echo.standalone_engine.graph_slice_import.v1",
