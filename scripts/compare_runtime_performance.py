@@ -12,6 +12,7 @@ import shutil
 import statistics
 import subprocess
 import sys
+import tempfile
 import time
 from datetime import datetime, timezone
 from pathlib import Path
@@ -24,6 +25,7 @@ DEFAULT_LEGACY_TASKS = (
     "runStandaloneSaveRuntimeSmoke",
     "runStandaloneAlphaReadinessSmoke",
 )
+DEFAULT_LEGACY_GRADLE_ARGS = ("--console", "plain")
 LEGACY_REPORTS = {
     "contentGraph": Path("reports/echo/standalone/content-graph-load.json"),
     "saveRuntime": Path("reports/echo/standalone/runtime-save.json"),
@@ -154,31 +156,39 @@ def tail(text: str, limit: int = 4000) -> str:
 
 def run_measured(label: str, command: list[str], cwd: Path, timeout_seconds: int) -> dict[str, Any]:
     started = time.perf_counter()
-    process = subprocess.Popen(
-        [str(part) for part in command],
-        cwd=cwd,
-        stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE,
-        text=True,
-        encoding="utf-8",
-        errors="replace",
-    )
-    peak_rss = None
-    timed_out = False
-    while process.poll() is None:
-        rss = process_rss_bytes(process.pid)
-        if rss is not None:
-            peak_rss = max(peak_rss or 0, rss)
-        if time.perf_counter() - started > timeout_seconds:
-            timed_out = True
-            process.kill()
-            break
-        time.sleep(0.05)
-    stdout, stderr = process.communicate()
-    elapsed_ms = round((time.perf_counter() - started) * 1000, 3)
-    rss = process_rss_bytes(process.pid)
-    if rss is not None:
-        peak_rss = max(peak_rss or 0, rss)
+    with tempfile.TemporaryDirectory(prefix="echo-phase6-") as temp_dir:
+        stdout_path = Path(temp_dir) / "stdout.txt"
+        stderr_path = Path(temp_dir) / "stderr.txt"
+        with stdout_path.open("w", encoding="utf-8", errors="replace") as stdout_file, stderr_path.open(
+            "w", encoding="utf-8", errors="replace"
+        ) as stderr_file:
+            process = subprocess.Popen(
+                [str(part) for part in command],
+                cwd=cwd,
+                stdout=stdout_file,
+                stderr=stderr_file,
+                text=True,
+                encoding="utf-8",
+                errors="replace",
+            )
+            peak_rss = None
+            timed_out = False
+            while process.poll() is None:
+                rss = process_rss_bytes(process.pid)
+                if rss is not None:
+                    peak_rss = max(peak_rss or 0, rss)
+                if time.perf_counter() - started > timeout_seconds:
+                    timed_out = True
+                    process.kill()
+                    break
+                time.sleep(0.05)
+            process.wait()
+            elapsed_ms = round((time.perf_counter() - started) * 1000, 3)
+            rss = process_rss_bytes(process.pid)
+            if rss is not None:
+                peak_rss = max(peak_rss or 0, rss)
+        stdout = stdout_path.read_text(encoding="utf-8", errors="replace")
+        stderr = stderr_path.read_text(encoding="utf-8", errors="replace")
     return {
         "label": label,
         "command": [str(part) for part in command],
@@ -356,7 +366,7 @@ def run_legacy_tasks(args: argparse.Namespace) -> list[dict[str, Any]]:
         raise FileNotFoundError(f"Legacy Gradle wrapper not found: {wrapper}")
     runs = []
     for task in args.legacy_task:
-        command = [str(wrapper), task]
+        command = [str(wrapper), *DEFAULT_LEGACY_GRADLE_ARGS, task]
         runs.append(run_measured(f"legacy-{task}", command, args.legacy_runtime_root, args.timeout_seconds))
     return runs
 
