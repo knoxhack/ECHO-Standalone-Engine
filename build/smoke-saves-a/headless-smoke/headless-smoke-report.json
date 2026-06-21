@@ -1,11 +1,10 @@
 {
   "schema": "echo.engine.headless_smoke.v2",
   "status": "PASS",
-  "engineVersion": "2.0.0-beta.2",
+  "engineVersion": "2.0.0-beta.5",
   "packId": "ashfall-standalone-engine-edition",
   "installedModules": 19,
   "contentGraph": {
-    "modules": 19,
     "edges": 110,
     "fingerprint": "2e97d9ecd54d6b6b875f29261a46f799b8db92cca56e0f990a7a02b2421da5ff",
     "crossRuntimeParity": true,
@@ -15,7 +14,8 @@
       "echo_native": 78,
       "echo_runtime_standalone": 78
     },
-    "nodes": 140
+    "nodes": 140,
+    "modules": 19
   },
   "adapterCore": {
     "revoked": 0,

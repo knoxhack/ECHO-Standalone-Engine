@@ -1,6 +1,6 @@
 $ErrorActionPreference = "Stop"
 $Root = Split-Path -Parent $MyInvocation.MyCommand.Path
-$Engine = Join-Path $Root "dist\echo-standalone-engine-2.0.0-beta.2.jar"
+$Engine = Join-Path $Root "dist\echo-standalone-engine-2.0.0-beta.5.jar"
 if (!(Test-Path -LiteralPath $Engine)) {
   throw "Missing engine JAR: $Engine. Run scripts\build.ps1 first."
 }

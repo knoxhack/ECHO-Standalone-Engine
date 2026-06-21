@@ -1,6 +1,6 @@
 # Changelog
 
-## 2.0.0-beta.2
+## 2.0.0-beta.5
 
 - New module-first standalone engine.
 - Strict pack and module SHA-256 verification.

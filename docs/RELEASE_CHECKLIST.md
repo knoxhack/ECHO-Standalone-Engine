@@ -2,14 +2,14 @@
 
 ## Automated
 
-- [ ] `scripts/build.sh` or `scripts/build.ps1` passes.
-- [ ] Engine and module compilation use Java 21.
-- [ ] Module graph tests pass.
-- [ ] Required module SHA-256 verification passes.
-- [ ] Chunk palette reorder test passes.
-- [ ] Offscreen render smoke produces a nonblank frame.
-- [ ] Headless pack boot, world generation, save, and reload pass.
-- [ ] `dist/checksums.sha256` matches every runtime file.
+- [x] `scripts/build.sh` or `scripts/build.ps1` passes.
+- [x] Engine and module compilation use Java 21.
+- [x] Module graph tests pass.
+- [x] Required module SHA-256 verification passes.
+- [x] Chunk palette reorder test passes.
+- [x] Offscreen render smoke produces a nonblank frame.
+- [x] Headless pack boot, world generation, save, and reload pass.
+- [x] `dist/checksums.sha256` matches every runtime file.
 
 ## Manual desktop
 

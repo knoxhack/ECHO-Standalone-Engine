@@ -1,0 +1,107 @@
+{
+  "schemaVersion": "echo.engine.repair.v1",
+  "engineVersion": "2.0.0-beta.5",
+  "generatedAt": "2026-06-21T07:03:24.756469700Z",
+  "packId": "ashfall-standalone-engine-edition",
+  "packVersion": "2.0.0-beta.5",
+  "packRoot": "C:\\Development\\Github\\ECHO-Standalone-Engine\\dist",
+  "status": "NO_REPAIR_NEEDED",
+  "checkedModules": [
+    {
+      "moduleId": "echoadaptercore",
+      "path": "mods/echoadaptercore-1.0.0-standalone.jar",
+      "status": "OK"
+    },
+    {
+      "moduleId": "echoashfallprotocol",
+      "path": "mods/echoashfallprotocol-1.0.0-standalone.jar",
+      "status": "OK"
+    },
+    {
+      "moduleId": "echocommonloot",
+      "path": "mods/echocommonloot-1.0.0-standalone.jar",
+      "status": "OK"
+    },
+    {
+      "moduleId": "echocontentcore",
+      "path": "mods/echocontentcore-1.0.0-standalone.jar",
+      "status": "OK"
+    },
+    {
+      "moduleId": "echocore",
+      "path": "mods/echocore-1.0.0-standalone.jar",
+      "status": "OK"
+    },
+    {
+      "moduleId": "echocreatureroles",
+      "path": "mods/echocreatureroles-1.0.0-standalone.jar",
+      "status": "OK"
+    },
+    {
+      "moduleId": "echofoundationcore",
+      "path": "mods/echofoundationcore-1.0.0-standalone.jar",
+      "status": "OK"
+    },
+    {
+      "moduleId": "echohealthcore",
+      "path": "mods/echohealthcore-1.0.0-standalone.jar",
+      "status": "OK"
+    },
+    {
+      "moduleId": "echohudcore",
+      "path": "mods/echohudcore-1.0.0-standalone.jar",
+      "status": "OK"
+    },
+    {
+      "moduleId": "echomaterialcore",
+      "path": "mods/echomaterialcore-1.0.0-standalone.jar",
+      "status": "OK"
+    },
+    {
+      "moduleId": "echoplatformcore",
+      "path": "mods/echoplatformcore-1.0.0-standalone.jar",
+      "status": "OK"
+    },
+    {
+      "moduleId": "echoschemacore",
+      "path": "mods/echoschemacore-1.0.0-standalone.jar",
+      "status": "OK"
+    },
+    {
+      "moduleId": "echoscreencore",
+      "path": "mods/echoscreencore-1.0.0-standalone.jar",
+      "status": "OK"
+    },
+    {
+      "moduleId": "echostationcore",
+      "path": "mods/echostationcore-1.0.0-standalone.jar",
+      "status": "OK"
+    },
+    {
+      "moduleId": "echoterminal",
+      "path": "mods/echoterminal-1.0.0-standalone.jar",
+      "status": "OK"
+    },
+    {
+      "moduleId": "echotoolcore",
+      "path": "mods/echotoolcore-1.0.0-standalone.jar",
+      "status": "OK"
+    },
+    {
+      "moduleId": "echovalidationcore",
+      "path": "mods/echovalidationcore-1.0.0-standalone.jar",
+      "status": "OK"
+    },
+    {
+      "moduleId": "echoweathercore",
+      "path": "mods/echoweathercore-1.0.0-standalone.jar",
+      "status": "OK"
+    },
+    {
+      "moduleId": "echoworldstarter",
+      "path": "mods/echoworldstarter-1.0.0-standalone.jar",
+      "status": "OK"
+    }
+  ],
+  "missingOrCorruptModules": []
+}

@@ -4,14 +4,14 @@ docs/MIGRATION_FROM_OLD_RUNTIME.md
 docs/MODULE_AUTHORING.md
 docs/RELEASE_CHECKLIST.md
 examples/data-addon/README.md
-examples/data-addon/src/main/resources/META-INF/echo.module.json
+examples/data-addon/src/main/resources/META-INF/echo.mod.json
 examples/data-addon/src/main/resources/echo-content/blocks.json
 examples/data-addon/src/main/resources/echo-content/items.json
 examples/data-addon/src/main/resources/echo-content/recipes.json
 modules/ashfall/src/main/java/dev/echo/modules/ashfall/AshfallGameExtension.java
 modules/ashfall/src/main/java/dev/echo/modules/ashfall/AshfallModule.java
 modules/ashfall/src/main/java/dev/echo/modules/ashfall/AshfallWorldGenerator.java
-modules/ashfall/src/main/resources/META-INF/echo.module.json
+modules/ashfall/src/main/resources/META-INF/echo.mod.json
 modules/ashfall/src/main/resources/echo-content/blocks.json
 modules/ashfall/src/main/resources/echo-content/entities.json
 modules/ashfall/src/main/resources/echo-content/items.json

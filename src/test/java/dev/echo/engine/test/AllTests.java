@@ -1,5 +1,6 @@
 package dev.echo.engine.test;
 
+import dev.echo.engine.game.EngineCliTest;
 import dev.echo.engine.game.RenderSmokeTest;
 import dev.echo.engine.game.SaveContentIdentityTest;
 import dev.echo.engine.runtime.adaptercore.AdapterCoreBridgeSurfaceTest;
@@ -31,6 +32,7 @@ public final class AllTests {
         AdapterCoreBridgeSurfaceTest.run(packRoot, manifest);
         CanonicalRuntimeIntegrationTest.run(packRoot, manifest);
         SaveContentIdentityTest.run(packRoot, manifest);
+        EngineCliTest.run(packRoot, manifest);
         RenderSmokeTest.run(packRoot, manifest);
         System.out.println("ALL TESTS PASS");
     }

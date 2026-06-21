@@ -46,7 +46,7 @@ Paths are resolved under the configured pack root and rejected if normalization 
 
 ### Descriptor layer
 
-`META-INF/echo.module.json` declares:
+`META-INF/echo.mod.json` declares:
 
 - schema version
 - stable module ID

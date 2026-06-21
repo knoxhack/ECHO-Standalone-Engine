@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")" && pwd)"
-ENGINE="$ROOT/dist/echo-standalone-engine-2.0.0-beta.2.jar"
+ENGINE="$ROOT/dist/echo-standalone-engine-2.0.0-beta.5.jar"
 if [[ ! -f "$ENGINE" ]]; then
   echo "Missing engine JAR: $ENGINE. Run scripts/build.sh first." >&2
   exit 1

@@ -1,4 +1,4 @@
-ECHO Standalone Engine 2.0.0-beta.2
+ECHO Standalone Engine 2.0.0-beta.5
 
 The installed module JARs and their embedded .ECHO Content Graph are the content authority.
 AdapterCore is the only module-to-runtime mutation bridge.

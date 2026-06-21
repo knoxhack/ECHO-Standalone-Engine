@@ -32,7 +32,7 @@ import java.util.List;
 import java.util.Map;
 
 public final class GameSession implements GameAccess, WorldAccess, AutoCloseable {
-    public static final String ENGINE_VERSION = "2.0.0-beta.2";
+    public static final String ENGINE_VERSION = "2.0.0-beta.5";
 
     private final String worldId;
     private final Path worldRoot;

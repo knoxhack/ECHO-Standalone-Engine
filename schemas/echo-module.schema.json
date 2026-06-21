@@ -3,15 +3,19 @@
   "$id": "https://echo.example/schemas/echo-module.v1.json",
   "title": "ECHO Standalone Module Descriptor",
   "type": "object",
-  "required": ["schemaVersion", "id", "name", "version", "entrypoint", "trust", "dependencies", "permissions"],
+  "required": ["schemaVersion", "id", "name", "version", "trust"],
   "properties": {
-    "schemaVersion": {"const": 1},
+    "schemaVersion": {"type": "string"},
     "id": {"type": "string", "pattern": "^[a-z0-9_.-]+$"},
     "name": {"type": "string", "minLength": 1},
     "version": {"type": "string", "minLength": 1},
     "entrypoint": {"type": "string"},
     "trust": {"enum": ["official", "developer", "data-only"]},
-    "dependencies": {
+    "official": {"type": "boolean"},
+    "kind": {"type": "string"},
+    "side": {"type": "string"},
+    "standalone": {"type": "boolean"},
+    "requires": {
       "type": "array",
       "items": {
         "type": "object",
@@ -20,11 +24,22 @@
           "id": {"type": "string"},
           "version": {"type": "string"},
           "optional": {"type": "boolean"}
-        },
-        "additionalProperties": false
+        }
       }
     },
+    "optional": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id"],
+        "properties": {
+          "id": {"type": "string"},
+          "version": {"type": "string"}
+        }
+      }
+    },
+    "access": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
     "permissions": {"type": "array", "items": {"type": "string"}, "uniqueItems": true}
   },
-  "additionalProperties": false
+  "additionalProperties": true
 }

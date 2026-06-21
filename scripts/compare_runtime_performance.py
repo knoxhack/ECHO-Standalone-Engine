@@ -19,7 +19,7 @@ from pathlib import Path
 from typing import Any
 
 
-ENGINE_JAR = "echo-standalone-engine-2.0.0-beta.2.jar"
+ENGINE_JAR = "echo-standalone-engine-2.0.0-beta.5.jar"
 DEFAULT_LEGACY_TASKS = (
     "runStandaloneContentGraphLoadSmoke",
     "runStandaloneSaveRuntimeSmoke",
@@ -50,7 +50,28 @@ def read_json(path: Path) -> dict[str, Any] | None:
 
 def write_json(path: Path, data: dict[str, Any]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(data, indent=2, sort_keys=False) + "\n", encoding="utf-8")
+    temp = path.with_suffix(path.suffix + ".tmp")
+    temp.write_text(json.dumps(data, indent=2, sort_keys=False) + "\n", encoding="utf-8")
+    temp.replace(path)
+
+
+def write_partial_report(path: Path, args: argparse.Namespace, **sections: Any) -> None:
+    partial = {
+        "schema": "echo.standalone_engine.performance_comparison.v1",
+        "generatedAt": iso_now(),
+        "status": "PARTIAL",
+        "host": {
+            "os": platform.platform(),
+            "python": platform.python_version(),
+            "machine": platform.machine(),
+        },
+        "repos": {
+            "engine": git_snapshot(args.engine_root),
+            "legacyStandaloneRuntime": git_snapshot(args.legacy_runtime_root),
+        },
+    }
+    partial.update(sections)
+    write_json(path, partial)
 
 
 def git_snapshot(repo: Path) -> dict[str, Any]:
@@ -157,52 +178,102 @@ def tail(text: str, limit: int = 4000) -> str:
     return text[-limit:]
 
 
+def terminate_process_tree(pid: int) -> None:
+    try:
+        import psutil  # type: ignore
+
+        root = psutil.Process(pid)
+        for child in root.children(recursive=True):
+            try:
+                child.terminate()
+            except psutil.Error:
+                pass
+        root.terminate()
+        gone, alive = psutil.wait_procs([root] + root.children(recursive=True), timeout=5)
+        for proc in alive:
+            try:
+                proc.kill()
+            except psutil.Error:
+                pass
+    except Exception:
+        try:
+            os.kill(pid, 9 if os.name != "nt" else 1)
+        except Exception:
+            pass
+
+
 def run_measured(label: str, command: list[str], cwd: Path, timeout_seconds: int) -> dict[str, Any]:
     started = time.perf_counter()
+    process: subprocess.Popen | None = None
     with tempfile.TemporaryDirectory(prefix="echo-phase6-") as temp_dir:
         stdout_path = Path(temp_dir) / "stdout.txt"
         stderr_path = Path(temp_dir) / "stderr.txt"
         with stdout_path.open("w", encoding="utf-8", errors="replace") as stdout_file, stderr_path.open(
             "w", encoding="utf-8", errors="replace"
         ) as stderr_file:
-            process = subprocess.Popen(
-                [str(part) for part in command],
-                cwd=cwd,
-                stdout=stdout_file,
-                stderr=stderr_file,
-                text=True,
-                encoding="utf-8",
-                errors="replace",
-            )
-            peak_rss = None
-            timed_out = False
-            while process.poll() is None:
+            try:
+                process = subprocess.Popen(
+                    [str(part) for part in command],
+                    cwd=cwd,
+                    stdout=stdout_file,
+                    stderr=stderr_file,
+                    text=True,
+                    encoding="utf-8",
+                    errors="replace",
+                )
+                peak_rss = None
+                timed_out = False
+                while process.poll() is None:
+                    rss = process_rss_bytes(process.pid)
+                    if rss is not None:
+                        peak_rss = max(peak_rss or 0, rss)
+                    if time.perf_counter() - started > timeout_seconds:
+                        timed_out = True
+                        terminate_process_tree(process.pid)
+                        break
+                    time.sleep(0.05)
+                process.wait(timeout=10)
+                elapsed_ms = round((time.perf_counter() - started) * 1000, 3)
                 rss = process_rss_bytes(process.pid)
                 if rss is not None:
                     peak_rss = max(peak_rss or 0, rss)
-                if time.perf_counter() - started > timeout_seconds:
-                    timed_out = True
-                    process.kill()
-                    break
-                time.sleep(0.05)
-            process.wait()
-            elapsed_ms = round((time.perf_counter() - started) * 1000, 3)
-            rss = process_rss_bytes(process.pid)
-            if rss is not None:
-                peak_rss = max(peak_rss or 0, rss)
+            except Exception as failure:
+                if process is not None:
+                    terminate_process_tree(process.pid)
+                    try:
+                        process.wait(timeout=5)
+                    except Exception:
+                        pass
+                return {
+                    "label": label,
+                    "command": [str(part) for part in command],
+                    "cwd": str(cwd),
+                    "exitCode": -1,
+                    "timedOut": False,
+                    "wallMs": round((time.perf_counter() - started) * 1000, 3),
+                    "peakRssBytes": peak_rss if "peak_rss" in dir() else None,
+                    "stdoutTail": "",
+                    "stderrTail": str(failure),
+                    "failureReason": f"harness exception: {failure}",
+                }
         stdout = stdout_path.read_text(encoding="utf-8", errors="replace")
         stderr = stderr_path.read_text(encoding="utf-8", errors="replace")
-    return {
+    result = {
         "label": label,
         "command": [str(part) for part in command],
         "cwd": str(cwd),
-        "exitCode": process.returncode,
-        "timedOut": timed_out,
-        "wallMs": elapsed_ms,
-        "peakRssBytes": peak_rss,
+        "exitCode": process.returncode if process is not None else -1,
+        "timedOut": timed_out if "timed_out" in dir() else False,
+        "wallMs": elapsed_ms if "elapsed_ms" in dir() else round((time.perf_counter() - started) * 1000, 3),
+        "peakRssBytes": peak_rss if "peak_rss" in dir() else None,
         "stdoutTail": tail(stdout),
         "stderrTail": tail(stderr),
     }
+    if result["timedOut"]:
+        result["failureReason"] = "timed out"
+    elif result["exitCode"] != 0:
+        result["failureReason"] = f"non-zero exit code {result['exitCode']}"
+    return result
 
 
 def percentile(values: list[float], percent: float) -> float | None:
@@ -271,7 +342,12 @@ def benchmark_engine(args: argparse.Namespace) -> dict[str, Any]:
             str(save_root),
             "--headless-smoke",
         ]
-        measured = run_measured(f"engine-headless-smoke-{index + 1}", command, args.engine_root, args.timeout_seconds)
+        measured = run_measured(
+            f"engine-headless-smoke-{index + 1}",
+            command,
+            args.engine_root,
+            args.engine_timeout_seconds if args.engine_timeout_seconds is not None else args.timeout_seconds,
+        )
         report_path = save_root / "headless-smoke" / "headless-smoke-report.json"
         report = read_json(report_path)
         ok = (
@@ -380,7 +456,8 @@ def run_legacy_gradle_tasks(args: argparse.Namespace, tasks: list[str], label_pr
     runs = []
     for task in tasks:
         command = [str(wrapper), *DEFAULT_LEGACY_GRADLE_ARGS, task]
-        runs.append(run_measured(f"{label_prefix}-{task}", command, args.legacy_runtime_root, args.timeout_seconds))
+        timeout = args.legacy_task_timeout_seconds if args.legacy_task_timeout_seconds is not None else args.timeout_seconds
+        runs.append(run_measured(f"{label_prefix}-{task}", command, args.legacy_runtime_root, timeout))
     return runs
 
 
@@ -452,7 +529,10 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--engine-root", type=Path, default=root)
     parser.add_argument("--legacy-runtime-root", type=Path, default=root.parent / "ECHO-Standalone-Runtime")
     parser.add_argument("--iterations", type=int, default=3)
-    parser.add_argument("--timeout-seconds", type=int, default=180)
+    parser.add_argument("--timeout-seconds", type=int, default=180, help="Default timeout for measured tasks.")
+    parser.add_argument("--engine-timeout-seconds", type=int, default=None, help="Override timeout for engine headless smoke runs.")
+    parser.add_argument("--legacy-task-timeout-seconds", type=int, default=None, help="Override timeout for legacy Gradle tasks.")
+    parser.add_argument("--legacy-client-timeout-seconds", type=int, default=None, help="Override timeout for legacy client launch proxy tasks.")
     parser.add_argument("--java", default="java")
     parser.add_argument("--work-dir", type=Path, default=root / "build" / "phase6-performance-comparison")
     parser.add_argument("--out", type=Path, default=root / "reports" / "PHASE6_PERFORMANCE_COMPARISON.json")
@@ -480,9 +560,13 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> None:
     args = parse_args()
+    write_partial_report(args.out, args)
     engine = benchmark_engine(args)
+    write_partial_report(args.out, args, engine=engine)
     legacy_task_runs = run_legacy_tasks(args)
+    write_partial_report(args.out, args, engine=engine, legacyTaskRuns=legacy_task_runs)
     legacy_client_launch_runs = run_legacy_client_launch_tasks(args)
+    write_partial_report(args.out, args, engine=engine, legacyTaskRuns=legacy_task_runs, legacyClientLaunchProxyRuns=legacy_client_launch_runs)
     legacy = summarize_legacy(args.legacy_runtime_root, legacy_task_runs, legacy_client_launch_runs)
     report = {
         "schema": "echo.standalone_engine.performance_comparison.v1",

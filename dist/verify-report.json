@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "echo.engine.verify.v1",
+  "engineVersion": "2.0.0-beta.5",
+  "generatedAt": "2026-06-21T07:03:24.392498Z",
+  "packId": "ashfall-standalone-engine-edition",
+  "packVersion": "2.0.0-beta.5",
+  "packRoot": "C:\\Development\\Github\\ECHO-Standalone-Engine\\dist",
+  "manifest": "C:\\Development\\Github\\ECHO-Standalone-Engine\\dist\\pack.json",
+  "contentGraph": {
+    "edges": 110,
+    "nodes": 140,
+    "fingerprint": "2e97d9ecd54d6b6b875f29261a46f799b8db92cca56e0f990a7a02b2421da5ff"
+  },
+  "status": "PASS"
+}

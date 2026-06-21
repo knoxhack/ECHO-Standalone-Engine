@@ -15,7 +15,7 @@ import zipfile
 ROOT = Path(__file__).resolve().parents[1]
 BUILD = ROOT / "build"
 DIST = ROOT / "dist"
-VERSION = "2.0.0-beta.2"
+VERSION = "2.0.0-beta.5"
 PACK_ID = "ashfall-standalone-engine-edition"
 PACK_NAME = "Ashfall Standalone Engine Edition"
 PACK_MANIFEST = f"{PACK_ID}-beta-{VERSION}.pack.json"

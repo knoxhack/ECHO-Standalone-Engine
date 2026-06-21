@@ -5,27 +5,27 @@
 Build against:
 
 ```text
-dist/echo-engine-api-2.0.0-beta.2.jar
+dist/echo-engine-api-2.0.0-beta.5.jar
 ```
 
 Do not compile a module against runtime implementation packages. Public contracts are under `dev.echo.engine.api`.
 
 ## Descriptor
 
-Place this at `META-INF/echo.module.json`:
+Place this at `META-INF/echo.mod.json`:
 
 ```json
 {
-  "schemaVersion": 1,
+  "schemaVersion": "echo.module.descriptor.v1",
   "id": "examplemodule",
   "name": "Example Module",
   "version": "1.0.0",
   "entrypoint": "example.module.ExampleModule",
   "trust": "developer",
-  "dependencies": [
+  "requires": [
     {"id": "somebase", "version": "1.0.0", "optional": false}
   ],
-  "permissions": ["content.register", "gameplay.extend"]
+  "access": ["content.register", "gameplay.extend"]
 }
 ```
 
@@ -33,14 +33,14 @@ For a data-only addon:
 
 ```json
 {
-  "schemaVersion": 1,
+  "schemaVersion": "echo.module.descriptor.v1",
   "id": "exampledata",
   "name": "Example Data Addon",
   "version": "1.0.0",
   "entrypoint": "",
   "trust": "data-only",
-  "dependencies": [],
-  "permissions": ["content.register"]
+  "requires": [],
+  "access": ["content.register"]
 }
 ```
 

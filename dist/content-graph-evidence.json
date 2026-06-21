@@ -22,7 +22,7 @@
     {
       "moduleId": "echoadaptercore",
       "artifact": "echoadaptercore-1.0.0-standalone.jar",
-      "sha256": "e3b484796afacfd1300f9ea5554014cfead62e9211292b344e49c5ff579589df",
+      "sha256": "161eefa167f4b8f968bda6eadd314cd110b0c7b1d91157dfa4b6bb5641172f98",
       "nodes": 2,
       "edges": 1,
       "features": 1,
@@ -36,7 +36,7 @@
     {
       "moduleId": "echoashfallprotocol",
       "artifact": "echoashfallprotocol-1.0.0-standalone.jar",
-      "sha256": "6696f7ff39b31e4461c21d8ab3f449cd36047bf8699e6078f06af7100b20006e",
+      "sha256": "26b14b66ad15e2f84d016c551d4b8ab288c66755bb9321f29dd2267366d32773",
       "nodes": 47,
       "edges": 56,
       "features": 4,
@@ -50,7 +50,7 @@
     {
       "moduleId": "echocommonloot",
       "artifact": "echocommonloot-1.0.0-standalone.jar",
-      "sha256": "3c51cf089d2fef08465960eec52d768011cc9f6281df7ef0d24d4cea7d9d69d0",
+      "sha256": "1f42d7b4665c46f0b0a0121b4ec067e75703c4879913eb0d54b518650523ffda",
       "nodes": 2,
       "edges": 3,
       "features": 1,
@@ -64,7 +64,7 @@
     {
       "moduleId": "echocontentcore",
       "artifact": "echocontentcore-1.0.0-standalone.jar",
-      "sha256": "e6fdee7d2dcc647ff1444573996db10b1a67a6ca2bfccbe3e98ab438a045740c",
+      "sha256": "e7025ad7589a47550aa12feeb9972b76d56bb27e4e99b571fac88d9ce76e13b4",
       "nodes": 9,
       "edges": 4,
       "features": 0,
@@ -78,7 +78,7 @@
     {
       "moduleId": "echocore",
       "artifact": "echocore-1.0.0-standalone.jar",
-      "sha256": "a2b28345992a43b56f44d5ec46df32ad3930799cdbbc5a3663fc5a8887367d24",
+      "sha256": "790b216deeac68b2c972d36044a5f8bd13de7ee878d4d898e2df5eded1549e3b",
       "nodes": 16,
       "edges": 12,
       "features": 0,
@@ -92,7 +92,7 @@
     {
       "moduleId": "echocreatureroles",
       "artifact": "echocreatureroles-1.0.0-standalone.jar",
-      "sha256": "ec31f99f95122959e739e201de9bbd52c61ad10a3b1faf0303f3c148c83c8cf2",
+      "sha256": "13f536f434a069599968ce397c205141b81fa5476fd71ce298c20d4c3de742ef",
       "nodes": 3,
       "edges": 0,
       "features": 1,
@@ -106,7 +106,7 @@
     {
       "moduleId": "echofoundationcore",
       "artifact": "echofoundationcore-1.0.0-standalone.jar",
-      "sha256": "f4553c8768ddd7ca51ff15eb4805f4db771d308e9eb1cce7e6628fd847faace3",
+      "sha256": "e47945e44a6f2200349c185504379ee8581041874103646950465dcd3cb89f23",
       "nodes": 2,
       "edges": 1,
       "features": 1,
@@ -120,7 +120,7 @@
     {
       "moduleId": "echohealthcore",
       "artifact": "echohealthcore-1.0.0-standalone.jar",
-      "sha256": "9f379d9cc2037938de66f2137f6d55a4d3a950482c805788c40c6a4e140119db",
+      "sha256": "bff61d2b9ec05d2b4a35c9b8d590a8fe49ab8e87cd4b4214c860a8af60c7a1f8",
       "nodes": 7,
       "edges": 1,
       "features": 0,
@@ -134,7 +134,7 @@
     {
       "moduleId": "echohudcore",
       "artifact": "echohudcore-1.0.0-standalone.jar",
-      "sha256": "ef483238edef4a69fdd5ddbe6031fa9effc4454f53b80391a127577f5a82818c",
+      "sha256": "cf469ddf2a535bdbb17566541f5820187a118b3b5d8cf3f11f246311d15a72c7",
       "nodes": 11,
       "edges": 5,
       "features": 1,
@@ -148,7 +148,7 @@
     {
       "moduleId": "echomaterialcore",
       "artifact": "echomaterialcore-1.0.0-standalone.jar",
-      "sha256": "56748d38a80b4e1010eed5dbcb7a28668728c75c23fbe6be183448cb71b46d7d",
+      "sha256": "3214f54b50d18a4aa36e3c06347dad4c5d6db73bae740ed4504ee333774ae446",
       "nodes": 4,
       "edges": 0,
       "features": 1,
@@ -162,7 +162,7 @@
     {
       "moduleId": "echoplatformcore",
       "artifact": "echoplatformcore-1.0.0-standalone.jar",
-      "sha256": "c26fbc0b7831255f0f20657f9bd36d3d7295957b0802a8cc0895691a3e429b1c",
+      "sha256": "2864a1fe11f36f073d464c5b1a9db11b5c0ab71f2eef163e75a48c1a6c450d65",
       "nodes": 6,
       "edges": 1,
       "features": 0,
@@ -176,7 +176,7 @@
     {
       "moduleId": "echoschemacore",
       "artifact": "echoschemacore-1.0.0-standalone.jar",
-      "sha256": "e071fcbc4adc43238369400e0b070430c593d0b92939bb762f8155df727dcf21",
+      "sha256": "2b3505eb0e985e336faebc6e4603d47bafa1bb343ecc11a1648f09cde9570ebc",
       "nodes": 6,
       "edges": 1,
       "features": 0,
@@ -190,7 +190,7 @@
     {
       "moduleId": "echoscreencore",
       "artifact": "echoscreencore-1.0.0-standalone.jar",
-      "sha256": "7a9ba1b22a1538923032fac586e533d7616852c51bec8743b0d7931e496fcd1a",
+      "sha256": "ae7d798314433ec63fa243de94d492a6fffce7377d51e61098348389c8769b2a",
       "nodes": 3,
       "edges": 2,
       "features": 1,
@@ -204,7 +204,7 @@
     {
       "moduleId": "echostationcore",
       "artifact": "echostationcore-1.0.0-standalone.jar",
-      "sha256": "c6621129fefda5c16dd069650b0ab551efabedfdf97ec22a978a852657c286de",
+      "sha256": "14e353b74d89972fa899da0d64380232736ff69a92be9ce2de306fb8d05fc61a",
       "nodes": 4,
       "edges": 4,
       "features": 1,
@@ -218,7 +218,7 @@
     {
       "moduleId": "echoterminal",
       "artifact": "echoterminal-1.0.0-standalone.jar",
-      "sha256": "522f07251cb352e97ddf1bdb159efcba0ac6aae5c1497f7a3a5acefb137380e5",
+      "sha256": "6709cb7d9c697d6e8ca8de7fd4ce25baca4f52833b3e6a972dd70dbf459b326d",
       "nodes": 4,
       "edges": 4,
       "features": 1,
@@ -232,7 +232,7 @@
     {
       "moduleId": "echotoolcore",
       "artifact": "echotoolcore-1.0.0-standalone.jar",
-      "sha256": "38ed1458c5d8708c5f9d73ea618a2ad28986b1712e1b0320fa5833a0e87134d9",
+      "sha256": "5af49c56202c48a08952a107ec6f5a14068c6a4a9d2a434b8449cce52efc248f",
       "nodes": 3,
       "edges": 3,
       "features": 1,
@@ -246,7 +246,7 @@
     {
       "moduleId": "echovalidationcore",
       "artifact": "echovalidationcore-1.0.0-standalone.jar",
-      "sha256": "a5fe3027c873e9cad0e2983503081f9e1752bfdc3fb5d8ac749a41ab0b0f5653",
+      "sha256": "ea7662eed9a6ab0b34123ba88ce98f6123d3e6784e87f0b5d37c63345e28956f",
       "nodes": 7,
       "edges": 1,
       "features": 0,
@@ -260,7 +260,7 @@
     {
       "moduleId": "echoweathercore",
       "artifact": "echoweathercore-1.0.0-standalone.jar",
-      "sha256": "09fb4acd601b4e4342d2e6208b4cc2a024ac12e83a570cc4e6b3f36f6622aed3",
+      "sha256": "2456cc05b23124b5a92a524600b011197ccde9e5fba4bed7019af2239512e053",
       "nodes": 2,
       "edges": 1,
       "features": 1,
@@ -274,7 +274,7 @@
     {
       "moduleId": "echoworldstarter",
       "artifact": "echoworldstarter-1.0.0-standalone.jar",
-      "sha256": "e1728dea5891be56ed17bb594f35f17614944cbab4bba8523c94634c37662901",
+      "sha256": "992e6cf6bf38ad8505a4cba0cfa1df326250d8579726d7377cc253bfdd6718b9",
       "nodes": 2,
       "edges": 10,
       "features": 1,

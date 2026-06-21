@@ -7,7 +7,7 @@ This repository is a side-by-side rewrite of the older ECHO Standalone Runtime. 
 Current release target:
 
 ```text
-2.0.0-beta.2
+2.0.0-beta.5
 ```
 
 ## Runtime Contract
@@ -17,8 +17,8 @@ Current release target:
 - Runtime target: `echo_runtime_standalone`
 - Required Java: `21+`
 - Pack id: `ashfall-standalone-engine-edition`
-- Pack artifact: `dist/ashfall-standalone-engine-edition-2.0.0-beta.2.zip`
-- Launcher manifest: `dist/ashfall-standalone-engine-edition-beta-2.0.0-beta.2.pack.json`
+- Pack artifact: `dist/ashfall-standalone-engine-edition-2.0.0-beta.5.zip`
+- Launcher manifest: `dist/ashfall-standalone-engine-edition-beta-2.0.0-beta.5.pack.json`
 
 ## Run The Prebuilt Game
 
@@ -39,7 +39,7 @@ Linux or macOS:
 Equivalent engine command:
 
 ```text
-java -Dfile.encoding=UTF-8 -jar dist/echo-standalone-engine-2.0.0-beta.2.jar --pack-root dist --manifest pack.json --save-root saves
+java -Dfile.encoding=UTF-8 -jar dist/echo-standalone-engine-2.0.0-beta.5.jar --pack-root dist --manifest pack.json --save-root saves
 ```
 
 ## Build And Verify
