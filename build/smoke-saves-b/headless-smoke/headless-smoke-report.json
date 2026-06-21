@@ -5,45 +5,45 @@
   "packId": "ashfall-standalone-engine-edition",
   "installedModules": 19,
   "contentGraph": {
-    "nodes": 140,
-    "mappedNodeCounts": {
-      "echo_native": 78,
-      "neoforge": 78,
-      "echo_runtime_standalone": 78
-    },
-    "canonical": true,
-    "crossRuntimeParity": true,
-    "fingerprint": "2e97d9ecd54d6b6b875f29261a46f799b8db92cca56e0f990a7a02b2421da5ff",
+    "modules": 19,
     "edges": 110,
-    "modules": 19
+    "fingerprint": "2e97d9ecd54d6b6b875f29261a46f799b8db92cca56e0f990a7a02b2421da5ff",
+    "crossRuntimeParity": true,
+    "canonical": true,
+    "mappedNodeCounts": {
+      "echo_runtime_standalone": 78,
+      "neoforge": 78,
+      "echo_native": 78
+    },
+    "nodes": 140
   },
   "adapterCore": {
+    "revoked": 0,
+    "rejected": 0,
+    "canonicalRuntimeBridge": true,
+    "accepted": 48,
+    "ready": true,
     "acceptedByDomain": {
       "blocks": 14,
-      "recipes": 4,
-      "gameplay": 1,
-      "items": 24,
-      "entities": 3,
+      "worldgen": 1,
       "services": 1,
-      "worldgen": 1
-    },
-    "ready": true,
-    "accepted": 48,
-    "canonicalRuntimeBridge": true,
-    "rejected": 0,
-    "revoked": 0
+      "entities": 3,
+      "items": 24,
+      "gameplay": 1,
+      "recipes": 4
+    }
   },
   "runtimeContent": {
-    "items": 24,
-    "gameExtensions": 1,
-    "entityDefinitions": 3,
+    "recipes": 4,
     "blocks": 16,
-    "recipes": 4
+    "entityDefinitions": 3,
+    "gameExtensions": 1,
+    "items": 24
   },
   "world": {
-    "chunks": 25,
-    "saveReload": true,
+    "spawnedEntities": 4,
     "contentIdentityVerified": true,
-    "spawnedEntities": 4
+    "saveReload": true,
+    "chunks": 25
   }
 }
